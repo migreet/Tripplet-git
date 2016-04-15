@@ -8,6 +8,7 @@
 
 echo "git test Mic";
 echo "git test2 Mic";
+echo "merch test";
 echo "10010110";
 
 ?>

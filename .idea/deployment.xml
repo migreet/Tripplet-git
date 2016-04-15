@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="PublishConfigData" uploadOnCheckin="56a492d3-9cb0-4eb7-89fb-7fe9c97158f5">
-    <serverData>
-      <paths name="Mars">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/home/mg144/public_html/trippletgit" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
     <option name="myUploadOnCheckinName" value="MARS" />
   </component>
 </project>
