@@ -7,5 +7,6 @@
  */
 
 echo "git test Mic";
+echo "git test2 Mic";
 
 ?>
