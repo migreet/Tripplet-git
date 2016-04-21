@@ -6,3 +6,14 @@
  * Time: 20:25
  */
 
+//Instanzen
+$votingInstnc = new voting();
+
+//GETs
+$votingId=$_GET['id'];
+
+
+$voting = $votingInstnc->delete($votingId);
+header ('location: ../voting.php');
+
+?>
