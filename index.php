@@ -6,7 +6,6 @@
  * Time: 14:12
  */
 /*include("include/sessioncheck.php");*/
-echo "änderung";
 ?>
 
 <!DOCTYPE html>
