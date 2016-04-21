@@ -27,7 +27,6 @@ if (isset($frageCreate)) {
             $antwortInstnc = new antwort();
             $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
             echo $frage;
-            echo filetype($frage);
         }
 
     }
