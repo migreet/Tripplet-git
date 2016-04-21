@@ -17,7 +17,7 @@ if (!empty ($bezeichnung)) {
 
 echo "<div> Die Frage wurde eingereicht</div>";
 
-header('Location: index.php'); //id Voting??!
+header('Location: index.php?id=' .$ID_Voting); //id Voting??!
 }
 else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.</div>";
 
