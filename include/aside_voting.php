@@ -1,42 +1,4 @@
-<?php
 
-$frageCreate=$_POST["fragecreate"];
-$frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
-
-
-if (isset($frageCreate)) {
-
-    if (!empty ($frageText)) {
-        $frageInstnc = new frage();
-        $frage = $frageInstnc->createFrage($frageText, $ID_Voting);
-        header('Location: voting.php?id=' .$ID_Voting);
-        echo "<div> Die Frage wurde eingereicht</div>";
-
-
-    }
-    else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.</div>";
-
-    }
-
-    //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
-    $antwort= array ();
-    for ($i = 0; $i <= 9; $i++) {
-        if (!empty (htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))){
-            //$antwort[] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
-            $antwortText = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
-            $antwortInstnc = new antwort();
-            $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
-
-        }
-
-    }
-
-
-
-
-}
-
-?>
 
 
 <div>
