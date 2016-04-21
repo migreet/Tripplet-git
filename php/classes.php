@@ -458,7 +458,7 @@ class antwort extends mother
     {
         try {
             $stmt = $this->pdo->prepare('
-              	INSERT INTO antwort (text, ID_FRAGE)
+              	INSERT INTO antworten (text, ID_FRAGE)
 				VALUES (:text, :fragenid)
             ');
             $stmt->bindParam(':text', $text);
