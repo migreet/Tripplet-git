@@ -1,15 +1,21 @@
 <?php
 
 $frageCreate=$_POST["fragecreate"];
+
 // echo $ID_Voting;
+
 if (isset($frageCreate)) {
-$bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
+    $frageInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
+    $frage = $frageInstnc->createFrage($bezeichnung, $frageText, $ID_Voting);
+
     $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
     //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
     $antwort= array ();
     for ($i = 0; $i <= 9; $i++) {
         if (!empty (htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))){
-            $antwort[] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
+            //$antwort[] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
+            $antwortInstnc = new antwort();
+            $antwort = $antwortInstnc->createAnwort($frageText, $frage);
         }
 
     }
@@ -18,9 +24,6 @@ print_r($antwort);
 
 
 if (!empty ($bezeichnung)) {
-    $frageInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
-    $frage = $frageInstnc->createFrage($bezeichnung, $frageText, $ID_Voting);
-    // echo $frage;
 
 echo "<div> Die Frage wurde eingereicht</div>";
 
@@ -40,9 +43,6 @@ else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wend
 
 <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
     <div class="form-group">
-        <div class="col-sm-12">
-            <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnnung" id="bezeichnung" required>
-        </div>
 
         <div class="col-sm-12">
             <input type="text" class="form-control" name="frage" placeholder="Frage" id="frage" required>
