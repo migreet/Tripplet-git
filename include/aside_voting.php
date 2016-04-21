@@ -1,14 +1,14 @@
 <?php
 
 $frageCreate=$_POST["fragecreate"];
-echo $ID_Voting;
+// echo $ID_Voting;
 if (isset($frageCreate)) {
 $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
     $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
     //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
     $antwort= array ();
     while ($i<9) {
-        $antwort[i] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
+        $antwort[$i] = htmlspecialchars($_POST["antwort" .$i], ENT_QUOTES, "UTF-8");
         $i++;
     }
 print_r($antwort);
@@ -18,7 +18,7 @@ print_r($antwort);
 if (!empty ($bezeichnung)) {
     $frageInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
     $frage = $frageInstnc->createFrage($bezeichnung, $frageText, $ID_Voting);
-    echo $frage;
+    // echo $frage;
 
 echo "<div> Die Frage wurde eingereicht</div>";
 
