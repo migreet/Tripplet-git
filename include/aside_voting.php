@@ -1,6 +1,7 @@
 <?php
 
 $frageCreate=$_POST["fragecreate"];
+echo $ID_Voting;
 if (isset($frageCreate)) {
 $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
     $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
