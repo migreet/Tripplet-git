@@ -366,14 +366,13 @@ class frage extends mother
 
     }
 
-    public function createFrage($bezeichnung, $text, $votingid)
+    public function createFrage($text, $votingid)
     {
         try {
             $stmt = $this->pdo->prepare('
-              	INSERT INTO frage (bezeichnung, text, ID_VOTING)
-				VALUES (:bezeichnung,:text,:votingid)
+              	INSERT INTO frage ( text, ID_VOTING)
+				VALUES (:text,:votingid)
             ');
-            $stmt->bindParam(':bezeichnung', $bezeichnung);
             $stmt->bindParam(':text', $text);
             $stmt->bindParam(':votingid', $votingid);
             $stmt->execute();
