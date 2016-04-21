@@ -19,7 +19,7 @@ else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wend
 
 }
 }
-echo "<h1>Variabeltest</h1>"
+echo "<h1>Variabeltest</h1>";
 echo "$bezeichnung";
 echo "$frageText";
 echo "$antwort";
