@@ -378,6 +378,7 @@ class frage extends mother
             $stmt->bindParam(':votingid', $votingid);
             $stmt->execute();
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+            print_r ($result);
             return $result;
 
         } catch (PDOException $e) {
@@ -463,7 +464,6 @@ class antwort extends mother
             $stmt->bindParam(':fragenid', $fragenid);
             $stmt->execute();
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
-            print_r ($result);
             return $result;
 
         } catch (PDOException $e) {
