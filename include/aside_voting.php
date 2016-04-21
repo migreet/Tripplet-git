@@ -7,9 +7,9 @@ $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
     $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
     //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
     $antwort= array ();
-    while ($i<=9) {
+    for ($i = 0; $i <= 9; $i++) {
         $antwort[$i] = htmlspecialchars($_POST["antwort" .$i], ENT_QUOTES, "UTF-8");
-        $i++;
+
     }
 print_r($antwort);
 
