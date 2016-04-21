@@ -14,8 +14,9 @@ if (isset($frageCreate)) {
     for ($i = 0; $i <= 9; $i++) {
         if (!empty (htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))){
             //$antwort[] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
+            $antwortText = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
             $antwortInstnc = new antwort();
-            $antwort = $antwortInstnc->createAntwort($frageText, $frage);
+            $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
         }
 
     }
