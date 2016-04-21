@@ -378,7 +378,9 @@ class frage extends mother
             $stmt->bindParam(':votingid', $votingid);
             $stmt->execute();
             $result=$stmt->fetch(PDO::FETCH_ASSOC);
-            return $result["ID"];
+            $fragenID=$stmt->lastInsertedId();
+            return $fragenID;
+            //return $result;
 
         } catch (PDOException $e) {
             echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
