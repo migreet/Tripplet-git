@@ -6,9 +6,17 @@ $frageCreate=$_POST["fragecreate"];
 
 if (isset($frageCreate)) {
     $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
-    $frageInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
-    $frage = $frageInstnc->createFrage($bezeichnung, $frageText, $ID_Voting);
+    if (!empty ($bezeichnung)) {
+        $frageInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
+        $frage = $frageInstnc->createFrage($bezeichnung, $frageText, $ID_Voting);
 
+        echo "<div> Die Frage wurde eingereicht</div>";
+
+        header('Location: voting.php?id=' .$ID_Voting); //id Voting??!
+    }
+    else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.</div>";
+
+    }
 
     //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
     $antwort= array ();
@@ -27,15 +35,7 @@ print_r($antwort);
 
 
 
-if (!empty ($bezeichnung)) {
 
-echo "<div> Die Frage wurde eingereicht</div>";
-
-header('Location: voting.php?id=' .$ID_Voting); //id Voting??!
-}
-else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.</div>";
-
-}
 }
 
 ?>
