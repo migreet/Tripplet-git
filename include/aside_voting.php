@@ -2,17 +2,17 @@
 
 $frageCreate=$_POST["fragecreate"];
 $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
-// echo $ID_Voting;
+
 
 if (isset($frageCreate)) {
 
     if (!empty ($frageText)) {
-        $frageInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
+        $frageInstnc = new frage();
         $frage = $frageInstnc->createFrage($frageText, $ID_Voting);
-
+        header('Location: voting.php?id=' .$ID_Voting);
         echo "<div> Die Frage wurde eingereicht</div>";
 
-        header('Location: voting.php?id=' .$ID_Voting); //id Voting??!
+
     }
     else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.</div>";
 
