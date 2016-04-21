@@ -378,7 +378,7 @@ class frage extends mother
             $stmt->bindParam(':votingid', $votingid);
             $stmt->execute();
             $result=$stmt->fetch(PDO::FETCH_ASSOC);
-            $fragenID=$stmt->lastInsertedId();
+            $fragenID=$stmt->lastInsertId();
             return $fragenID;
             //return $result;
 
