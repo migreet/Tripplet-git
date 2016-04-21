@@ -384,7 +384,6 @@ class frage extends mother
             echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
             die();
         }
-
     }
 }
 
@@ -451,6 +450,25 @@ class antwort extends mother
             die();
         }
 
+    }
+
+    public function createAntwort($text, $fragenid)
+    {
+        try {
+            $stmt = $this->pdo->prepare('
+              	INSERT INTO antwort (text, ID_FRAGE)
+				VALUES (:text, :fragenid)
+            ');
+            $stmt->bindParam(':text', $text);
+            $stmt->bindParam(':fragenid', $fragenid);
+            $stmt->execute();
+            $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
     }
 
 }
