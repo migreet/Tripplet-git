@@ -16,6 +16,12 @@
 require_once("php/classes.php");
 
 session_start();
+//Instanzen
+$antwortInstnc = new antwort();
+$votingInstnc = new voting();
+$frageInstnc = new frage();
+
+//GETs
 $ID_Voting=$_GET['id'];
 
 
@@ -44,7 +50,6 @@ if (isset($frageCreate)) {
         if (!empty (htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))){
             //$antwort[] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
             $antwortText = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
-            $antwortInstnc = new antwort();
             $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
 
         }
@@ -63,7 +68,6 @@ if (isset($postVoting)) {
     $vorlesungsId= htmlspecialchars($_GET["id"], ENT_QUOTES, "UTF-8");
 
     if (!empty ($bezeichnung)) {
-        $votingInstnc = new voting();
         $voting = $votingInstnc->createVoting($bezeichnung, $schluessel, $vorlesungsId);
 
         echo "<div> Die Registrierung war erfolgreich!</div>";
@@ -87,8 +91,6 @@ if (isset($postVoting)) {
 <?php else: ?>
     <body>
     <?php require_once("include/navigation.php");
-    $votingInstnc = new voting();
-    $frageInstnc = new frage();
     $voting=$votingInstnc->getById($ID_Voting);
     ?>
 
@@ -97,7 +99,7 @@ if (isset($postVoting)) {
         <div class="col-md-8">
             <?php
 
-
+//Ausgeben der Fragen zur passenden Voting ID
             echo "<p><strong>Fragen in diesem Voting</strong></p>";
             $voting = $frageInstnc->getByVotingId($ID_Voting);
             if (!empty ($voting)):
@@ -106,13 +108,24 @@ if (isset($postVoting)) {
     <div class='list-entry'>
     <div class='col-md-7'>";
 
-            echo "<a href='voting.php?id=".$eintrag['ID']."'>";
             echo $eintrag['text'] . " ";
             echo $eintrag['datum'] . " ";
-            echo "</a>"; ?>
+            ?>
             <button type='button' class='btn btn-info'>edit</button>
             <button type="button" class="btn btn-danger">Löschen</button>
+
+            <!--Ausgabe der Antworten zu der passenden Frage -->
+            <?php
+            $antwort=$antwortInstnc->getByFragenId($fragenid);
+            foreach ($antwort as $eintrag) {
+            echo "
+            <div class='list-entry'>
+            <div class='col-md-7'>";
+
+            echo $eintrag['text'] . " ";
+            ?>
         </div>
+
     </div>
     <?php }
     else:
