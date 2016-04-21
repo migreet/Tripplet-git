@@ -11,10 +11,11 @@ $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
     echo "$frageText";
     echo "$antwort";
 
+
 if (!empty ($bezeichnung)) {
     $frageInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
     $frage = $frageInstnc->createFrage($bezeichnung, $frageText, $ID_Voting);
-    print_r($frage);
+    echo $frage;
 
 echo "<div> Die Frage wurde eingereicht</div>";
 
