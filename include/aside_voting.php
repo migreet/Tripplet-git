@@ -1,6 +1,6 @@
 <?php
 
-$frageCrate=$_POST["fragecreate"];
+$frageCreate=$_POST["fragecreate"];
 if (isset($frageCreate)) {
 $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
     $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
