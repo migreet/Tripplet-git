@@ -5,6 +5,8 @@
  * Date: 21.04.2016
  * Time: 20:25
  */
+//Löschen der Votings
+
 
 //Requires
 require_once("../php/classes.php");

@@ -6,6 +6,8 @@
  * Time: 20:25
  */
 
+//Löschen der Fragen
+
 //Requires
 require_once("../php/classes.php");
 session_start();
