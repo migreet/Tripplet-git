@@ -15,7 +15,7 @@ if (isset($frageCreate)) {
         if (!empty (htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))){
             //$antwort[] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
             $antwortInstnc = new antwort();
-            $antwort = $antwortInstnc->createAnwort($frageText, $frage);
+            $antwort = $antwortInstnc->createAntwort($frageText, $frage);
         }
 
     }
