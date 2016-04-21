@@ -116,10 +116,10 @@ if (isset($postVoting)) {
 
             <!--Ausgabe der Antworten zu der passenden Frage -->
             <?php
-            $antwort=$antwortInstnc->getByFragenId($fragenid);
-            foreach ($antwort as $eintrag) {
+            $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
+            foreach ($antwort as $eintragFrage) {
 
-            echo $eintrag['text'] . " ";
+            echo $eintragFrage['text'];
             }
             ?>
         </div>
