@@ -75,7 +75,8 @@ if (!empty ($voting)):
     echo "</a> ";?>
     <button type='button' class='btn btn-success'>Start</button>
     <button type='button' class='btn btn-info'>edit</button>
-    <button type="button" class="btn btn-danger">Löschen</button>
+    <!-- Votings löschen -->
+    <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-danger">Löschen</a>
 </div>
 
 </div>
