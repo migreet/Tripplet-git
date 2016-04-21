@@ -14,6 +14,7 @@ $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
 if (!empty ($bezeichnung)) {
     $frageInstnc = new frage(); //richtige Klasse benutzen!!    createFrage($bezeichnung, $text, $votingid)
     $frage = $frageInstnc->createFrage($bezeichnung, $frageText, $ID_Voting);
+    echo $frage;
 
 echo "<div> Die Frage wurde eingereicht</div>";
 
