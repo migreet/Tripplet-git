@@ -118,11 +118,9 @@ if (isset($postVoting)) {
             <?php
             $antwort=$antwortInstnc->getByFragenId($fragenid);
             foreach ($antwort as $eintrag) {
-            echo "
-            <div class='list-entry'>
-            <div class='col-md-7'>";
 
             echo $eintrag['text'] . " ";
+            }
             ?>
         </div>
 
