@@ -376,9 +376,8 @@ class frage extends mother
             $stmt->bindParam(':bezeichnung', $bezeichnung);
             $stmt->bindParam(':text', $text);
             $stmt->bindParam(':votingid', $votingid);
-            $stmt->execute();
+            $stmt->execute(array('widgets'));
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
-            print_r ($result);
             return $result;
 
         } catch (PDOException $e) {
