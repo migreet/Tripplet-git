@@ -113,7 +113,7 @@ if (isset($postVoting)) {
             ?>
             <button type='button' class='btn btn-info'>edit</button>
             <!-- Fragenlöschen-->
-            <a href="/do/voting_delete.php?id=<?php $eintrag['ID']?>" class="btn btn-danger">Löschen</a>
+            <a href="/do/voting_delete.php?id=<?php echo $eintrag['ID']?>" class="btn btn-danger">Löschen</a>
 
             <!--Ausgabe der Antworten zu der passenden Frage -->
             <?php
