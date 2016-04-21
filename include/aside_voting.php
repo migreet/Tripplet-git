@@ -5,9 +5,7 @@ if (isset($frageCreate)) {
 $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
     $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
     $antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
-echo "$bezeichnung";
-    echo "$frageText";
-    echo "$antwort";
+
 
 if (!empty ($bezeichnung)) {
 $vorlesungInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
@@ -21,6 +19,9 @@ else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wend
 
 }
 }
+echo "$bezeichnung";
+echo "$frageText";
+echo "$antwort";
 ?>
 
 
