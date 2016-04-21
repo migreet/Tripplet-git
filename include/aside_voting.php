@@ -5,10 +5,11 @@ $frageCreate=$_POST["fragecreate"];
 // echo $ID_Voting;
 
 if (isset($frageCreate)) {
+    $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
     $frageInstnc = new frage(); //richtige Klasse benutzen!!!    createFrage($bezeichnung, $text, $votingid)
     $frage = $frageInstnc->createFrage($bezeichnung, $frageText, $ID_Voting);
 
-    $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
+
     //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
     $antwort= array ();
     for ($i = 0; $i <= 9; $i++) {
