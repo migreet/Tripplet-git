@@ -6,6 +6,10 @@
  * Time: 20:25
  */
 
+//Requires
+require_once("php/classes.php");
+session_start();
+
 //Instanzen
 $votingInstnc = new voting();
 
