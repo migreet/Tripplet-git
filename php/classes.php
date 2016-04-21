@@ -370,7 +370,7 @@ class frage extends mother
     {
         try {
             $stmt = $this->pdo->prepare('
-              	INSERT INTO voting (bezeichnung, text, ID_VOTING)
+              	INSERT INTO frage (bezeichnung, text, ID_VOTING)
 				VALUES (:bezeichnung,:text,:votingid)
             ');
             $stmt->bindParam(':bezeichnung', $bezeichnung);
