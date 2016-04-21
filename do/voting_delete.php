@@ -11,14 +11,14 @@ require_once("../php/classes.php");
 session_start();
 
 //Instanzen
-$votingInstnc = new voting();
+$fragenInstnc = new frage();
 
 //GETs
 $fragenId=$_GET['id'];
 $votingId=$_GET['idvoting'];
 
 
-$voting = $votingInstnc->delete($fragenId);
+$frage = $fragenInstnc->delete($fragenId);
 header ('location: ../voting.php?id=' .$votingId);
 
 ?>
