@@ -19,6 +19,6 @@ $votingId=$_GET['idvoting'];
 
 
 $voting = $votingInstnc->delete($fragenId);
-header ('location: ../voting.php?=' .$votingId);
+header ('location: ../voting.php?id=' .$votingId);
 
 ?>
