@@ -5,8 +5,14 @@ echo $ID_Voting;
 if (isset($frageCreate)) {
 $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
     $frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
-    $antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
-    echo "<h1>Variabeltest</h1>";
+    //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
+    $antwort= array ();
+    while ($i<9) {
+        $antwort[i] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
+        $i++;
+    }
+    }
+
 
 
 if (!empty ($bezeichnung)) {
@@ -41,7 +47,35 @@ else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wend
         </div>
 
         <div class="col-sm-12">
-            <input type="text" class="form-control" name="antwort" placeholder="Antwort" id="antwort" required>
+            <input type="text" class="form-control" name="antwort0" placeholder="Antwort" id="antwort" required>
+        </div>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort1" placeholder="Antwort" id="antwort" required>
+        </div>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort2" placeholder="Antwort" id="antwort" >
+        </div>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort3" placeholder="Antwort" id="antwort" >
+        </div>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort4" placeholder="Antwort" id="antwort" >
+        </div>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort5" placeholder="Antwort" id="antwort" >
+        </div>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort6" placeholder="Antwort" id="antwort" >
+        </div>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort7" placeholder="Antwort" id="antwort" >
+        </div>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort8" placeholder="Antwort" id="antwort" >
+        </div>
+
+        <div class="col-sm-12">
+            <input type="text" class="form-control" name="antwort9" placeholder="Antwort" id="antwort" >
             <input type="hidden" value="1" name="fragecreate">
         </div>
 
