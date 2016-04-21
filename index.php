@@ -110,8 +110,8 @@ $eintragManager = new vorlesung();
     foreach ($liste as $eintrag) {
     echo "<div class='list-entry'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
     echo $eintrag['bezeichnung'] . " ";
-    echo "</a>
-<button type='button' class='btn btn-danger'>Löschen</button>
+    echo "
+<a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-danger'>Löschen</a>
 </div>";
     }
     }
