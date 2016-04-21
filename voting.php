@@ -112,7 +112,8 @@ if (isset($postVoting)) {
             echo $eintrag['datum'] . " ";
             ?>
             <button type='button' class='btn btn-info'>edit</button>
-            <button type="button" class="btn btn-danger">L�schen</button>
+            <button type="button" class="btn btn-danger">Löschen</button>
+            <a href='NotizUpdate_form.php?notiz_id=$notiz->id' class="btn btn-danger">Löschen</a>
 
             <!--Ausgabe der Antworten zu der passenden Frage -->
             <?php
