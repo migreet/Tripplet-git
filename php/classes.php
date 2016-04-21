@@ -435,7 +435,7 @@ class frage extends mother
     public function delete($id)
     {
         try {
-            $stmt = $this->pdo->prepare('DELETE FROM voting WHERE id = :id');
+            $stmt = $this->pdo->prepare('DELETE FROM frage WHERE id = :id');
             $stmt->bindParam(':id', $id);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
