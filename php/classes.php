@@ -85,6 +85,21 @@ public function signup($name, $vorname, $passwort, $mail)
         }
 
     }
+    public function delete($id)
+    {
+        try {
+            $stmt = $this->pdo->prepare('DELETE FROM dozent WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $n = $stmt->fetch();
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+        if (!$n) $n = null;
+        return $n;
+    }
 }
 
 
@@ -173,8 +188,22 @@ class vorlesung extends mother
     }
 
 
-	
-	
+
+    public function delete($id)
+    {
+        try {
+            $stmt = $this->pdo->prepare('DELETE FROM vorlesung WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $n = $stmt->fetch();
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+        if (!$n) $n = null;
+        return $n;
+    }
 }
 
 class voting extends mother
@@ -240,6 +269,7 @@ class voting extends mother
 
     }
 
+
     public function createVoting($bezeichnung, $schluessel, $vorlesungsid)
     {
         try {
@@ -298,7 +328,22 @@ class voting extends mother
         if (!$n) $n = null;
         return $n;
     }
-	
+
+    public function delete($id)
+    {
+        try {
+            $stmt = $this->pdo->prepare('DELETE FROM voting WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $n = $stmt->fetch();
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+        if (!$n) $n = null;
+        return $n;
+    }
 }
 
 class frage extends mother
@@ -386,6 +431,22 @@ class frage extends mother
             die();
         }
     }
+
+    public function delete($id)
+    {
+        try {
+            $stmt = $this->pdo->prepare('DELETE FROM voting WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $n = $stmt->fetch();
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+        if (!$n) $n = null;
+        return $n;
+    }
 }
 
 class antwort extends mother
@@ -472,6 +533,21 @@ class antwort extends mother
         }
     }
 
+    public function delete($id)
+    {
+        try {
+            $stmt = $this->pdo->prepare('DELETE FROM antworten WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $n = $stmt->fetch();
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+        if (!$n) $n = null;
+        return $n;
+    }
 }
 
 class auswertung extends mother
