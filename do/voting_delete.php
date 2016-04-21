@@ -14,10 +14,11 @@ session_start();
 $votingInstnc = new voting();
 
 //GETs
-$votingId=$_GET['id'];
+$fragenId=$_GET['id'];
+$votingId=$_GET['idvoting'];
 
 
-$voting = $votingInstnc->delete($votingId);
-header ('location: ../voting.php?=' .$voting);
+$voting = $votingInstnc->delete($fragenId);
+header ('location: ../voting.php?=' .$votingId);
 
 ?>
