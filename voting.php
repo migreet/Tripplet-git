@@ -70,7 +70,7 @@ if (isset($postVoting)) {
     <div class='col-md-7'>";
 
             echo "<a href='voting.php?id=".$eintrag['ID']."'>";
-            echo $eintrag['bezeichnung'] . " ";
+            echo $eintrag['text'] . " ";
             echo $eintrag['datum'] . " ";
             echo "</a>"; ?>
             <button type='button' class='btn btn-info'>edit</button>
