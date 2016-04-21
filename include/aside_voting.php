@@ -26,11 +26,10 @@ if (isset($frageCreate)) {
             $antwortText = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
             $antwortInstnc = new antwort();
             $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
-            echo $frage;
+
         }
 
     }
-print_r($antwort);
 
 
 
