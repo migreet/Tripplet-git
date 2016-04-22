@@ -37,7 +37,6 @@ if (isset($_POST['schluesselsent'])) {
     if ($schluessel==$voting['schluessel']){
         $_SESSION['id']= uniqid();
         $_SESSION['votingid']= $voting['ID'];
-        print_r( $_SESSION['id']);
         foreach ($frage as $eintrag) {
 
 
@@ -61,7 +60,9 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
         <h1>Fragerunde</h1>
         <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
-        <?php foreach ($antwort as $eintrag) {
+        <?php
+        print_r( $_SESSION['id']);
+        foreach ($antwort as $eintrag) {
 
             echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
 
