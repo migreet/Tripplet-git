@@ -29,13 +29,13 @@ $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 
-print_r( $_SESSION);
+
 
 if (isset($_POST['schluesselsent'])) {
     if ($schluessel=$voting['schluessel']){
         $_SESSION['id']= uniqid();
         $_SESSION['votingid']= $voting['ID'];
-
+        print_r( $_SESSION);
         foreach ($frage as $eintrag) {
 
 
