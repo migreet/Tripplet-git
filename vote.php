@@ -25,7 +25,6 @@ $schluessel=$_POST['schluessel'];
 $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
 $voting=$votingInstnc->getByKey($schluessel);
-print_r ($voting);
 echo $schluessel;
 echo "test!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 $frageInstnc = new frage();
@@ -35,7 +34,7 @@ $antwortInstnc = new antwort();
 
 
 if (isset($_POST['schluesselsent'])) {
-    if ($schluessel=$voting['schluessel']){
+    if ($schluessel==$voting['schluessel']){
         $_SESSION['id']= uniqid();
         $_SESSION['votingid']= $voting['ID'];
         print_r( $_SESSION);
