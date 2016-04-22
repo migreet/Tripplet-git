@@ -34,6 +34,14 @@ echo $_SESSION['id'];
 print_r($schluessel);
 print_r($frage);
 
+if (isset($_POST["fragerunde"])) {
+    $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
+    echo $eintragID;
+    /*$auswertungInstnc= new auswertung();
+    $auswertungupdate= $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
+    //header ('location:vote.php');*/
+}
+
 
 if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
 
@@ -56,27 +64,8 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
 
                 echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
 
-
-
-
-
             }
             echo "<input type='hidden' value='1' name='fragerunde'>";
-
-            //Code aus Index.php
-            if (isset($_POST["fragerunde"])) {
-                $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
-                echo $eintragID;
-                /*$auswertungInstnc= new auswertung();
-                $auswertungupdate= $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
-                //header ('location:vote.php');*/
-            }
-            else {
-                echo "<div> Fragenerstellung war nicht erfolgreich. Bitte versuchen sie es erneut.</div>";
-            }
-
-
-
             ?>
             <input type="submit"> <br />
         </form>
