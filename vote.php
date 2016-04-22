@@ -32,6 +32,7 @@ $antwortInstnc = new antwort();
 echo $schluessel;
 print_r( $_SESSION);
 print_r($voting);
+echo $schluesselsent;
 
 if (isset($schluesselsent)) {
     if ($schluessel==$voting['schluessel']){
