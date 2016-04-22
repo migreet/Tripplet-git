@@ -259,7 +259,7 @@ class voting extends mother
             $stmt->bindParam(':schluessel', $schluessel);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            $n = $stmt->fetchAll();
+            $n = $stmt->fetch();
         } catch (PDOException $e) {
             echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
             die();
