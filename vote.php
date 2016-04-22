@@ -29,8 +29,7 @@ $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 echo $schluessel;
-echo "test!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
-
+print_r( $_SESSION);
 
 
 if (isset($_POST['schluesselsent'])) {
