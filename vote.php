@@ -25,6 +25,7 @@ if(isset ($schluesselsent)) {
         $_SESSION['votingid']= $voting['ID'];
         print_r($_SESSION);
     }
+    header ("location: vote.php");
 }
 
 
