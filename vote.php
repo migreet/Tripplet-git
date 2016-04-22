@@ -61,7 +61,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
         <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
         <?php
-        print_r( $_SESSION['id']);
+        print_r( $_SESSION);
         foreach ($antwort as $eintrag) {
 
             echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
