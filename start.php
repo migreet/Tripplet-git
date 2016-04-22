@@ -31,7 +31,7 @@ print_r ($voting);
 if (isset($votingsent)) {
 //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
     if (empty($voting['schluessel'])){
-            $voting = $votingInstnc->update($votingId, $schluessel);
+            $voting = $votingInstnc->update($votingId, 99);
             header('Location: start.php?id=' .$votingId);
 
 
