@@ -24,6 +24,7 @@ $schluessel=$POST['schluessel'];
 $votingInstnc = new voting();
 $voting=$votingInstnc->getById($votingId);
 
+print_r ($voting['schlussel']);
 
 
 //Ifabfrage für Schlüsseleingabe und Statusprüfung
