@@ -31,7 +31,7 @@ $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
-
+//Fehler irgendwo hier!!! ID kommt nicht raus
 if (isset($_POST["fragerunde"])) {
     $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
     print_r ($fragerunde);
