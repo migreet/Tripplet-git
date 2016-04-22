@@ -40,6 +40,7 @@ if (isset($schluesselsent)) {
         $_SESSION['votingid']= $voting['ID'];
         foreach ($frage as $eintrag) {
 echo $eintrag['ID'];
+            echo $eintrag['ID'];
             $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
         }
         //header ("location: vote.php");
