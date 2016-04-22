@@ -36,7 +36,7 @@ if (isset($votingsent)) {
 
         }
     else {
-        $voting = $votingInstnc->update($votingId, '');
+        $voting = $votingInstnc->update($votingId, NULL);
         header('Location: start.php?id=' .$votingId);
     }
     }
