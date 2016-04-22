@@ -32,13 +32,12 @@ $antwortInstnc = new antwort();
 
 echo $_SESSION['id'];
 print_r($schluessel);
-
+print_r($frage);
 
 if (isset($schluesselsent)) {
     if ($schluessel==$voting['schluessel']){
         $_SESSION['id']= uniqid();
         $_SESSION['votingid']= $voting['ID'];
-        print_r($frage);
         foreach ($frage as $eintrag) {
 
     $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
