@@ -29,6 +29,7 @@ $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Sc
 $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
+$fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
 
 if (isset($_POST["fragerunde"])) {
