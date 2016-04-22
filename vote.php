@@ -77,7 +77,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
             if (isset($_POST["fragerunde"])) {
                 $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
                 $auswertungInstnc= new auswertung();
-                $auswertungupdate= $auswertungInstnc->updateAuswertung($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintrag["ID"]);
+                $auswertungupdate= $auswertungInstnc->updateAuswertung($fragerunde['ID_FRAGE'], $_SESSION['id'], $_POST["antwort"]);
                 //header ('location:vote.php');
             }
             else {
