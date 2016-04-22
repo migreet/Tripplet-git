@@ -25,11 +25,11 @@ $schluessel=$_POST['schluessel'];
 $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
 $voting=$votingInstnc->getByKey($schluessel);
-echo $schluessel;
-echo "test!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
+echo $schluessel;
+echo "test!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
 
 
@@ -52,7 +52,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
     $antwort = $antwortInstnc->getByFragenId($fragerunde['ID_FRAGE']);
     $countFragen=$auswertungInstnc->countFragen(0,$voting['ID'],$_SESSION['id']);
     $countfinished=$auswertungInstnc->countFragen(1,$voting['ID'],$_SESSION['id']);
-    ?>
+    print_r($antwort);  ?>
 
     <body>
 
