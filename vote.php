@@ -29,6 +29,7 @@ $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 
+print_r( $_SESSION);
 
 if (isset($_POST['schluesselsent'])) {
     if ($schluessel=$voting['schluessel']){
@@ -40,7 +41,7 @@ if (isset($_POST['schluesselsent'])) {
 
     $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
     }
-        header ("location: vote.php?x=".$url);
+        header ("location: vote.php");
     }
 }
 if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
@@ -73,7 +74,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
             $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
             $auswertungInstnc= new auswertung();
             $auswertungupdate= $auswertungInstnc->updateAuswertung($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintrag["ID"]);
-            header ('location:vote.php?x='.$url);
+            header ('location:vote.php');
         }
         else {
                     echo "<div> Fragenerstellung war nicht erfolgreich. Bitte versuchen sie es erneut.</div>";
