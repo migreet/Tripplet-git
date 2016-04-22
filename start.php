@@ -18,7 +18,7 @@ session_start();
 //POSTs & GETs
 $votingId=$_GET['id'];
 $votingsent=$_POST['votingstart'];
-$schluessel=$POST['schluessel'];
+$schluessel=$_POST['schluessel'];
 
 //Instanzen
 $votingInstnc = new voting();
@@ -31,7 +31,7 @@ print_r ($voting);
 if (isset($votingsent)) {
 //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
     if (empty($voting['schluessel'])){
-            $voting = $votingInstnc->update($votingId, 'string');
+            $voting = $votingInstnc->update($votingId, $schluessel);
             header('Location: start.php?id=' .$votingId);
 
 
