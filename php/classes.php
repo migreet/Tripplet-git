@@ -715,7 +715,8 @@ class auswertung extends mother
 
     }
 
-    public function updateAuswertung($fragenid, $sessionid, $antwortid)
+
+    public function update($fragenid, $sessionid, $antwortid)
     {
         try {
             $stmt = $this->pdo->prepare('
@@ -737,6 +738,8 @@ class auswertung extends mother
         }
 
     }
+
+
 	
 }
 
