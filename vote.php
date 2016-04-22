@@ -36,6 +36,7 @@ print_r($voting);
 
 if (isset($schluesselsent)) {
     echo "wasXxXxX";
+    echo $voting;
     if ($schluessel==$voting['schluessel']){
         $_SESSION['id']= uniqid();
 
