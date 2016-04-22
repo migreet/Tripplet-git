@@ -12,7 +12,7 @@
 <html lang="de">
 
 
-<?php require_once("include/header.php");
+<?php
 require_once("php/classes.php");
 
 session_start();
@@ -20,7 +20,7 @@ session_start();
 //GETs & POSTs
 $schluessel=$_POST['schluessel'];
 $schluesselsent=$_POST['schluesselsent'];
-
+echo $schluessel;
 
 //Instanzen
 $votingInstnc = new voting();
@@ -29,8 +29,7 @@ $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Sc
 $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
-echo $schluessel;
-print_r( $_SESSION);
+
 print_r($voting);
 
 
