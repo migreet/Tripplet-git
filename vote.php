@@ -15,11 +15,16 @@ $schluesselsent=$_POST['schluesselsent'];
 //Instanzen
 $votingInstnc = new voting();
 $voting=$votingInstnc->getByKey($schluessel);
-print_r($voting);
+// print_r($voting);    FUNKTIONIERT
 
 
 if(isset ($schluesselsent)) {
-    echo $schluessel;
+    //echo $schluessel;     FUNKTIONIERT
+    if (!empty ($voting)){
+        $_SESSION['id']= uniqid();
+        $_SESSION['votingid']= $voting['ID'];
+        print_r($_SESSION);
+    }
 }
 
 
