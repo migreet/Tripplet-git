@@ -24,8 +24,9 @@ if(isset ($schluesselsent)) {
         $_SESSION['id']= uniqid();
         $_SESSION['votingid']= $voting['ID'];
         print_r($_SESSION);
+        header ("location: vote.php");
     }
-    header ("location: vote.php");
+
 }
 
 
