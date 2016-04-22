@@ -27,7 +27,7 @@ $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
 $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
 $frageInstnc = new frage();
-$frage = $frageInstnc->getByVotingId($voting[71]);
+$frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 
 echo $_SESSION['id'];
