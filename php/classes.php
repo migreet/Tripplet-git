@@ -252,6 +252,22 @@ class voting extends mother
         return $n;
     }
 
+    public function getByKey($key)
+    {
+        try {
+            $stmt = $this->pdo->prepare('SELECT * FROM voting WHERE schluessel = :schluessel');
+            $stmt->bindParam(':schluessel', $schluessel);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $n = $stmt->fetchAll();
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+        if (!$n) $n = null;
+        return $n;
+    }
+
     public function getAll()
     {
         try {
