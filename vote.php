@@ -54,7 +54,8 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
     <div class="container">
 
         <h1>Fragerunde</h1>
-        <?php echo $fragerunde['text']."<br>"; ?>
+        <?php echo $fragerunde['text']."<br>";
+        echo $fragerunde['ID'];?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
             <?php
             print_r( $_SESSION);
