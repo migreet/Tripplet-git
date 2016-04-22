@@ -16,12 +16,15 @@
 require_once("php/classes.php");
 
 session_start();
-$url=$_GET['x'];
+
+//GETs & POSTs
 $schluessel=$_POST['schluessel'];
 
+
+//Instanzen
 $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
-$voting=$votingInstnc->getByUrl($url);
+$voting=$votingInstnc->getByKey($schluessel);
 $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
