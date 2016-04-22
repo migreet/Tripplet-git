@@ -252,7 +252,7 @@ class voting extends mother
         return $n;
     }
 
-    public function getByKey($key)
+    public function getByKey($schluessel)
     {
         try {
             $stmt = $this->pdo->prepare('SELECT * FROM voting WHERE schluessel = :schluessel');
