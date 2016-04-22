@@ -69,15 +69,18 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
 
 
 
-                echo "<input type='hidden' value='1' name='fragerunde'>";
+
 
             }
+            echo "<input type='hidden' value='1' name='fragerunde'>";
 
             //Code aus Index.php
             if (isset($_POST["fragerunde"])) {
+                echo $fragerunde['ID_FRAGE']. $_SESSION['id']. $eintragID;
+
                 $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
                 $auswertungInstnc= new auswertung();
-                $auswertungupdate= $auswertungInstnc->updateAuswertung($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
+                $auswertungupdate= $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
                 //header ('location:vote.php');
             }
             else {
