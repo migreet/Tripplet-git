@@ -31,13 +31,13 @@ if (isset($votingsent)) {
 //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
     if (!empty ($voting['schluessel'])){
             $voting = $votingInstnc->update($votingId, $schluessel);
-            header('Location: voting.php?id=' .$votingId);
+            header('Location: start.php?id=' .$votingId);
 
 
         }
     else {
         $voting = $votingInstnc->update($votingId, '');
-        header('Location: voting.php?id=' .$votingId);
+        header('Location: start.php?id=' .$votingId);
     }
     }
 
