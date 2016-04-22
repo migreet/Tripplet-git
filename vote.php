@@ -35,7 +35,7 @@ $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 if (isset($_POST["fragerunde"])) {
     $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
     print_r ($fragerunde);
-    echo $eintragID. "-" .$fragerunde['ID_FRAGE']. "-" .$_SESSION['id']. "-" .$eintragID;
+    echo $eintragID. "-" .$fragerunde['ID']. "-" .$_SESSION['id']. "-" .$eintragID;
     $auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
     //header ('location:vote.php');
 }
