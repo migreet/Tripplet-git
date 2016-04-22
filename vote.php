@@ -25,7 +25,7 @@ $schluesselsent=$_POST['schluesselsent'];
 //Instanzen
 $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
-$voting=$votingInstnc->getByKey($schluessel);
+$voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
 $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
@@ -36,6 +36,7 @@ print_r($voting);
 if (isset($schluesselsent)) {
     if ($schluessel==$voting['schluessel']){
         $_SESSION['id']= uniqid();
+        echo "wasXxXxX";
         $_SESSION['votingid']= $voting['ID'];
         foreach ($frage as $eintrag) {
 
