@@ -25,6 +25,8 @@ $schluessel=$_POST['schluessel'];
 $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
 $voting=$votingInstnc->getByKey($schluessel);
+print_r ($voting);
+print_r ($schluessel);
 $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
