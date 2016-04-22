@@ -37,9 +37,9 @@ print_r($frage);
 if (isset($_POST["fragerunde"])) {
     $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
     echo $eintragID;
-    /*$auswertungInstnc= new auswertung();
+    $auswertungInstnc= new auswertung();
     $auswertungupdate= $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
-    //header ('location:vote.php');*/
+    //header ('location:vote.php');
 }
 
 
