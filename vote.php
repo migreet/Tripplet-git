@@ -19,6 +19,7 @@ session_start();
 
 //GETs & POSTs
 $schluessel=$_POST['schluessel'];
+$schluesselsent=$_POST['schluesselsent'];
 
 
 //Instanzen
@@ -30,9 +31,9 @@ $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 echo $schluessel;
 print_r( $_SESSION);
+print_r($voting);
 
-
-if (isset($_POST['schluesselsent'])) {
+if (isset($schluesselsent)) {
     if ($schluessel==$voting['schluessel']){
         $_SESSION['id']= uniqid();
         $_SESSION['votingid']= $voting['ID'];
