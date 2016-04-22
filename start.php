@@ -50,9 +50,7 @@ if (isset($votingsent)) {
 Neues Voting starten
 
 <form name="registerform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-    <div class="form-group">
-            <input type="text" class="form-control" name="schluessel" placeholder="Schlüssel" id="schluessel" required>
-    </div>
+
     <div class="form-group">
             <input type="hidden" value="1" name="votingstart">
     </div>
@@ -60,9 +58,12 @@ Neues Voting starten
 <?php //Buttonänderung
 if (empty ($voting['schluessel'])):
 ?>
-
+    <div class="form-group">
+        <input type="text" class="form-control" name="schluessel" placeholder="Schlüssel" id="schluessel" required>
+    </div>
     <div class="form-group">
             <button type="submit" name="start" class="btn btn-success">starten</button>
+
     </div>
 
 <?php
