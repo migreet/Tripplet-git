@@ -124,7 +124,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
         <form name="signinform" class="form-inline col-sm-offset-6" style="padding-top: 7px;" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group">
                 <label class="sr-only" for="schluessel">Schlüssel</label>
-                <input type="password" class="form-control" name="passwort" id="passwort" placeholder="Passwort" required>
+                <input type="password" class="form-control" name="schluessel" id="schluessel" placeholder="Schlüssel" required>
                 <input type="hidden" value="1" name="schluesselsent">
             </div>
             <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
