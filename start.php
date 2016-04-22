@@ -30,7 +30,7 @@ print_r ($voting);
 //Ifabfrage für Schlüsseleingabe und Statusprüfung
 if (isset($votingsent)) {
 //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
-    if ($voting['schluessel']==NULL){
+    if (empty($voting['schluessel'])){
             $voting = $votingInstnc->update($votingId, $schluessel);
             header('Location: start.php?id=' .$votingId);
 
