@@ -11,6 +11,13 @@ session_start();
 //GETs & POSTs
 $schluessel=$_POST['schluessel'];
 $schluesselsent=$_POST['schluesselsent'];
+
+//Instanzen
+$votingInstnc = new voting();
+$voting=$votingInstnc->getByKey($schluessel);
+print_r($voting);
+
+
 if(isset ($schluesselsent)) {
     echo $schluessel;
 }
