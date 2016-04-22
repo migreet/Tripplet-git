@@ -19,25 +19,28 @@ session_start();
 
 //GETs & POSTs
 $schluessel=$_POST['schluessel'];
+$schluesselsent=$_POST['schluesselsent'];
 
 
 //Instanzen
 $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
-$voting=$votingInstnc->getByKey($schluessel);
-print_r ($voting);
-print_r ($schluessel);
+$voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
 $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
+echo $schluessel;
+print_r( $_SESSION);
+print_r($voting);
 
 
-
-if (isset($_POST['schluesselsent'])) {
-    if ($schluessel=$voting['schluessel']){
+if (isset($schluesselsent)) {
+    echo "wasXxXxX";
+    print_r($voting) ;
+    if ($schluessel==$voting['schluessel']){
         $_SESSION['id']= uniqid();
+
         $_SESSION['votingid']= $voting['ID'];
-        print_r( $_SESSION);
         foreach ($frage as $eintrag) {
 
 
@@ -52,7 +55,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
     $antwort = $antwortInstnc->getByFragenId($fragerunde['ID_FRAGE']);
     $countFragen=$auswertungInstnc->countFragen(0,$voting['ID'],$_SESSION['id']);
     $countfinished=$auswertungInstnc->countFragen(1,$voting['ID'],$_SESSION['id']);
-    ?>
+      ?>
 
     <body>
 
@@ -61,7 +64,9 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
         <h1>Fragerunde</h1>
         <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
-        <?php foreach ($antwort as $eintrag) {
+        <?php
+        print_r( $_SESSION);
+        foreach ($antwort as $eintrag) {
 
             echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
 
@@ -123,7 +128,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
         <form name="signinform" class="form-inline col-sm-offset-6" style="padding-top: 7px;" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group">
                 <label class="sr-only" for="schluessel">Schlüssel</label>
-                <input type="password" class="form-control" name="passwort" id="passwort" placeholder="Passwort" required>
+                <input type="password" class="form-control" name="schluessel" id="schluessel" placeholder="Schlüssel" required>
                 <input type="hidden" value="1" name="schluesselsent">
             </div>
             <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
