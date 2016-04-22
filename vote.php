@@ -104,8 +104,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
                 }
 
             }
-        //Umleiten auf Dankesseite
-        header ('location:aftervote.php');
+
         ?>
     </div>
 
