@@ -30,9 +30,6 @@ $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 
-echo $_SESSION['id'];
-print_r($schluessel);
-print_r($frage);
 
 if (isset($_POST["fragerunde"])) {
     $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
