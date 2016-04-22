@@ -29,13 +29,16 @@ $voting=$votingInstnc->getById($votingId);
 //Ifabfrage für Schlüsseleingabe und Statusprüfung
 if (isset($votingsent)) {
 //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
-    if ($voting['status']===0 && !empty ($schluessel)){
-            $frage = $frageInstnc->createFrage($frageText, $ID_Voting);
-            header('Location: voting.php?id=' .$ID_Voting);
-            echo "<div> Die Frage wurde eingereicht</div>";
+    if (!empty ($voting['schluessel'])){
+            $voting = $votingInstnc->update($votingId, $schluessel);
+            header('Location: voting.php?id=' .$votingId);
 
 
         }
+    else {
+        $voting = $votingInstnc->update($votingId, '');
+        header('Location: voting.php?id=' .$votingId);
+    }
     }
 
 //ZU TUN:::Status Abfragen --> wenn status=0 dann auf 1 updaten wenn er 1 ist dann auf 0 Updaten. Möglichkeit auf Counter Checke. Schlüssel löschen beim schließen.
@@ -55,7 +58,7 @@ Neues Voting starten
     </div>
 
 <?php //Buttonänderung
-if ($votingInstnc->getById($votingId)===0):
+if (empty ($voting['schluessel'])):
 ?>
 
     <div class="form-group">

@@ -292,16 +292,16 @@ class voting extends mother
     }
 
 
-    public function updateVoting($votingid, $status)
+    public function update($votingid, $schluessel)
     {
         try {
             $stmt = $this->pdo->prepare('
             UPDATE voting
-            SET status=:status
+            SET schluessel=:schluessel
             WHERE ID=:votingid;
             ');
             $stmt->bindParam(':votingid', $votingid);
-            $stmt->bindParam(':status', $status);
+            $stmt->bindParam(':schluessel', $schluessel);
             $stmt->execute();
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
