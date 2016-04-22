@@ -21,7 +21,6 @@ session_start();
 //GETs & POSTs
 $schluessel=$_POST['schluessel'];
 $schluesselsent=$_POST['schluesselsent'];
-echo $schluessel;
 
 //Instanzen
 $votingInstnc = new voting();
@@ -31,18 +30,13 @@ $frageInstnc = new frage();
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 
-print_r($voting);
-
 
 if (isset($schluesselsent)) {
-    echo $schluessel;
-    print_r($voting) ;
     if ($schluessel==$voting['schluessel']){
         $_SESSION['id']= uniqid();
-
         $_SESSION['votingid']= $voting['ID'];
+        echo $_SESSION['id'];
         foreach ($frage as $eintrag) {
-
 
     $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
     }
