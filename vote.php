@@ -78,7 +78,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
                 $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
                 $auswertungInstnc= new auswertung();
                 $auswertungupdate= $auswertungInstnc->updateAuswertung($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintrag["ID"]);
-                header ('location:vote.php');
+                //header ('location:vote.php');
             }
             else {
                 echo "<div> Fragenerstellung war nicht erfolgreich. Bitte versuchen sie es erneut.</div>";
