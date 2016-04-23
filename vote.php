@@ -43,10 +43,7 @@ echo "<br />=== Session === <br />";
 print_r( $_SESSION);
 
 //Fehler irgendwo hier!!! ID kommt nicht raus
-if (isset($fragerundeset)) {
-    $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
-    $auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
-}
+
 
 
 if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
@@ -55,6 +52,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     $antwort = $antwortInstnc->getByFragenId($fragerunde['ID_FRAGE']);
     $countFragen=$auswertungInstnc->countFragen(0,$_SESSION['votingid'],$_SESSION['id']);
     $countfinished=$auswertungInstnc->countFragen(1,$_SESSION['votingid'],$_SESSION['id']);
+
+    if (isset($fragerundeset)) {
+        $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
+        $auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
+    }
     ?>
 
     <body>
