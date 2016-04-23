@@ -50,7 +50,7 @@ print_r( $_SESSION);
 if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
     if ($_SESSION['rights']>0){
-        header("direction:index.php")
+        header("direction:index.php");
     }
 
     $fragerunde=$auswertungInstnc->frageRunde($_SESSION['votingid'], $_SESSION['id']);
