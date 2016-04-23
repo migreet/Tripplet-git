@@ -68,7 +68,7 @@ if (!empty ($voting)):
         echo "<div class='list-entry'>
               <div class='col-md-7'>";
         if (empty($eintrag['schluessel'])){
-            echo "<div style='color:green'><a href='voting.php?id=".$eintrag['ID']."'>";
+            echo "<a href='voting.php?id=".$eintrag['ID']."' style='color:green'>";
             echo $eintrag['bezeichnung'] . " ";
             echo $eintrag['datum'] . " ";
             echo "</a> ";?>
@@ -76,16 +76,14 @@ if (!empty ($voting)):
             <button type='button' class='btn btn-info'>edit</button>
             <!-- Votings löschen -->
             <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-danger">Löschen</a>
-            </div>
     <?php
         }
     else{
-        echo "<div style='color:red'><a href='voting.php?id=".$eintrag['ID']."'>";
+        echo "<a href='voting.php?id=".$eintrag['ID']."' style='color:red'>";
         echo $eintrag['bezeichnung'] . " ";
         echo $eintrag['datum'] . " ";
         echo "</a> ";?>
-        <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-success">Start</a>
-        </div>
+        <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-danger">Stop</a>
 
 <?php
     }
