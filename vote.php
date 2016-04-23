@@ -24,7 +24,7 @@ $schluesselsent=$_POST['schluesselsent'];
 $fragerundeset=$_POST["fragerunde"];
 
 //Instanzen
-$votingInstnc = new voting();
+
 $auswertungInstnc = new auswertung();
 $frageInstnc = new frage();
 $antwortInstnc = new antwort();
@@ -101,6 +101,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
     </body>
 <?php else:
     if (isset($schluesselsent)) {
+        $votingInstnc = new voting();
         $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist
         if ($schluessel==$voting['schluessel']){
             $_SESSION['id']= uniqid();
