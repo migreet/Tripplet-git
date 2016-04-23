@@ -46,7 +46,6 @@ print_r( $_SESSION);
 
 
 if ($_SESSION['rights']>0){
-    echo "test";
     header ('location: index.php');
 }
 
