@@ -21,6 +21,7 @@ session_start();
 //GETs & POSTs
 $schluessel=$_POST['schluessel'];
 $schluesselsent=$_POST['schluesselsent'];
+$fragerundeset=$_POST["fragerunde"];
 
 //Instanzen
 $votingInstnc = new voting();
@@ -32,7 +33,7 @@ $antwortInstnc = new antwort();
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
 //Fehler irgendwo hier!!! ID kommt nicht raus
-if (isset($_POST["fragerunde"])) {
+if (isset($fragerundeset)) {
     $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
     print_r ($fragerunde);
     echo $eintragID. "-" .$fragerunde['ID']. "-" .$_SESSION['id']. "-" .$eintragID;
