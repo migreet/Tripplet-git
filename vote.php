@@ -101,10 +101,10 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
 <?php else:
     if (isset($schluesselsent)) {
         if ($schluessel==$voting['schluessel']){
-            $_SESSION['id']= uniqid();
-            $_SESSION['votingid']= $voting['ID'];
             $votingInstnc = new voting();
             $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
+            $_SESSION['id']= uniqid();
+            $_SESSION['votingid']= $voting['ID'];
             foreach ($frage as $eintrag) {
                 $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
             }
