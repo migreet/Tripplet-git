@@ -33,12 +33,14 @@ $frage = $frageInstnc->getByVotingId($voting['ID']);
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
 //debug section
-echo"=== voting === <br />";
+echo"<br />=== voting === <br />";
 print_r($voting)."<br />";
-echo"=== frage === <br />";
+echo"<br />=== frage === <br />";
 print_r($frage) ."<br />";
-echo "=== fragerunde === <br />";
+echo "<br />=== fragerunde === <br />";
 print_r($fragerunde)."<br />";
+echo "<br />=== Session === <br />";
+print_r( $_SESSION);
 
 //Fehler irgendwo hier!!! ID kommt nicht raus
 if (isset($fragerundeset)) {
@@ -63,7 +65,6 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
         <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
             <?php
-            print_r( $_SESSION);
             foreach ($antwort as $eintrag) {
 
                 echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
@@ -104,8 +105,6 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
             $_SESSION['id']= uniqid();
             $_SESSION['votingid']= $voting['ID'];
             foreach ($frage as $eintrag) {
-                echo $eintrag['ID'];
-                echo $eintrag['ID'];
                 $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
             }
         }
