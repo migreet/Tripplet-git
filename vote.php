@@ -62,7 +62,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     <body>
     <
     <?php
-    if ($_SESSION['rights']>0)){
+    if ($_SESSION['rights']>0){
         require_once("include/navigation_login.php");
     }
     else{
