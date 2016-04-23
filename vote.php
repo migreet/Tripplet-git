@@ -32,13 +32,20 @@ $frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
+//debug section
+echo"=== voting === <br />";
+print_r($voting);
+echo"=== frage === <br />";
+print_r($frage);
+echo"=== fragerunde === <br />";
+print_r($fragerunde);
+
 //Fehler irgendwo hier!!! ID kommt nicht raus
 if (isset($fragerundeset)) {
     $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
     print_r ($fragerunde);
     echo $eintragID. "-" .$fragerunde['ID']. "-" .$_SESSION['id']. "-" .$eintragID;
     $auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
-    //header ('location:vote.php');
 }
 
 
@@ -104,7 +111,6 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
                 echo $eintrag['ID'];
                 $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
             }
-            //header ("location: vote.php");
         }
     }
     ?>
