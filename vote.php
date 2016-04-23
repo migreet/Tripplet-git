@@ -67,6 +67,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
             <?php
+            if (!empty($antwort)):
             foreach ($antwort as $eintrag) {
 
                 echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
@@ -76,9 +77,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             ?>
             <input type="submit"> <br />
         </form>
+        <?php endif; ?>
         <?php echo "Beantwortete Fragen " .$countfinished ['COUNT(*)']; ?> <br>
         <?php echo "Gesamtfragen " .$countFragen['COUNT(*)']; ?> <br>
-
         <?php
         $anzahlFragen=$countFragen['COUNT(*)'];
         $anzahlFragenready=$countfinished ['COUNT(*)'];
