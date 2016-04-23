@@ -104,44 +104,23 @@ if (isset($postVoting)) {
             $voting = $frageInstnc->getByVotingId($ID_Voting);
             if (!empty ($voting)):
             foreach ($voting as $eintrag) {
-                echo "
+            echo "
     <div class='list-entry'>
     <div class='col-md-7'>";
-                if (empty($eintrag['schluessel'])) {
-                echo "<div style='color:green'>" . $eintrag['text'];
-                echo $eintrag['datum'] . "</div>";
-                ?>
-                <button type='button' class='btn btn-info'>edit</button>
-                <!-- Fragenlöschen-->
-                <a href="do/voting_delete.php?id=<?php echo $eintrag['ID'] . '&' . 'idvoting=' . $ID_Voting; ?>"
-                   class="btn btn-danger">Löschen</a>
 
-                <!--Ausgabe der Antworten zu der passenden Frage -->
-                <?php
-                $antwort = $antwortInstnc->getByFragenId($eintrag['ID']);
-                foreach ($antwort as $eintragFrage) {
+            echo " " . $eintrag['text'] . " ";
+            echo " " . $eintrag['datum'] . " ";
+            ?>
+            <button type='button' class='btn btn-info'>edit</button>
+            <!-- Fragenlöschen-->
+            <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
 
-                    echo $eintragFrage['text'];
-                }
-                }
-            else{
+            <!--Ausgabe der Antworten zu der passenden Frage -->
+            <?php
+            $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
+            foreach ($antwort as $eintragFrage) {
 
-                echo "<div style='color:red'>" . $eintrag['text'];
-                echo  $eintrag['datum'] . "</div>";
-                ?>
-                <button type='button' class='btn btn-info'>edit</button>
-                <!-- Fragenlöschen-->
-                <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
-
-                <!--Ausgabe der Antworten zu der passenden Frage -->
-                <?php
-                $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
-                foreach ($antwort as $eintragFrage) {
-
-                    echo $eintragFrage['text'];
-                }
-
-
+            echo $eintragFrage['text'];
             }
             ?>
         </div>
