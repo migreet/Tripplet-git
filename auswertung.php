@@ -95,7 +95,7 @@ if (isset($postVoting)) {
     ?>
 
     <div class="container">
-        <h1> Voting <?php echo $voting['bezeichnung']; ?></h1>
+        <h1> Auswertung <?php echo $voting['bezeichnung']; ?></h1>
         <div class="col-md-8">
             <?php
 
