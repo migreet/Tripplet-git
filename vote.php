@@ -51,10 +51,10 @@ if (isset($fragerundeset)) {
 
 if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
-    $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
+    $fragerunde=$auswertungInstnc->frageRunde($_SESSION['votingid'], $_SESSION['id']);
     $antwort = $antwortInstnc->getByFragenId($fragerunde['ID_FRAGE']);
-    $countFragen=$auswertungInstnc->countFragen(0,$voting['ID'],$_SESSION['id']);
-    $countfinished=$auswertungInstnc->countFragen(1,$voting['ID'],$_SESSION['id']);
+    $countFragen=$auswertungInstnc->countFragen(0,$_SESSION['votingid'],$_SESSION['id']);
+    $countfinished=$auswertungInstnc->countFragen(1,$_SESSION['votingid'],$_SESSION['id']);
     ?>
 
     <body>
