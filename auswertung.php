@@ -100,7 +100,7 @@ if (isset($postVoting)) {
             <?php
 
             //Ausgeben der Fragen zur passenden Voting ID
-            echo "<p><strong>Fragen in diesem Voting</strong></p>";
+            echo "<p><strong>Auswertung XY</strong></p>";
             $voting = $frageInstnc->getByVotingId($ID_Voting);
             if (!empty ($voting)):
             foreach ($voting as $eintrag) {
@@ -111,9 +111,6 @@ if (isset($postVoting)) {
             echo " " . $eintrag['text'] . " ";
             echo " " . $eintrag['datum'] . " ";
             ?>
-            <button type='button' class='btn btn-info'>edit</button>
-            <!-- Fragenlöschen-->
-            <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
 
             <!--Ausgabe der Antworten zu der passenden Frage -->
             <?php
@@ -132,11 +129,6 @@ if (isset($postVoting)) {
     endif;
     ?>
 
-    </div>
-    <div class="col-md-4">
-        <?php require_once('include/aside_voting.php');
-
-        ?>
     </div>
     </div>
     </body>
