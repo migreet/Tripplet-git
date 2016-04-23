@@ -117,6 +117,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     if (isset($schluesselsent)) {
         if ($schluessel==$voting['schluessel']){
             $_SESSION['id']= uniqid();
+            $_SESSION['rights']= 0;
             $_SESSION['votingid']= $voting['ID'];
             foreach ($frage as $eintrag) {
                 $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
