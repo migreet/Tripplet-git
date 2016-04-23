@@ -49,7 +49,7 @@ if (isset($fragerundeset)) {
 }
 
 
-if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
+if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
     $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
     $antwort = $antwortInstnc->getByFragenId($fragerunde['ID_FRAGE']);
