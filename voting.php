@@ -108,7 +108,6 @@ if (isset($postVoting)) {
     <div class='list-entry'>
     <div class='col-md-7'>";
                 if (empty($eintrag['schluessel'])) {
-                }
                 echo "<div style='color:green'>" . $eintrag['text'];
                 echo $eintrag['datum'] . "</div>";
                 ?>
