@@ -62,6 +62,7 @@ if (isset($_POST["sentlogin"])) {
             if($mail==$dozent['mail'] && $passwort==$dozent['passwort']){
             $_SESSION ['login'] = 1;
             $_SESSION ['mail'] = $mail;
+            $_SESSION ['rights']=$dozent['ID_RECHTE'];
             $_SESSION ['id'] = $dozent['ID'];
             header('location:index.php');
         }
