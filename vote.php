@@ -28,7 +28,6 @@ $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
 $frageInstnc = new frage();
 $antwortInstnc = new antwort();
-$voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
@@ -102,6 +101,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
 <?php else:
     if (isset($schluesselsent)) {
         if ($schluessel==$voting['schluessel']){
+            $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist
             $_SESSION['id']= uniqid();
             $_SESSION['votingid']= $voting['ID'];
             foreach ($frage as $eintrag) {
