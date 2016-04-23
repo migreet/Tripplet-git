@@ -44,8 +44,8 @@ print_r( $_SESSION);
 
 //Fehler irgendwo hier!!! ID kommt nicht raus
 if (isset($fragerundeset)) {
-    $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
-    $auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
+    //$eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
+    //$auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
 }
 
 
