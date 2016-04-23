@@ -34,11 +34,11 @@ $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
 //debug section
 echo"=== voting === <br />";
-print_r($voting);
+print_r($voting)."<br />";
 echo"=== frage === <br />";
-print_r($frage);
-echo"=== fragerunde === <br />";
-print_r($fragerunde);
+print_r($frage) ."<br />";
+echo "=== fragerunde === <br />";
+print_r($fragerunde)."<br />";
 
 //Fehler irgendwo hier!!! ID kommt nicht raus
 if (isset($fragerundeset)) {
