@@ -47,7 +47,7 @@ print_r( $_SESSION);
 
 if ($_SESSION['rights']>0){
     echo "test";
-    header('direction:index.php');
+    header ('location: index.php');
 }
 
 if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
