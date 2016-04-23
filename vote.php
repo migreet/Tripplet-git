@@ -45,14 +45,11 @@ print_r( $_SESSION);
 //Fehler irgendwo hier!!! ID kommt nicht raus
 
 
+if ($_SESSION['rights']>0){
+    header('direction:index.php');
+}
 
-
-if (isset($_SESSION['id'])):
-
-    if ($_SESSION['rights']>0){
-        header('direction:index.php');
-    }
-    if (isset($_SESSION['votingid'])):
+if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
     $fragerunde=$auswertungInstnc->frageRunde($_SESSION['votingid'], $_SESSION['id']);
     $antwort = $antwortInstnc->getByFragenId($fragerunde['ID_FRAGE']);
@@ -83,9 +80,7 @@ if (isset($_SESSION['id'])):
             ?>
             <input type="submit"> <br />
         </form>
-        <?php
-            endif;
-        else: ?>
+        <?php else: ?>
         Du hast alle Fragen beantwortet! :) <br>
         <?php endif; ?>
         <?php echo "Beantwortete Fragen " .$countfinished ['COUNT(*)']; ?> <br>
