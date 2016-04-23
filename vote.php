@@ -78,7 +78,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <input type="submit"> <br />
         </form>
         <?php else: ?>
-        Du hast alle Fragen beantwortet! :)
+        Du hast alle Fragen beantwortet! :) <br>
         <?php endif; ?>
         <?php echo "Beantwortete Fragen " .$countfinished ['COUNT(*)']; ?> <br>
         <?php echo "Gesamtfragen " .$countFragen['COUNT(*)']; ?> <br>
