@@ -26,10 +26,10 @@ $fragerundeset=$_POST["fragerunde"];
 //Instanzen
 $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
-$voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
 $frageInstnc = new frage();
-$frage = $frageInstnc->getByVotingId($voting['ID']);
 $antwortInstnc = new antwort();
+$voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
+$frage = $frageInstnc->getByVotingId($voting['ID']);
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
 //debug section
@@ -43,8 +43,6 @@ print_r($fragerunde)."<br />";
 //Fehler irgendwo hier!!! ID kommt nicht raus
 if (isset($fragerundeset)) {
     $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
-    print_r ($fragerunde);
-    echo $eintragID. "-" .$fragerunde['ID']. "-" .$_SESSION['id']. "-" .$eintragID;
     $auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
 }
 
@@ -62,8 +60,7 @@ if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
     <div class="container">
 
         <h1>Fragerunde</h1>
-        <?php echo $fragerunde['text']."<br>";
-        echo $fragerunde['ID'];?>
+        <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
             <?php
             print_r( $_SESSION);
