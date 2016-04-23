@@ -44,12 +44,12 @@ print_r( $_SESSION);
 
 //Fehler irgendwo hier!!! ID kommt nicht raus
 if (isset($fragerundeset)) {
-    $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
-    $auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
+    //$eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
+    //$auswertungInstnc->update($fragerunde['ID'], $_SESSION['id'], $eintragID);
 }
 
 
-if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
+if (isset($_SESSION['id']) && $_SESSION['votingid']==$voting['ID']):
 
     $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
     $antwort = $antwortInstnc->getByFragenId($fragerunde['ID_FRAGE']);
