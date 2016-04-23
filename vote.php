@@ -60,6 +60,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     ?>
 
     <body>
+    <
+    <?php
+    if ($_SESSION['rights']>0)){
+        require_once("include/navigation_login.php");
+    }
+    else{
+        echo "<a href='vote.php' class='btn btn-danger'>Ausloggen</a>";
+    }
+    ?>
 
     <div class="container">
 
