@@ -7,7 +7,6 @@ require_once("include/header.php");
 require_once("php/classes.php");
 
 session_start();
-print_r($_SESSION);
 ?>
 
 
@@ -31,6 +30,8 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
         <h2> Mein Account</h2>
         <?php
         echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE'];
+        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 class='btn btn-success'>Daten ändern</a>";
+        echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-success'> Account Löschen</a>";
         ?>
 
         <h2>Admin Area</h2>
