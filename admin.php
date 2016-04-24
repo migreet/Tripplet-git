@@ -27,12 +27,13 @@
             <h1> Accountverwaltung</h1>
             <?php foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
-                if ($_SESSION['rights']>=2){
-                echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Freischalten</a>";
-                echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Löschen</a>";
-                }
-                elseif ($_SESSION['rights']==3) {
+                if ($_SESSION['rights']>=2) {
                     echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Grant Admin</a>";
+                    if ($_SESSION['rights']==3){
+                        echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Freischalten</a>";
+                        echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Löschen</a>";
+                    }
+
                 }
                 echo "<br>---<br>";
             }
