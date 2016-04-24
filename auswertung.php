@@ -120,7 +120,7 @@ if (isset($postVoting)) {
 
                 echo $eintragFrage['text'];
                 $anzahlAntworten=$auswertungInstnc->countAntworten($eintragFrage['ID']);
-                echo $anzahlAntworten;
+                print_r( $anzahlAntworten);
             }
             ?>
         </div>
