@@ -633,6 +633,24 @@ class auswertung extends mother
 
     }
 
+    public function countAntworten($antwortid)
+    {
+        try {
+            $stmt = $this->pdo->prepare('
+              SELECT COUNT(:antwortid) FROM auswertung;
+            ');
+            $stmt->bindParam(':antwortid', $antwortid);
+            $stmt->execute();
+            $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+
+    }
+
     public function createAuswertung($fragenid, $sessionid)
     {
         try {
