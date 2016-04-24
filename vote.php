@@ -116,7 +116,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             foreach ($frage as $eintrag) {
                 $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
             }
+        header('location:vote.php');
         }
+
     }
     ?>
 
