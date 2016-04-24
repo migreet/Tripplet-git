@@ -18,16 +18,16 @@
         header ('location: index.php');
     ?>
 
-    <?php else:
-        print_r($_SESSION);
-        ?>
+    <?php else:?>
         <body>
         <?php require_once("include/navigation.php");
         ?>
 
         <div class="container">
             <h1> Accountverwaltung</h1>
-            <?php foreach ($userlist as $user){
+            <?php
+            print_r($_SESSION);
+            foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 if ($_SESSION['rights']>=2) {
                     if (empty($user['ID_RECHTE'])) {
