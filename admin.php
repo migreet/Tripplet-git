@@ -33,7 +33,7 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 if ($_SESSION['rights']>=2) {
                     if (empty($user['ID_RECHTE'])) {
-                        echo "<a href='admin.php?id=" . $user['ID'] . "'class='btn btn-success'>Freischalten</a>";
+                        echo "<a href='admin_update.php?id=" . $user['ID'] . "&rights=1 class='btn btn-success'>Freischalten</a>";
                     }
                         echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-success'>Löschen</a>";
 
