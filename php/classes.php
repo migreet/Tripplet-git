@@ -48,12 +48,14 @@ class dozent extends mother
         return $n;
     }
 
-    public function getAll()
+    public function getAll($dozentenid)
     {
         try {
             $stmt = $this->pdo->prepare('
               SELECT * FROM dozent
+              WHERE ID != :dozentenid
             ');
+            $stmt->bindParam(':dozentenid', $dozentenid);
             $stmt->execute();
 			$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
 			return $result;
