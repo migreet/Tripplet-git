@@ -53,7 +53,7 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
     </body>
 
 <?php endif; ?>
-
+.
 </html>
 
 
