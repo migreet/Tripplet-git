@@ -28,7 +28,7 @@
 
         <div class="container">
             <h1> Accountverwaltung</h1>
-            <?php
+            <?php /*
             foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 if ($_SESSION['rights']>=2) {
@@ -45,6 +45,7 @@
                 }
                 echo "<br>---<br>";
             }
+ */
             ?>
 
         </div>
