@@ -28,6 +28,11 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
 
     <div class="container">
         <h1> Accountverwaltung</h1>
+
+        <h2> Mein Account</h2>
+
+        <h2>Admin Area</h2>
+
         <?php
             foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
