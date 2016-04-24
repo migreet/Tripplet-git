@@ -15,7 +15,7 @@ print_r($_SESSION);
 <?php
 $admin=new dozent();
 $adminInstnc=$admin->getById($_SESSION['id']);
-$userlist=$admin->getAll();
+$userlist=$admin->getAll($_SESSION['id']);
 
 if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
     header ('location: index.php');
