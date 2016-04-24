@@ -28,7 +28,9 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
 
     <div class="container">
         <h1> Accountverwaltung</h1>
-
+        <?php
+        echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE'];
+        ?>
         <h2> Mein Account</h2>
 
         <h2>Admin Area</h2>
