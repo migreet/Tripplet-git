@@ -17,9 +17,10 @@ $dozentInstnc = new dozent();
 
 //GETs
 $dozentenId=$_GET['id'];
+$rights=$_GET['rights'];
 
 
-$vorlesung = $dozentInstnc->delete($dozentenId);
+$dozent = $dozentInstnc->updateRights($dozentenId, $rights);
 header ('location: ../admin.php');
 
 ?>
