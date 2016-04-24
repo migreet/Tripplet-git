@@ -3,8 +3,8 @@
 
 
     <?php
-    require_once("php/classes.php");
     require_once("include/header.php");
+    require_once("php/classes.php");
 
     session_start();
     print_r($_SESSION);
