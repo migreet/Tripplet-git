@@ -40,19 +40,17 @@ if(!isset($_SESSION['login'])):
         <?php
             foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
-                if ($_SESSION['rights']>=2) {
+                if ($_SESSION['rights']>$user['ID_RECHTE']) {
                     if (empty($user['ID_RECHTE'])) {
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 class='btn btn-success'>Freischalten</a>";
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-success'>Freischalten</a>";
                     }
-                        echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-success'>Löschen</a>";
+                    echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-success'>Löschen</a>";
 
-                    if ($_SESSION['rights']==3 && $user['ID_RECHTE']!=NULL){
-                        if ($user['ID_RECHTE']==2){
-                            echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 class='btn btn-success'>Take Admin</a>";
-                        } else{
-
+                    if ($user['ID_RECHTE']==2){
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 class='btn btn-success'>Take Admin</a>";
+                    } else{
                         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 class='btn btn-success'>Grant Admin</a>";
-                        }
+
                     }
 
                 }
