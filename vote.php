@@ -49,7 +49,7 @@ if ($_SESSION['rights']>0){
     header ('location: index.php');
 }
 
-if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
+if (isset($_SESSION['id']) && isset($_SESSION['votingid']) && !empty($_SESSION['votingid'])):
 
     $fragerunde=$auswertungInstnc->frageRunde($_SESSION['votingid'], $_SESSION['id']);
     $antwort = $antwortInstnc->getByFragenId($fragerunde['ID_FRAGE']);
