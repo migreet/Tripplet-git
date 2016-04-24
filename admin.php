@@ -16,7 +16,7 @@ $admin=new dozent();
 $adminInstnc=$admin->getById($_SESSION['id']);
 $userlist=$admin->getAll($_SESSION['id']);
 
-if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
+if(!isset($_SESSION['login'])):
     header ('location: index.php');
     ?>
 
@@ -32,7 +32,6 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
         echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-success'>Daten ändern</a>";
         echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-success'> Account Löschen</a>";
-        print_r($_SESSION);
         if ($_SESSION['rights']>1){
         ?>
 
