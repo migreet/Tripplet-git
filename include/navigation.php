@@ -20,9 +20,8 @@
         </li>
         <li>
             <?php
-            $admin=new dozent();
-            $adminInstnc=$admin->getById($_SESSION['id']);
-            if ($adminInstnc['ID_RECHTE'] == 2):
+
+            if ($_SESSION['rights'] > 1 ):
             ?>
                 <a href="admin.php" >Accountverwaltung</a>
             <?php endif; ?>
