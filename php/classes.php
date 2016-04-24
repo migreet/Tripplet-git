@@ -641,7 +641,7 @@ class auswertung extends mother
             ');
             $stmt->bindParam(':antwortid', $antwortid);
             $stmt->execute();
-            $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+            $result=$stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
 
         } catch (PDOException $e) {
