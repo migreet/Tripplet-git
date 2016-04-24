@@ -637,7 +637,7 @@ class auswertung extends mother
     {
         try {
             $stmt = $this->pdo->prepare('
-              SELECT COUNT(:antwortid) FROM auswertung;
+              SELECT COUNT(*) FROM auswertung WHERE ID_ANTWORT=:antwortid;
             ');
             $stmt->bindParam(':antwortid', $antwortid);
             $stmt->execute();
