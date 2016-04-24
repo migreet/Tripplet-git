@@ -26,7 +26,10 @@
         <div class="container">
             <h1> Accountverwaltung</h1>
             <?php foreach ($userlist as $user){
-                echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE']."<br>---<br>";
+                echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
+                echo "<a href='admin.php?id=" . $eintrag['ID'] . "class='btn btn-success'>Freischalten</a><br>---<br>";
+                echo "<a href='admin.php?id=" . $eintrag['ID'] . "class='btn btn-success'>Löschen</a><br>---<br>";
+                echo "<a href='admin.php?id=" . $eintrag['ID'] . "class='btn btn-success'>Grant Admin</a><br>---<br>";
             }
             ?>
 
