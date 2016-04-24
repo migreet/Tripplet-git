@@ -33,9 +33,9 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 if ($_SESSION['rights']>=2) {
                     if (empty($user['ID_RECHTE'])) {
-                        echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Freischalten</a>";
+                        echo "<a href='admin.php?id=" . $user['ID'] . "'class='btn btn-success'>Freischalten</a>";
                     }
-                        echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Löschen</a>";
+                        echo "<a href='admin_delete.php?id=" . $user['ID'] . "'class='btn btn-success'>Löschen</a>";
 
                     if ($_SESSION['rights']==3 && $user['ID_RECHTE']!=NULL){
 
