@@ -12,4 +12,6 @@ require_once("php/classes.php");
 session_start();
 
 $_SESSION['voting']="";
+
+header('location: vote.php');
 ?>
