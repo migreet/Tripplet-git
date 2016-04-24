@@ -40,7 +40,7 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
                     if ($_SESSION['rights']==3 && $user['ID_RECHTE']!=NULL){
 
                         echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Grant Admin</a>";
-                    }.
+                    }
 
                 }
                 echo "<br>---<br>";
