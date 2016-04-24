@@ -5,3 +5,11 @@
  * Date: 24.04.2016
  * Time: 15:10
  */
+
+require_once("include/header.php");
+require_once("php/classes.php");
+
+session_start();
+
+$_SESSION['voting']="";
+?>
