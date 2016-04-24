@@ -47,10 +47,10 @@ if(!isset($_SESSION['login'])):
                     echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-success'>Löschen</a>";
 
                     if ($user['ID_RECHTE']==1){
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-success'>Take Admin</a>";
-                    } else{
                         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 'class='btn btn-success'>Grant Admin</a>";
 
+                    } else{
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-success'>Take Admin</a>";
                     }
 
                 }
