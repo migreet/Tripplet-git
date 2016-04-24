@@ -106,7 +106,7 @@ public function signup($name, $vorname, $passwort, $mail)
         try {
             $stmt = $this->pdo->prepare('
             UPDATE dozent
-            SET RECHTE_ID=:rights
+            SET ID_RECHTE=:rights
             WHERE ID=:userid;
             ');
             $stmt->bindParam(':userid', $userid);
