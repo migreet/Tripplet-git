@@ -33,7 +33,7 @@
                     }
                         echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Löschen</a>";
 
-                    if ($_SESSION['rights']==3 && !empty($eintrag['ID_RECHTE'])){
+                    if ($_SESSION['rights']==3 && $eintrag['ID_RECHTE']!=NULL){
 
                         echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Grant Admin</a>";
                     }
