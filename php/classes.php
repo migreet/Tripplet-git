@@ -100,6 +100,27 @@ public function signup($name, $vorname, $passwort, $mail)
         if (!$n) $n = null;
         return $n;
     }
+
+    public function updateRights($userid, $rights)
+    {
+        try {
+            $stmt = $this->pdo->prepare('
+            UPDATE dozent
+            SET RECHTE_ID=:rights
+            WHERE ID=:userid;
+            ');
+            $stmt->bindParam(':userid', $userid);
+            $stmt->bindParam(':rights', $rights);
+            $stmt->execute();
+            $result=$stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+
+    }
 }
 
 
