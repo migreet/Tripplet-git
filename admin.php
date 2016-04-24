@@ -2,8 +2,9 @@
     <html lang="de">
 
 
-    <?php require_once("include/header.php");
+    <?php
     require_once("php/classes.php");
+    require_once("include/header.php");
 
     session_start();
     ?>
@@ -26,7 +27,6 @@
         <div class="container">
             <h1> Accountverwaltung</h1>
             <?php
-            print_r($_SESSION);
             foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 if ($_SESSION['rights']>=2) {
