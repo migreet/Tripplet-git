@@ -20,6 +20,7 @@ session_start();
 $antwortInstnc = new antwort();
 $votingInstnc = new voting();
 $frageInstnc = new frage();
+$auswertungInstnc = new auswertung();
 
 //GETs
 $ID_Voting=$_GET['id'];
@@ -118,6 +119,8 @@ if (isset($postVoting)) {
             foreach ($antwort as $eintragFrage) {
 
                 echo $eintragFrage['text'];
+                $anzahlAntworten=$auswertungInstnc->countAntworten($eintragFrage['ID']);
+                echo $anzahlAntworten;
             }
             ?>
         </div>
