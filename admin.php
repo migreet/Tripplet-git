@@ -19,7 +19,7 @@
     ?>
 
     <?php else:
-        echo $_SESSION['rights'];
+        print_r($_SESSION);
         ?>
         <body>
         <?php require_once("include/navigation.php");
