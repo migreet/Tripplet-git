@@ -14,7 +14,7 @@
     $admin=new dozent();
     $adminInstnc=$admin->getById($_SESSION['id']);
     $userlist=$admin->getAll();
-    if(!isset($_SESSION['login']) or $adminInstnc['ID_RECHTE'] != 2):
+    if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
         header ('location: index.php');
     ?>
 
@@ -27,8 +27,11 @@
             <h1> Accountverwaltung</h1>
             <?php foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
+                if ($_SESSION['rights']>=2){
                 echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Freischalten</a>";
                 echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Löschen</a>";
+                }
+                elseif ($_SESSION['rights']==3)
                 echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Grant Admin</a><br>---<br>";
             }
             ?>
