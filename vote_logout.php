@@ -11,7 +11,7 @@ require_once("php/classes.php");
 
 session_start();
 
-unset($_SESSION['votingid']);
+$_SESSION['votingid']="";
 
 header('location: vote.php');
 ?>
