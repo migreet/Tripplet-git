@@ -7,6 +7,7 @@
     require_once("include/header.php");
 
     session_start();
+    print_r($_SESSION);
     ?>
 
 
@@ -15,7 +16,7 @@
     $admin=new dozent();
     $adminInstnc=$admin->getById($_SESSION['id']);
     $userlist=$admin->getAll();
-    print_r($_SESSION);
+
     if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
         header ('location: index.php');
     ?>
