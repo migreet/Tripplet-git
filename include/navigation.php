@@ -19,12 +19,7 @@
 
         </li>
         <li>
-            <?php
-
-            if ($_SESSION['rights'] > 1 ):
-            ?>
-                <a href="admin.php" >Accountverwaltung</a>
-            <?php endif; ?>
+            <a href="admin.php" >Accountverwaltung</a>
         </li>
         <li>
             <a href="index.php" >test3</a>
