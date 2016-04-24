@@ -111,7 +111,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid']) && !empty($_SESSION['
 <?php else:
     if (isset($schluesselsent)) {
         if ($schluessel==$voting['schluessel']){
-            if !isset($_SESSION['id']){
+            if (!isset($_SESSION['id'])){
             $_SESSION['id']= uniqid();
             }
             $_SESSION['rights']= 0;
