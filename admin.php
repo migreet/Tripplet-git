@@ -18,7 +18,9 @@
         header ('location: index.php');
     ?>
 
-    <?php else: ?>
+    <?php else:
+        echo $_SESSION['rights'];
+        ?>
         <body>
         <?php require_once("include/navigation.php");
         ?>
