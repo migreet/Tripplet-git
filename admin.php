@@ -28,12 +28,12 @@
             <?php foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 if ($_SESSION['rights']>=2) {
-                    if (empty($eintrag['ID_RECHTE'])) {
+                    if (empty($user['ID_RECHTE'])) {
                         echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Freischalten</a>";
                     }
                         echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Löschen</a>";
 
-                    if ($_SESSION['rights']==3 && !empty($eintrag['ID_RECHTE'])){
+                    if ($_SESSION['rights']==3 && !empty($user['ID_RECHTE'])){
 
                         echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Grant Admin</a>";
                     }
