@@ -26,7 +26,7 @@
         <div class="container">
             <h1> Accountverwaltung</h1>
             <?php foreach ($userlist as $user){
-                echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE']."<br>";
+                echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE']."---<br>";
             }
             ?>
 
