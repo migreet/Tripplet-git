@@ -15,6 +15,7 @@
     $admin=new dozent();
     $adminInstnc=$admin->getById($_SESSION['id']);
     $userlist=$admin->getAll();
+    print_r($_SESSION);
     if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
         header ('location: index.php');
     ?>
@@ -27,7 +28,6 @@
         <div class="container">
             <h1> Accountverwaltung</h1>
             <?php
-            print_r($_SESSION);
             foreach ($userlist as $user){
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 if ($_SESSION['rights']>=2) {
