@@ -113,12 +113,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         if ($schluessel==$voting['schluessel']){
             if (!isset($_SESSION['id'])){
             $_SESSION['id']= uniqid();
+                foreach ($frage as $eintrag) {
+                    $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
+                }
             }
             $_SESSION['rights']= 0;
             $_SESSION['votingid']= $voting['ID'];
-            foreach ($frage as $eintrag) {
-                $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
-            }
         header('location:vote.php');
         }
 
