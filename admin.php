@@ -31,8 +31,10 @@
                 echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Freischalten</a>";
                 echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Löschen</a>";
                 }
-                elseif ($_SESSION['rights']==3)
-                echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Grant Admin</a><br>---<br>";
+                elseif ($_SESSION['rights']==3) {
+                    echo "<a href='admin.php?id=" . $eintrag['ID'] . "'class='btn btn-success'>Grant Admin</a>";
+                }
+                echo "<br>---<br>";
             }
             ?>
 
