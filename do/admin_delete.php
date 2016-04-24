@@ -19,7 +19,7 @@ $dozentInstnc = new dozent();
 $dozentenId=$_GET['id'];
 
 
-$vorlesung = $vorlesungInstnc->delete($dozentenId);
+$vorlesung = $dozentInstnc->delete($dozentenId);
 header ('location: ../admin.php');
 
 ?>
