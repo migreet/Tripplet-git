@@ -44,7 +44,7 @@ if(!isset($_SESSION['login']) or $_SESSION['rights'] <2):
 
                 }
                 echo "<br>---<br>";
-            }.
+            }
  */
         ?>
 
