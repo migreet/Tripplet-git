@@ -64,7 +64,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     ?>
 
     <body>
-    <a href='vote.php' class='btn btn-danger'>Ausloggen</a>
+    <a href='vote_logout.php' class='btn btn-danger'>Ausloggen</a>
     <div class="container">
 
         <h1>Fragerunde</h1>
