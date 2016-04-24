@@ -59,6 +59,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     if (isset($fragerundeset)) {
         $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
         $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
+        header('location:vote.php');
     }
     ?>
 
