@@ -121,7 +121,9 @@ if (isset($postVoting)) {
 
                 echo $eintragFrage['text'];
                 $anzahlAntworten=$auswertungInstnc->countAntworten($eintragFrage['ID']);
-                echo $anzahlAntworten['COUNT(*)'];
+                $percent=100/$eintrag*$anzahlAntworten['COUNT(*)'];
+                echo $percent;
+
             }
             ?>
         </div>
