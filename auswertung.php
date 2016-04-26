@@ -124,7 +124,7 @@ if (isset($postVoting)) {
                 $percent=100/intval($eintrag)*intval($anzahlAntworten['COUNT(*)']);
                 echo "
                 <div class='progress'>
-                    <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='width: 20%'>
+                    <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='width: $percent%'>
                 <span class='sr-only'>20% Complete</span>
                 </div>
                 </div>";
