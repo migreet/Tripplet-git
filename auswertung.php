@@ -114,7 +114,7 @@ if (isset($postVoting)) {
             echo " " . $anzahlTeilnehmer['COUNT(*)'] . " ";
             ?>
 
-            <!--Ausgabe der Antworten zu der passenden Frage -->
+            <!--Ausgabe der Antworten zu der passenden Frage-->
             <?php
             $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
             foreach ($antwort as $eintragFrage) {
