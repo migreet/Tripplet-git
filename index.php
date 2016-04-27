@@ -109,16 +109,19 @@ $eintragManager = new vorlesung();
     if (!empty ($liste)) {
     echo "<div class='list-group'>";
     foreach ($liste as $eintrag) {
-    echo "<div class='list-group-item'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
-        echo "<div class='col-md-8'>";
-    echo $eintrag['bezeichnung'] . " ";
-        echo "</div>";
-        echo " <div class='col-md-4'>
-<a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-default'>Löschen</a>
-</div> </div>";
+
+        echo "<div class='list-group-item'>";
+            echo "<a href='vorlesung.php?id=" . $eintrag['ID'] . "'>";
+            echo "<div class='col-md-8'>";
+                echo $eintrag['bezeichnung'] . " ";
+            echo "</div>";
+            echo " <div class='col-md-4'>";
+                echo "<a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-default'>Löschen</a>";
+            echo"</div>";
+        echo"</div>";
 
     }
-        echo "</div>";
+    echo "</div>";
     }
     else {
         echo "Es sind keine Vorlesungen Vorhanden";
