@@ -112,7 +112,7 @@ $eintragManager = new vorlesung();
     echo "<div class='list-group-item'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
     echo $eintrag['bezeichnung'] . " ";
     echo "
-<a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-danger'>Löschen</a>
+<a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-default'>Löschen</a>
 </div>";
     }
         echo "</div>";
