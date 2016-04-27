@@ -115,7 +115,7 @@ $eintragManager = new vorlesung();
                 echo $eintrag['bezeichnung'] . " ";
             echo "</div>";
             echo " <div class='col-md-4'>";
-                echo "<a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-default'>Löschen</a>";
+                //echo "<a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-default'>Löschen</a>";
             echo"</div>";
         echo"</a>";
 
