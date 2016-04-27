@@ -112,10 +112,11 @@ $eintragManager = new vorlesung();
     echo "<div class='col-md-8'>";
         echo "<div class='list-group-item'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
     echo $eintrag['bezeichnung'] . " ";
-    echo "</div>";
+
         echo " <div class='col-md-4'>
 <a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-default'>Löschen</a>
 </div> </div>";
+        echo "</div>";
     }
         echo "</div>";
     }
