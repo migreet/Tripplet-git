@@ -109,11 +109,13 @@ $eintragManager = new vorlesung();
     if (!empty ($liste)) {
     echo "<div class='list-group'>";
     foreach ($liste as $eintrag) {
-    echo "<div class='list-group-item'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
+    echo "<div class="col-md-8">";
+        echo "<div class='list-group-item'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
     echo $eintrag['bezeichnung'] . " ";
-    echo "
+    echo "</div>";
+        echo " <div class="col-md-4">
 <a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-default'>Löschen</a>
-</div>";
+</div> </div>";
     }
         echo "</div>";
     }
