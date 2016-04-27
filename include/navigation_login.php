@@ -39,7 +39,7 @@
                 <input type="password" class="form-control" name="passwort" id="passwort" placeholder="Passwort" required>
                 <input type="hidden" value="1" name="sentlogin">
             </div>
-            <button type="submit" name="login" class="btn btn-default">Anmelden</button>
+            <button type="submit" name="login" class="btn btn-default btn-login">Anmelden</button>
         </form>
 
 
