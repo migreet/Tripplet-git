@@ -103,23 +103,25 @@ $eintragManager = new vorlesung();
 
 
 
-    echo "<p><strong>Ihre Vorlesungen im Überblick</strong></p>";
+    echo "<p><strong>Ihre Vorlesungen im Überblick</strong></p> ";
 
     $liste = $eintragManager->getByDozentenId($_SESSION ['id']);
     if (!empty ($liste)) {
+    echo "<div class='list-group'>";
     foreach ($liste as $eintrag) {
-    echo "<div class='list-entry'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
+    echo "<div class='list-group-item'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
     echo $eintrag['bezeichnung'] . " ";
     echo "
 <a href='do/index_delete.php?id= ".$eintrag['ID']. "'class='btn btn-danger'>Löschen</a>
 </div>";
     }
+        echo "</div>";
     }
     else {
         echo "Es sind keine Vorlesungen Vorhanden";
     }
     ?>
-</div>
+    </div>
     <div class="col-md-4">
         <?php require_once('include/aside_index.php'); ?>
     </div>
