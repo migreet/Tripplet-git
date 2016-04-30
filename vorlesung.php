@@ -82,9 +82,10 @@ if (!empty ($voting)):
     <?php echo"</div>";
     echo"</div>";
 
-echo "
-        </div>";
+
 }
+    echo "
+        </div>";
 else:
     echo "Es sind keine Votings Vorhanden";
 endif;
