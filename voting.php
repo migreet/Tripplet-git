@@ -118,10 +118,12 @@ if (isset($postVoting)) {
             <!--Ausgabe der Antworten zu der passenden Frage -->
             <?php
             $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
+            echo "<ul>";
             foreach ($antwort as $eintragFrage) {
 
-            echo $eintragFrage['text'];
+            echo "<li>" . $eintragFrage['text'] . "</li>";
             }
+            echo "</ul>"
             ?>
         </div>
 
