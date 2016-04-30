@@ -68,7 +68,7 @@ if (!empty ($voting)):
     foreach ($voting as $eintrag) {
         echo "<div class='list-group-item'>
               <div class='col-md-8'>";
-        if (empty($eintrag['schluessel'])){
+        //if (empty($eintrag['schluessel'])){
             echo "<a href='voting.php?id=".$eintrag['ID']."' style='color:green'>";
             echo $eintrag['bezeichnung'] . " ";
             echo $eintrag['datum'] . " ";
@@ -81,16 +81,7 @@ if (!empty ($voting)):
             <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-default">Löschen</a>
     <?php echo"</div>";
     echo"</div>";
-        }
-    else{
-        echo "<a href='voting.php?id=".$eintrag['ID']."' style='color:red'>";
-        echo $eintrag['bezeichnung'] . " ";
-        echo $eintrag['datum'] . " ";
-        echo "</a> ";?>
-        <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Stop</a>
 
-<?php
-    }
 echo "</div>
         </div>";
 }
