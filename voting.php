@@ -105,8 +105,7 @@ if (isset($postVoting)) {
             if (!empty ($voting)):
             foreach ($voting as $eintrag) {
             echo "
-    <div class='list-group'>
-    <div class='list-group-item'>
+    <div class='list-entry'>
     <div class='col-md-7'>";
 
             echo " " . $eintrag['text'] . " ";
@@ -129,8 +128,6 @@ if (isset($postVoting)) {
         <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
         </div>
     </div>
-    </div>
-
     <?php }
     else:
         echo "Es sind keine Fragen vorhanden";
