@@ -111,7 +111,6 @@ if (isset($postVoting)) {
             echo " " . $eintrag['text'] . " ";
             echo " " . $eintrag['datum'] . " ";
             ?>
-            <button type='button' class='btn btn-info'>edit</button>
             <!-- Fragenlöschen-->
             <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
 
