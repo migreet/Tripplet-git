@@ -96,11 +96,14 @@ endif;
     </div>
 
     <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-        < class="form-group">
+        <div class="form-group">
             <div class="col-sm-12">
                 <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnnung" id="bezeichnung" required>
             </div>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" name="schluessel" placeholder="Schluessel" id="schluessel" required>
                 <input type="hidden" value="1" name="votingcreate">
+            </div>
 
         </div>
 
