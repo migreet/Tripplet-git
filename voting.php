@@ -110,12 +110,14 @@ if (isset($postVoting)) {
 
             echo " " . $eintrag['text'] . " ";
             echo " " . $eintrag['datum'] . " ";
+            echo "</div> <div class='col-md-5'>";
             ?>
             <!-- Fragenlöschen-->
             <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
 
             <!--Ausgabe der Antworten zu der passenden Frage -->
             <?php
+            echo "</div>";
             $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
             echo "<ul>";
             foreach ($antwort as $eintragFrage) {
