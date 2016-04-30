@@ -121,7 +121,7 @@ if (isset($postVoting)) {
 
                 echo $eintragFrage['text'];
                 $anzahlAntworten=$auswertungInstnc->countAntworten($eintragFrage['ID']);
-                $percent=100/intval($eintrag)*intval($anzahlAntworten['COUNT(*)']);
+                $percent=100/intval($anzahlTeilnehmer['COUNT(*)'])*intval($anzahlAntworten['COUNT(*)']);
                 echo "
                 <div class='progress'>
                     <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='width: $percent%'>
