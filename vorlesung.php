@@ -57,7 +57,7 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 
 <div class="container">
 <h1> Vorlesung <?php echo $vorlesung['bezeichnung']; ?></h1>
-<div class="col-md-8">
+< class="col-md-8">
     <?php
 
 
@@ -89,8 +89,6 @@ else:
     echo "Es sind keine Votings Vorhanden";
 endif;
 ?>
-
-</div>
 <div class="col-md-4">
     <div >
         <p><strong>Fügen sie eine neues Voting hinzu</strong></p>
