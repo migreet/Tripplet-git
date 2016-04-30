@@ -309,15 +309,14 @@ class voting extends mother
     }
 
 
-    public function createVoting($bezeichnung, $schluessel, $vorlesungsid)
+    public function createVoting($bezeichnung, $vorlesungsid)
     {
         try {
             $stmt = $this->pdo->prepare('
-              	INSERT INTO voting (bezeichnung, schluessel, ID_VORLESUNG)
-				VALUES (:bezeichnung,:schluessel,:vorlesungsid)
+              	INSERT INTO voting (bezeichnung, ID_VORLESUNG)
+				VALUES (:bezeichnung, :vorlesungsid)
             ');
             $stmt->bindParam(':bezeichnung', $bezeichnung);
-            $stmt->bindParam(':schluessel', $schluessel);
             $stmt->bindParam(':vorlesungsid', $vorlesungsid);
             $stmt->execute();
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
