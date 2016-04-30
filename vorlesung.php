@@ -69,13 +69,12 @@ if (!empty ($voting)):
         echo "<div class='list-group-item'>
               <div class='col-md-8'>";
         //if (empty($eintrag['schluessel'])){
-            echo "<a href='voting.php?id=".$eintrag['ID']."' style='color:green'>";
             echo $eintrag['bezeichnung'] . " ";
             echo $eintrag['datum'] . " ";
             echo "</div> ";
             echo " <div class='col-md-4'>";?>
             <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Start</a>
-            <button type='button' class='btn btn-default'>edit</button>
+            <a href="voting.php?id=<?php echo $eintrag['ID']?>" type='button' class='btn btn-default'>edit</a>
             <a href="auswertung.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Auswertung</a>
             <!-- Votings löschen -->
             <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-default">Löschen</a>
