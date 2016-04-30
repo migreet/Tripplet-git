@@ -56,7 +56,7 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 ?>
 
 <div class="container">
-<h1> Vorlesung <?php echo $vorlesung['bezeichnung']; ?></h1>
+<h1> <?php echo $vorlesung['bezeichnung']; ?></h1>
 <div class="col-md-8">
     <?php
 
