@@ -72,11 +72,11 @@ if (!empty ($voting)):
             echo $eintrag['bezeichnung'] . " ";
             echo $eintrag['datum'] . " ";
             echo "</a> ";?>
-            <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-success">Start</a>
+            <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Start</a>
             <button type='button' class='btn btn-info'>edit</button>
-            <a href="auswertung.php?id=<?php echo $eintrag['ID']?>" class="btn btn-success">Auswertung</a>
+            <a href="auswertung.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Auswertung</a>
             <!-- Votings löschen -->
-            <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-danger">Löschen</a>
+            <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-default">Löschen</a>
     <?php
         }
     else{
@@ -84,7 +84,7 @@ if (!empty ($voting)):
         echo $eintrag['bezeichnung'] . " ";
         echo $eintrag['datum'] . " ";
         echo "</a> ";?>
-        <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-danger">Stop</a>
+        <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Stop</a>
 
 <?php
     }
