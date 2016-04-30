@@ -22,12 +22,11 @@ $ID_Vorlesung=$_GET['id'];
     $postVoting=$_POST["votingcreate"];
     if (isset($postVoting)) {
         $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
-        $schluessel= htmlspecialchars($_POST["schluessel"], ENT_QUOTES, "UTF-8");
         $vorlesungsId= htmlspecialchars($_GET["id"], ENT_QUOTES, "UTF-8");
 
         if (!empty ($bezeichnung)) {
             $votingInstnc = new voting();
-            $voting = $votingInstnc->createVoting($bezeichnung, $schluessel, $vorlesungsId);
+            $voting = $votingInstnc->createVoting($bezeichnung, $vorlesungsId);
 
             echo "<div> Die Registrierung war erfolgreich!</div>";
 
@@ -97,14 +96,11 @@ endif;
     </div>
 
     <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-        <div class="form-group">
+        < class="form-group">
             <div class="col-sm-12">
                 <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnnung" id="bezeichnung" required>
             </div>
-            <div class="col-sm-12">
-                <input type="text" class="form-control" name="schluessel" placeholder="Schluessel" id="schluessel" required>
                 <input type="hidden" value="1" name="votingcreate">
-            </div>
 
         </div>
 
