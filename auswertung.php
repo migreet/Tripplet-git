@@ -109,9 +109,9 @@ if (isset($postVoting)) {
     <div class='list-entry'>
     <div class='col-md-7'>";
 
-            echo "<h3>" . $eintrag['text'] . "</h3></br>";
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($eintrag['ID']);
-            echo "Teilnehmer:" . $anzahlTeilnehmer['COUNT(*)'] . " ";
+            echo "<h3>" . $eintrag['text'] . "(" . $anzahlTeilnehmer['COUNT(*)'] . ")". "</h3></br>";
+
             ?>
 
             <!--Ausgabe der Antworten zu der passenden Frage-->
