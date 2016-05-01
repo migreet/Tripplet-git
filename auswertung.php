@@ -107,7 +107,7 @@ if (isset($postVoting)) {
             foreach ($voting as $eintrag) {
             echo "
     <div class='list-entry'>
-    <div class='col-md-7'>";
+    <div class='col-md-10'>";
 
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($eintrag['ID']);
             echo "<h3>" . $eintrag['text'] . "(Teilnehmer:" . $anzahlTeilnehmer['COUNT(*)'] . ")". "</h3></br>";
