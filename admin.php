@@ -28,22 +28,20 @@ if(!isset($_SESSION['login'])):
     <div class="container">
         <h1> Accountverwaltung</h1>
         <h2> Mein Account</h2>
-        <div class="list-group">
         <?php
         echo "<div class='col-md-6'>";
         echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
         echo "</div><div class='col-md-6'>";
         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-default'>Daten ändern</a>";
         echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'> Account Löschen</a>";
-        echo "</div></div>";
+        echo "</div>";
         if ($_SESSION['rights']>1){
         ?>
 
         <h2>Admin Area</h2>
-            <div class='list-group'>
         <?php
             foreach ($userlist as $user){
-                echo "<div class='list-group-item'><div class='col-md-6'>";
+                echo "<div class='col-md-6'>";
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 echo "</div><div class='col-md-6'>";
                 if ($_SESSION['rights']>$user['ID_RECHTE']) {
@@ -60,7 +58,7 @@ if(!isset($_SESSION['login'])):
                     }
 
                 }
-                echo "</div></div></div>";
+                echo "</div>";
             }
         }
         ?>
