@@ -43,9 +43,10 @@ if(!isset($_SESSION['login'])):
         ?>
 
         <h2>Admin Area</h2>
+            <div class="list-group">
         <?php
             foreach ($userlist as $user){
-                echo "<div class='col-md-6'>";
+                echo "<div class='list-group-item'><div class='col-md-6'>";
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 echo "</div><div class='col-md-6'>";
                 if ($_SESSION['rights']>$user['ID_RECHTE']) {
@@ -62,7 +63,7 @@ if(!isset($_SESSION['login'])):
                     }
 
                 }
-                echo "</div>";
+                echo "</div></div></div>";
             }
         }
         ?>
