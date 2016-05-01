@@ -110,7 +110,7 @@ if (isset($postVoting)) {
     <div class='col-md-10'>";
 
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($eintrag['ID']);
-            echo "<h3>" . $eintrag['text'] . "(" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)". "</h3></br>";
+            echo "<h3>" . $eintrag['text'] . " (" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)". "</h3></br>";
 
             ?>
 
@@ -120,7 +120,7 @@ if (isset($postVoting)) {
             foreach ($antwort as $eintragFrage) {
                 $anzahlAntworten=$auswertungInstnc->countAntworten($eintragFrage['ID']);
                 $percent=100/intval($anzahlTeilnehmer['COUNT(*)'])*intval($anzahlAntworten['COUNT(*)']);
-                echo $eintragFrage['text'] ."(Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)";
+                echo $eintragFrage['text'] ." (Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)";
                 echo "
                 <div class='progress'>
                     <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='width: $percent%'>
