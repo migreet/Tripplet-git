@@ -109,7 +109,7 @@ if (isset($postVoting)) {
     <div class='list-entry'>
     <div class='col-md-7'>";
 
-            echo "Frage:" . $eintrag['text'] . "</br>";
+            echo "<h3>" . $eintrag['text'] . "</h3></br>";
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($eintrag['ID']);
             echo "Teilnehmer:" . $anzahlTeilnehmer['COUNT(*)'] . " ";
             ?>
