@@ -29,9 +29,12 @@ if(!isset($_SESSION['login'])):
         <h1> Accountverwaltung</h1>
         <h2> Mein Account</h2>
         <?php
+        echo "<div class='col-md-6'>";
         echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
+        echo "</div><div class='col-md-6'>";
         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-default'>Daten ändern</a>";
         echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'> Account Löschen</a>";
+        echo "</div>";
         if ($_SESSION['rights']>1){
         ?>
 
