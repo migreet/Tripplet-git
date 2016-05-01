@@ -44,7 +44,7 @@ if(!isset($_SESSION['login'])):
             foreach ($userlist as $user){
                 echo "<div class='col-md-6'>";
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
-                echo "</div>";
+                echo "</div><div class='col-md-6'>";
                 if ($_SESSION['rights']>$user['ID_RECHTE']) {
                     if (empty($user['ID_RECHTE'])) {
                         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-default'>Freischalten</a>";
@@ -59,7 +59,7 @@ if(!isset($_SESSION['login'])):
                     }
 
                 }
-                echo "<br>---<br>";
+                echo "</div>";
             }
         }
         ?>
