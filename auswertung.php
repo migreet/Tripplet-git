@@ -111,7 +111,7 @@ if (isset($postVoting)) {
 
             echo " " . $eintrag['text'] . " ";
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($eintrag['ID']);
-            echo " " . $anzahlTeilnehmer['COUNT(*)'] . " ";
+            echo "Teilnehmer: " . $anzahlTeilnehmer['COUNT(*)'] . " ";
             ?>
 
             <!--Ausgabe der Antworten zu der passenden Frage-->
