@@ -42,15 +42,15 @@ if(!isset($_SESSION['login'])):
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 if ($_SESSION['rights']>$user['ID_RECHTE']) {
                     if (empty($user['ID_RECHTE'])) {
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-success'>Freischalten</a>";
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-default'>Freischalten</a>";
                     }
-                    echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-success'>Löschen</a>";
+                    echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'>Löschen</a>";
 
                     if ($user['ID_RECHTE']==1){
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 'class='btn btn-success'>Grant Admin</a>";
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 'class='btn btn-default'>Grant Admin</a>";
 
                     } elseif($user['ID_RECHTE']>1) {
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-success'>Take Admin</a>";
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-default'>Take Admin</a>";
                     }
 
                 }
