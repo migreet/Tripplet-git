@@ -63,7 +63,7 @@ if(!isset($_SESSION['login'])):
                     }
 
                 }
-                echo "</div></div></div>";
+                echo "</div></div>";
             }
         }
         ?>
