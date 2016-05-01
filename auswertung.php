@@ -119,7 +119,7 @@ if (isset($postVoting)) {
             $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
             foreach ($antwort as $eintragFrage) {
                 $anzahlAntworten=$auswertungInstnc->countAntworten($eintragFrage['ID']);
-                $percent=round(100/intval($anzahlTeilnehmer['COUNT(*)'])*intval($anzahlAntworten['COUNT(*)'],4));
+                $percent=round(100/intval($anzahlTeilnehmer['COUNT(*)'])*intval($anzahlAntworten['COUNT(*)']),2);
                 echo $eintragFrage['text'] ." (Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)";
                 echo "
                 <div class='progress'>
