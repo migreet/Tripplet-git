@@ -38,7 +38,7 @@ class dozent extends mother
     }
 
     /***
-     * @param $mail
+     * @param string $mail
      * @return null
      */
 
@@ -59,7 +59,7 @@ class dozent extends mother
     }
 
     /***
-     * @param $dozentenid
+     * @param int $dozentenid
      * @return mixed
      */
 
@@ -83,10 +83,10 @@ class dozent extends mother
     }
 
     /***
-     * @param $name
-     * @param $vorname
-     * @param $passwort
-     * @param $mail
+     * @param string $name
+     * @param string $vorname
+     * @param string $passwort
+     * @param  string $mail
      * @return mixed
      */
 
@@ -113,7 +113,7 @@ public function signup($name, $vorname, $passwort, $mail)
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
@@ -134,8 +134,8 @@ public function signup($name, $vorname, $passwort, $mail)
     }
 
     /***
-     * @param $userid
-     * @param $rights
+     * @param int $userid
+     * @param int $rights
      * @return mixed
      */
 
@@ -179,7 +179,7 @@ class vorlesung extends mother
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
@@ -198,6 +198,11 @@ class vorlesung extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @param int $dozentenid
+     * @return null
+     */
 	
 		    public function getByDozentenId($dozentenid)
     {
@@ -237,8 +242,8 @@ class vorlesung extends mother
 }
 
     /***
-     * @param $bezeichnung
-     * @param $dozentenid
+     * @param string $bezeichnung
+     * @param int $dozentenid
      * @return mixed
      */
 
@@ -263,6 +268,10 @@ class vorlesung extends mother
     }
 
 
+    /***
+     * @param int $id
+     * @return null
+     */
 
     public function delete($id)
     {
@@ -296,7 +305,7 @@ class voting extends mother
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
@@ -317,7 +326,7 @@ class voting extends mother
     }
 
     /***
-     * @param $vorlesungsid
+     * @param int $vorlesungsid
      * @return null
      */
 	
@@ -338,7 +347,7 @@ class voting extends mother
     }
 
     /***
-     * @param $schluessel
+     * @param string $schluessel
      * @return null
      */
 
@@ -380,8 +389,8 @@ class voting extends mother
     }
 
     /***
-     * @param $bezeichnung
-     * @param $vorlesungsid
+     * @param string $bezeichnung
+     * @param int $vorlesungsid
      * @return mixed
      */
 
@@ -407,8 +416,8 @@ class voting extends mother
     }
 
     /***
-     * @param $votingid
-     * @param $schluessel
+     * @param int $votingid
+     * @param string $schluessel
      * @return mixed
      */
 
@@ -434,25 +443,9 @@ class voting extends mother
     }
 
     /***
-     * @param $url
+     * @param int $id
      * @return null
      */
-
-    public function getByUrl($url)
-    {
-        try {
-            $stmt = $this->pdo->prepare('SELECT * FROM voting WHERE url = :url');
-            $stmt->bindParam(':url', $url);
-            $stmt->execute();
-            $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            $n = $stmt->fetch();
-        } catch (PDOException $e) {
-            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
-            die();
-        }
-        if (!$n) $n = null;
-        return $n;
-    }
 
     public function delete($id)
     {
@@ -488,7 +481,7 @@ class frage extends mother
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
@@ -509,7 +502,7 @@ class frage extends mother
     }
 
     /***
-     * @param $votingid
+     * @param int $votingid
      * @return null
      */
 	
@@ -551,8 +544,8 @@ class frage extends mother
     }
 
     /***
-     * @param $text
-     * @param $votingid
+     * @param string $text
+     * @param int $votingid
      * @return mixed
      */
 
@@ -578,7 +571,7 @@ class frage extends mother
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
@@ -616,7 +609,7 @@ class antwort extends mother
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
@@ -637,7 +630,7 @@ class antwort extends mother
     }
 
     /***
-     * @param $fragenid
+     * @param int $fragenid
      * @return null
      */
 
@@ -679,8 +672,8 @@ class antwort extends mother
     }
 
     /***
-     * @param $text
-     * @param $fragenid
+     * @param string $text
+     * @param int $fragenid
      * @return mixed
      */
 
@@ -704,7 +697,7 @@ class antwort extends mother
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
@@ -742,7 +735,7 @@ class auswertung extends mother
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
@@ -761,7 +754,11 @@ class auswertung extends mother
         if (!$n) $n = null;
         return $n;
     }
-	
+
+    /***
+     * @param int $fragenid
+     * @return null
+     */
 			    public function getByFragenId($fragenid)
     {
         try {
@@ -801,7 +798,7 @@ class auswertung extends mother
     }
 
     /***
-     * @param $antwortid
+     * @param int $antwortid
      * @return mixed
      */
 
@@ -824,7 +821,7 @@ class auswertung extends mother
     }
 
     /***
-     * @param $frageid
+     * @param int $frageid
      * @return mixed
      */
 
@@ -849,8 +846,8 @@ class auswertung extends mother
     }
 
     /***
-     * @param $fragenid
-     * @param $sessionid
+     * @param int $fragenid
+     * @param string $sessionid
      * @return mixed
      */
 
@@ -874,10 +871,11 @@ class auswertung extends mother
     }
 
     /***
-     * @param $status
-     * @param $votingid
-     * @param $sessionid
+     * @param int $status
+     * @param int $votingid
+     * @param string $sessionid
      * @return mixed
+     * nochmal überarbeiten
      */
 
     public function countFragen($status, $votingid, $sessionid)
@@ -918,8 +916,8 @@ class auswertung extends mother
     }
 
     /***
-     * @param $votingid
-     * @param $sessionid
+     * @param int $votingid
+     * @param string $sessionid
      * @return mixed
      */
 
@@ -950,9 +948,9 @@ class auswertung extends mother
     }
 
     /***
-     * @param $fragenid
-     * @param $sessionid
-     * @param $antwortid
+     * @param int $fragenid
+     * @param string $sessionid
+     * @param int $antwortid
      * @return mixed
      */
 
@@ -1000,7 +998,7 @@ class rechte extends mother
     }
 
     /***
-     * @param $id
+     * @param int $id
      * @return null
      */
 
