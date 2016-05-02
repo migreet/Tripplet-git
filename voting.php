@@ -141,7 +141,7 @@ if (isset($postVoting)) {
     </div>
     <div class="col-md-4">
         <?php require_once('include/aside_voting.php');
-        echo "$notification";
+        echo "$notification das ist ein test ob es klappt";
         ?>
     </div>
     </div>
