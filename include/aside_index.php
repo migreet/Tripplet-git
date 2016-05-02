@@ -31,14 +31,16 @@ else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den 
 
 <form name="registerform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
     <div class="form-group">
-            <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnung" id="mail" required>
+        <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnung" id="mail" required>
+        <input type="hidden" value="1" name="vorlesungcreate">
+        <button type="submit" name="registrieren" class="btn btn-default">Hinzufügen</button>
     </div>
 
-            <input type="hidden" value="1" name="vorlesungcreate">
 
 
 
 
-            <button type="submit" name="registrieren" class="btn btn-default">Hinzufügen</button>
+
+
 
 </form>
