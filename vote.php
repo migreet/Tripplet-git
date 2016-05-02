@@ -142,8 +142,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <div>
             <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
             </div>
+            <?php
+            //Ausgabe der Warnung bei falsher Schlüsseleingabe
+            echo $notification;
+            ?>
         </form>
-        <?php echo $notification; ?>
+
     </div>
 
     </body>
