@@ -37,7 +37,7 @@ if (isset($frageCreate)) {
         $frageInstnc = new frage();
         $frage = $frageInstnc->createFrage($frageText, $ID_Voting);
         header('Location: voting.php?id=' .$ID_Voting);
-        echo "<div> Die Frage wurde eingereicht</div>";
+        echo "<div> Die Frage wurde eingereicht</div>"; //Brauchen wir das?!
 
 
     }
@@ -75,7 +75,7 @@ if (isset($postVoting)) {
 
         header('Location: vorlesung.php?id='.$ID_Voting);
     }
-    else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.</div>";
+    else {$getNot = "Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.";
         //header('Location: vorlesung.php'."?id=1");
     }
 }
