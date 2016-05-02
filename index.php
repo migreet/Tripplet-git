@@ -31,7 +31,7 @@ $notification=$_GET['notification'];
 
 <?php require_once("include/navigation_login.php"); ?>
 
-<div class="container" >
+<div class="container" id="registrieren" >
     <div class="form-horizontal col-sm-offset-6">
     <h1>Registrieren</h1>
     </div>
@@ -101,7 +101,7 @@ $notification=$_GET['notification'];
 $eintragManager = new vorlesung();
 ?>
 
-<div class="container">
+<div class="container" id="vorlesungsubersicht">
 
     <h1> Vorlesungsübersicht</h1>
     <div class="col-md-8">
