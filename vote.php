@@ -33,7 +33,7 @@ $frage = $frageInstnc->getByVotingId($voting['ID']);
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
 //debug section
-
+/*
 echo"<br />=== voting === <br />";
 print_r($voting)."<br />";
 echo"<br />=== frage === <br />";
@@ -42,7 +42,7 @@ echo "<br />=== fragerunde === <br />";
 print_r($fragerunde)."<br />";
 echo "<br />=== Session === <br />";
 print_r( $_SESSION);
-
+*/
 
 if ($_SESSION['rights']>0){
     header ('location: index.php');
@@ -126,7 +126,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
     <body>
 
-    <div class="container">
+    <div class="container" id="vote">
 
         <h1 style="text-align: center;">Schlüssel eingeben</h1>
 
@@ -137,7 +137,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                 <input type="hidden" value="1" name="schluesselsent">
             </div>
             <div>
-            <button type="submit" name="login" class="btn btn-default vote-btn">Einschreiben</button>
+            <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
             </div>
         </form>
 
