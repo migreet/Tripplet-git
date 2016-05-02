@@ -16,6 +16,10 @@
 require_once("php/classes.php");
 require_once("include/header.php");
 session_start();
+
+
+//GETs & POSTs
+$notification=$_GET['notification'];
 ?>
 
 
@@ -75,13 +79,14 @@ session_start();
 
             if (empty($dozent)) {
                 $liste = $dozentInstnc->signup($nachname, $vorname, $passwort, $mail);
-                echo "<div class='col-sm-offset-6'> Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.</div>";
-                header('location:index.php');
+                $correct = "<div class='col-sm-offset-6'> Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.</div>";
+                header('location:index.php?notification=' . $correct);
             } else {
                 echo "<div class='col-sm-offset-6'> Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
             }
         }
     }
+    echo "$notification";
     ?>
 
 </div>
