@@ -82,11 +82,11 @@ $notification=$_GET['notification'];
                 $getNot = "Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.";
                 header('location:index.php?notification=' . $getNot);
             } else {
-                echo "Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.";
+                $getNot = "Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.";
             }
         }
 
-    }echo "<div class='col-sm-offset-6'> .$notification . </div>";
+    }echo "<div class='col-sm-offset-6'>$notification</div>";
 
     ?>
 
