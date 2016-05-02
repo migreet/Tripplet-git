@@ -7,8 +7,8 @@
  */
 
 //Requires
-require_once("php/classes.php");
-require_once("include/header.php");
+require_once("../php/classes.php");
+require_once("../include/header.php");
 session_start();
 
 $votingInstnc = new voting();
