@@ -67,6 +67,7 @@ $notification=$_GET['notification'];
     </form>
 
     <?php
+    echo "$notification";
     if (isset($_POST["sentregister"])) {
         $vorname = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
         $nachname = htmlspecialchars($_POST["nachname"], ENT_QUOTES, "UTF-8");
