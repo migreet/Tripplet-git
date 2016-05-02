@@ -85,7 +85,7 @@ $notification=$_GET['notification'];
                 echo "<div class='col-sm-offset-6'> Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
             }
         }
-        echo "$notification";
+        echo $notification;
     }
 
     ?>
