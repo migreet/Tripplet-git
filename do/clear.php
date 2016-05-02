@@ -13,3 +13,5 @@ session_start();
 
 $votingInstnc = new voting();
 $voting = $votingInstnc ->getByTimestamp();
+
+print_r($voting);
