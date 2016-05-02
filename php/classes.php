@@ -16,6 +16,11 @@ class dozent extends mother
         parent::__destruct();
     }
 
+    /***
+     * @param $id
+     * @return null
+     */
+
 	    public function getById($id)
     {
         try {
@@ -32,6 +37,11 @@ class dozent extends mother
         return $n;
     }
 
+    /***
+     * @param $mail
+     * @return null
+     */
+
     public function getByMail($mail)
     {
         try {
@@ -47,6 +57,11 @@ class dozent extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @param $dozentenid
+     * @return mixed
+     */
 
     public function getAll($dozentenid)
     {
@@ -66,6 +81,15 @@ class dozent extends mother
         }
 
     }
+
+    /***
+     * @param $name
+     * @param $vorname
+     * @param $passwort
+     * @param $mail
+     * @return mixed
+     */
+
 public function signup($name, $vorname, $passwort, $mail)
     {
         try {
@@ -87,6 +111,12 @@ public function signup($name, $vorname, $passwort, $mail)
         }
 
     }
+
+    /***
+     * @param $id
+     * @return null
+     */
+
     public function delete($id)
     {
         try {
@@ -102,6 +132,12 @@ public function signup($name, $vorname, $passwort, $mail)
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @param $userid
+     * @param $rights
+     * @return mixed
+     */
 
     public function updateRights($userid, $rights)
     {
@@ -142,6 +178,11 @@ class vorlesung extends mother
         parent::__destruct();
     }
 
+    /***
+     * @param $id
+     * @return null
+     */
+
 	    public function getById($id)
     {
         try {
@@ -174,6 +215,10 @@ class vorlesung extends mother
         return $n;
     }
 
+    /***
+     * @return mixed
+     */
+
     public function getAll()
 {
     try {
@@ -190,6 +235,13 @@ class vorlesung extends mother
     }
 
 }
+
+    /***
+     * @param $bezeichnung
+     * @param $dozentenid
+     * @return mixed
+     */
+
     public function createVorlesung($bezeichnung, $dozentenid)
     {
         try {
@@ -243,6 +295,11 @@ class voting extends mother
         parent::__destruct();
     }
 
+    /***
+     * @param $id
+     * @return null
+     */
+
 	    public function getById($id)
     {
         try {
@@ -258,6 +315,11 @@ class voting extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @param $vorlesungsid
+     * @return null
+     */
 	
 	    public function getByVorlesungsId($vorlesungsid)
     {
@@ -275,6 +337,11 @@ class voting extends mother
         return $n;
     }
 
+    /***
+     * @param $schluessel
+     * @return null
+     */
+
     public function getByKey($schluessel)
     {
         try {
@@ -290,6 +357,10 @@ class voting extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @return mixed
+     */
 
     public function getAll()
     {
@@ -307,6 +378,12 @@ class voting extends mother
         }
 
     }
+
+    /***
+     * @param $bezeichnung
+     * @param $vorlesungsid
+     * @return mixed
+     */
 
 
     public function createVoting($bezeichnung, $vorlesungsid)
@@ -329,6 +406,11 @@ class voting extends mother
 
     }
 
+    /***
+     * @param $votingid
+     * @param $schluessel
+     * @return mixed
+     */
 
     public function update($votingid, $schluessel)
     {
@@ -350,6 +432,11 @@ class voting extends mother
         }
 
     }
+
+    /***
+     * @param $url
+     * @return null
+     */
 
     public function getByUrl($url)
     {
@@ -400,6 +487,11 @@ class frage extends mother
         parent::__destruct();
     }
 
+    /***
+     * @param $id
+     * @return null
+     */
+
 	    public function getById($id)
     {
         try {
@@ -415,8 +507,13 @@ class frage extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @param $votingid
+     * @return null
+     */
 	
-			    public function getByVotingId($votingid)
+        public function getByVotingId($votingid)
     {
         try {
             $stmt = $this->pdo->prepare('SELECT * FROM frage WHERE ID_VOTING = :votingid');
@@ -431,6 +528,10 @@ class frage extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @return mixed
+     */
 
     public function getAll()
     {
@@ -448,6 +549,12 @@ class frage extends mother
         }
 
     }
+
+    /***
+     * @param $text
+     * @param $votingid
+     * @return mixed
+     */
 
     public function createFrage($text, $votingid)
     {
@@ -469,6 +576,11 @@ class frage extends mother
             die();
         }
     }
+
+    /***
+     * @param $id
+     * @return null
+     */
 
     public function delete($id)
     {
@@ -503,6 +615,11 @@ class antwort extends mother
         parent::__destruct();
     }
 
+    /***
+     * @param $id
+     * @return null
+     */
+
 		    public function getById($id)
     {
         try {
@@ -518,7 +635,12 @@ class antwort extends mother
         if (!$n) $n = null;
         return $n;
     }
-	
+
+    /***
+     * @param $fragenid
+     * @return null
+     */
+
 		    public function getByFragenId($fragenid)
     {
         try {
@@ -534,6 +656,10 @@ class antwort extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @return mixed
+     */
 
         public function getAll()
     {
@@ -551,6 +677,12 @@ class antwort extends mother
         }
 
     }
+
+    /***
+     * @param $text
+     * @param $fragenid
+     * @return mixed
+     */
 
     public function createAntwort($text, $fragenid)
     {
@@ -570,6 +702,11 @@ class antwort extends mother
             die();
         }
     }
+
+    /***
+     * @param $id
+     * @return null
+     */
 
     public function delete($id)
     {
@@ -604,6 +741,11 @@ class auswertung extends mother
         parent::__destruct();
     }
 
+    /***
+     * @param $id
+     * @return null
+     */
+
 		    public function getById($id)
     {
         try {
@@ -635,8 +777,11 @@ class auswertung extends mother
         if (!$n) $n = null;
         return $n;
     }
-	
-	
+
+
+    /***
+     * @return mixed
+     */
 
     public function getAll()
     {
@@ -655,6 +800,11 @@ class auswertung extends mother
 
     }
 
+    /***
+     * @param $antwortid
+     * @return mixed
+     */
+
     public function countAntworten($antwortid)
     {
         try {
@@ -672,6 +822,11 @@ class auswertung extends mother
         }
 
     }
+
+    /***
+     * @param $frageid
+     * @return mixed
+     */
 
     public function countTeilnehmer($frageid)
     {
@@ -693,6 +848,12 @@ class auswertung extends mother
 
     }
 
+    /***
+     * @param $fragenid
+     * @param $sessionid
+     * @return mixed
+     */
+
     public function createAuswertung($fragenid, $sessionid)
     {
         try {
@@ -711,6 +872,13 @@ class auswertung extends mother
         }
 
     }
+
+    /***
+     * @param $status
+     * @param $votingid
+     * @param $sessionid
+     * @return mixed
+     */
 
     public function countFragen($status, $votingid, $sessionid)
     {
@@ -749,6 +917,12 @@ class auswertung extends mother
 
     }
 
+    /***
+     * @param $votingid
+     * @param $sessionid
+     * @return mixed
+     */
+
     public function frageRunde($votingid, $sessionid)
     {
         try {
@@ -775,6 +949,12 @@ class auswertung extends mother
 
     }
 
+    /***
+     * @param $fragenid
+     * @param $sessionid
+     * @param $antwortid
+     * @return mixed
+     */
 
     public function update($fragenid, $sessionid, $antwortid)
     {
@@ -819,6 +999,11 @@ class rechte extends mother
         parent::__destruct();
     }
 
+    /***
+     * @param $id
+     * @return null
+     */
+
 		    public function getById($id)
     {
         try {
@@ -834,6 +1019,10 @@ class rechte extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    /***
+     * @return mixed
+     */
 
         public function getAll()
     {
