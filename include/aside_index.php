@@ -33,9 +33,9 @@ else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den 
     <div class="form-group">
             <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnung" id="mail" required>
     </div>
-    <div class="form-group">
+
             <input type="hidden" value="1" name="vorlesungcreate">
-    </div>
+
 
 
     <div class="form-group">
