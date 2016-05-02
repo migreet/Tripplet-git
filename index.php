@@ -32,7 +32,7 @@ $notificationLogin=$_GET['notification_login'];
 
 <?php
 require_once("include/navigation_login.php");
-echo "<div id='loginWarning'> $notificationLogin </div>";
+echo "<div id='loginWarning' class='col-sm-offset-6'> $notificationLogin </div>";
 ?>
 
 <div class="container" id="registrieren" >
