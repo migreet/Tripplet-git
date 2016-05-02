@@ -50,8 +50,9 @@ require_once("include/navigation.php");
 
 
 
-<div>
-Neues Voting starten
+<div class="container">
+<h1>Neues Voting starten</h1>
+    <div class="col-md-8">
 
 <form name="registerform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
 
@@ -83,6 +84,7 @@ else:
 endif;
 ?>
 </form>
+</div>
 </div>
 
 
