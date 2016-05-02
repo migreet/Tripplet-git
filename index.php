@@ -83,10 +83,12 @@ $notification=$_GET['notification'];
                 header('location:index.php?notification=' . $getNot);
             } else {
                 $getNot = "Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.";
+                header('location:index.php?notification=' . $getNot);
             }
         }
 
-    }echo "<div class='col-sm-offset-6'>$notification</div>";
+    }
+    echo "<div class='col-sm-offset-6'>$notification</div>";
 
     ?>
 
