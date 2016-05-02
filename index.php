@@ -28,10 +28,10 @@ session_start();
 <?php require_once("include/navigation_login.php"); ?>
 
 <div class="container" >
-    <div class="form-horizontal col-sm-offset-6 loginform">
+    <div class="form-horizontal col-sm-offset-6 ">
     <h1>Registrieren</h1>
     </div>
-    <form name="registerform" class="form-horizontal col-sm-offset-6" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+    <form name="registerform" class="form-horizontal col-sm-offset-6 loginform" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
         <div class="form-group">
             <div class="col-sm-6">
                 <input type="text" class="form-control" name="mail" placeholder="Emailadresse" id="mail" required>
