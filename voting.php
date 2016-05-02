@@ -23,6 +23,7 @@ $frageInstnc = new frage();
 
 //GETs
 $ID_Voting=$_GET['id'];
+$notification=$_GET['notification'];
 
 
 //Voting Aside Logik
@@ -40,8 +41,8 @@ if (isset($frageCreate)) {
 
 
     }
-    else {echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.</div>";
-
+    else {$getNot = "Es ist ein Problem beim Einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.";
+        header('Location: voting.php?id=' .$ID_Voting .'?notification=' . $getNot);
     }
 
     //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
@@ -140,7 +141,7 @@ if (isset($postVoting)) {
     </div>
     <div class="col-md-4">
         <?php require_once('include/aside_voting.php');
-
+        echo "$notification";
         ?>
     </div>
     </div>
