@@ -13,7 +13,7 @@ session_start();
 
 $votingInstnc = new voting();
 $voting = $votingInstnc ->getByTimestamp();
-
+print_r($voting);
 foreach ($voting as $eintrag){
 
     $votingInstnc->update($eintrag['ID'], NULL);
