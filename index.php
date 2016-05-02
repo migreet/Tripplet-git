@@ -64,6 +64,9 @@ $notification=$_GET['notification'];
                 <button type="submit" name="registrieren" class="btn btn-default">Registrieren</button>
             </div>
         </div>
+        <?php
+        echo "$notification";
+        ?>
     </form>
 
     <?php
@@ -85,7 +88,7 @@ $notification=$_GET['notification'];
                 echo "<div class='col-sm-offset-6'> Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
             }
         }
-        echo "$notification";
+
     }
 
     ?>
