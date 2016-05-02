@@ -122,7 +122,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         header('location:vote.php');
         }
         else {$getNot = "Falscher Schlüssel";}
-        header('location:vote.php?notification=' . $getNot);
+        header('location:vote.php?notification=' . $getNot) ;
 
     }
     ?>
