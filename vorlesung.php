@@ -32,7 +32,7 @@ $ID_Vorlesung=$_GET['id'];
 
             header('Location: vorlesung.php?id='.$ID_Vorlesung);
         }
-        else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.</div>";
+        else {echo "<div> Es ist ein Fehler aufgetreten! Wenden Sie sich bitte an den Administrator.</div>";
             //header('Location: vorlesung.php'."?id=1");
         }
     }
