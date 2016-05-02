@@ -16,12 +16,12 @@ if (!empty ($bezeichnung)) {
 $vorlesungInstnc = new vorlesung();
 $vorlesung = $vorlesungInstnc->createVorlesung($bezeichnung, $_SESSION ['id']);
 
-    $getNot = "Die Registrierung war erfolgreich!";
+    $getNot = "Die Vorlesung wurde erfolgreich angelegt!";
 
 
 header('Location: index.php?notification=' . $getNot);
 }
-else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.</div>";
+else {echo "<div> Anlegen der Vorlesung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.</div>";
 //header('Location: vorlesung.php'."?id=1");
 }
 }
