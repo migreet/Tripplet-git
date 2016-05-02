@@ -71,11 +71,12 @@ if (isset($_POST["sentlogin"])) {
             $_SESSION ['id'] = $dozent['ID'];
             header('location:index.php');
         }
+            else {
+                $getNot = "Bitte geben Sie eine korrekte Passwort und Emailadressenkombination ein.";
+                header('location:index.php?notification_login=' . $getNot);
+            }
     }
-    else {
-        $getNot = "Bitte geben Sie eine korrekte Passwort und Emailadressenkombination ein.";
-        header('location:index.php?notification_login=' . $getNot);
-    }
+
 }
 }
 ?>
