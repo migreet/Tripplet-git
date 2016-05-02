@@ -79,13 +79,13 @@ $notification=$_GET['notification'];
 
             if (empty($dozent)) {
                 $liste = $dozentInstnc->signup($nachname, $vorname, $passwort, $mail);
-                $correct = "<div class='col-sm-offset-6'> Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.</div>";
-                header('location:index.php?notification=' . $correct);
+                $getNot = "Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.";
+                header('location:index.php?notification=' . $getNot);
             } else {
-                echo "<div class='col-sm-offset-6'> Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
+                echo "Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.";
             }
         }
-        echo $notification;
+        echo "<div class='col-sm-offset-6'>" .$notification ."</div>";
     }
 
     ?>
