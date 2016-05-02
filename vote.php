@@ -136,7 +136,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                 <input type="password" class="form-control" name="schluessel" id="schluessel" placeholder="Schlüssel" required>
                 <input type="hidden" value="1" name="schluesselsent">
             </div>
-            <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
+            <button type="submit" name="login" class="btn btn-default vote-btn">Einschreiben</button>
         </form>
 
     </div>
