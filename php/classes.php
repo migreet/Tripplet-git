@@ -398,7 +398,7 @@ class voting extends mother
     {
         try {
             $stmt = $this->pdo->prepare('
-                SELECT * FROM voting WHERE datum < ADDDATE(NOW(), INTERVAL -30 MINUTE)
+                SELECT * FROM voting WHERE datum < ADDDATE(NOW(), INTERVAL -2 HOUR)
             ');
             $stmt->execute();
             $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
