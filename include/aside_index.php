@@ -38,7 +38,7 @@ else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den 
 
 
 
-    <div class="form-group">
+
             <button type="submit" name="registrieren" class="btn btn-default">Hinzufügen</button>
-    </div>
+
 </form>
