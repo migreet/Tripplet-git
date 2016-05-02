@@ -121,14 +121,15 @@ if (isset($postVoting)) {
             echo "<li>" . $eintragFrage['text'] . "</li>";
             }
             echo "</ul>";
-            echo "<div class='col-md-12' style='border-bottom: 1px solid #ddd'>";
-            echo "</div>";
+
             ?>
         </div>
         <div class="col-md-5"
         <!-- Fragenlöschen-->
         <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
         </div>
+    </div>
+    <div class='col-md-12' style='border-bottom: 1px solid #ddd'>
     </div>
     <?php }
     else:
