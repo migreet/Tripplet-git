@@ -388,6 +388,29 @@ class voting extends mother
 
     }
 
+
+    /***
+     * @return mixed
+     */
+
+
+    public function getByTimestamp()
+    {
+        try {
+            $stmt = $this->pdo->prepare('
+                SELECT * FROM voting WHERE datum < (NOW() - INTERVAL 10 MINUTE)
+            ');
+            $stmt->execute();
+            $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+
+    }
+
     /***
      * @param string $bezeichnung
      * @param int $vorlesungsid
