@@ -128,9 +128,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
     <div class="container">
 
-        <h1>Schlüssel eingeben</h1>
+        <h1 class="col-sm-offset-4">Schlüssel eingeben</h1>
 
-        <form name="signinform" class="form-inline col-sm-offset-6" style="padding-top: 7px;" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <form name="signinform" class="form-inline col-sm-offset-4" style="padding-top: 7px;" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group">
                 <label class="sr-only" for="schluessel">Schlüssel</label>
                 <input type="password" class="form-control" name="schluessel" id="schluessel" placeholder="Schlüssel" required>
