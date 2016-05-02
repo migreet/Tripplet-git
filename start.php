@@ -29,10 +29,11 @@ $schluesselcheck=$votingInstnc->getByKey($schluessel);
 //Ifabfrage für Schlüsseleingabe und Statusprüfung
 if (isset($votingsent)) {
 //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
-    if (empty($voting['schluessel']) && empty($schluesselcheck)){
+    if (empty($voting['schluessel'])){
+        if (empty($schluesselcheck)){
             $voting = $votingInstnc->update($votingId, $schluessel);
             header('Location: start.php?id=' .$votingId);
-
+        }
 
         }
     else {
