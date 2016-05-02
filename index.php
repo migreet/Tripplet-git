@@ -27,7 +27,7 @@ session_start();
 
 <?php require_once("include/navigation_login.php"); ?>
 
-<div class="container" >
+<div class="loginform" >
     <div class="form-horizontal col-sm-offset-6">
     <h1>Registrieren</h1>
     </div>
