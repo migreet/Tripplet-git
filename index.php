@@ -30,7 +30,10 @@ $notificationLogin=$_GET['notification_login'];
 	<body>
 
 
-<?php require_once("include/navigation_login.php"); ?>
+<?php
+require_once("include/navigation_login.php");
+echo "<div id='loginWarning'> $notificationLogin </div>";
+?>
 
 <div class="container" id="registrieren" >
     <div class="form-horizontal col-sm-offset-6">
@@ -68,7 +71,6 @@ $notificationLogin=$_GET['notification_login'];
     </form>
 
     <?php
-    echo "$notificationLogin";
     if (isset($_POST["sentregister"])) {
         $vorname = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
         $nachname = htmlspecialchars($_POST["nachname"], ENT_QUOTES, "UTF-8");
