@@ -120,7 +120,9 @@ if (isset($postVoting)) {
 
             echo "<li>" . $eintragFrage['text'] . "</li>";
             }
-            echo "</ul>"
+            echo "</ul>";
+            echo "<div class='col-md-7' style='border-bottom: 1px solid #ddd'>";
+            echo "</div>";
             ?>
         </div>
         <div class="col-md-5"
