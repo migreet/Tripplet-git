@@ -45,7 +45,7 @@ if (isset($votingsent)) {
     }
     }
 
-require_once("include/navigation_login.php");
+require_once("include/navigation.php");
 ?>
 
 
