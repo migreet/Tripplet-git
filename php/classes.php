@@ -399,7 +399,7 @@ class voting extends mother
         try {
             $stmt = $this->pdo->prepare('
                 SELECT * FROM voting
-                WHERE datum < ADDDATE(NOW(), INTERVAL -2 SECOND )
+                WHERE datum < ADDDATE(NOW(), INTERVAL -2 MIN)
                 AND schluessel != NULL
             ');
             $stmt->execute();
