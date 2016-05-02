@@ -143,9 +143,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
             </div>
         </form>
-<?php echo $getNot; ?>
-    </div>
 
+    </div>
+    <?php echo $notification; ?>
     </body>
 
 <?php endif; ?>
