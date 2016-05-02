@@ -23,13 +23,13 @@ $schluessel=$_POST['schluessel'];
 //Instanzen
 $votingInstnc = new voting();
 $voting=$votingInstnc->getById($votingId);
-
+$schluesselcheck=$votingInstnc->getByKey($schluessel);
 
 
 //Ifabfrage für Schlüsseleingabe und Statusprüfung
 if (isset($votingsent)) {
 //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
-    if (empty($voting['schluessel'])){
+    if (empty($voting['schluessel']) && empty($schluesselcheck)){
             $voting = $votingInstnc->update($votingId, $schluessel);
             header('Location: start.php?id=' .$votingId);
 
@@ -41,7 +41,6 @@ if (isset($votingsent)) {
     }
     }
 
-//ZU TUN:::Status Abfragen --> wenn status=0 dann auf 1 updaten wenn er 1 ist dann auf 0 Updaten. Möglichkeit auf Counter Checke. Schlüssel löschen beim schließen.
 ?>
 
 
