@@ -616,7 +616,7 @@ class antwort extends mother
 		    public function getById($id)
     {
         try {
-            $stmt = $this->pdo->prepare('SELECT * FROM antworten WHERE id = :id');
+            $stmt = $this->pdo->prepare('SELECT * FROM antwort WHERE id = :id');
             $stmt->bindParam(':id', $id);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -637,7 +637,7 @@ class antwort extends mother
 		    public function getByFragenId($fragenid)
     {
         try {
-            $stmt = $this->pdo->prepare('SELECT * FROM antworten WHERE ID_FRAGE = :fragenid');
+            $stmt = $this->pdo->prepare('SELECT * FROM antwort WHERE ID_FRAGE = :fragenid');
             $stmt->bindParam(':fragenid', $fragenid);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -658,7 +658,7 @@ class antwort extends mother
     {
         try {
             $stmt = $this->pdo->prepare('
-              SELECT * FROM antworten
+              SELECT * FROM antwort
             ');
             $stmt->execute();
 			$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -681,7 +681,7 @@ class antwort extends mother
     {
         try {
             $stmt = $this->pdo->prepare('
-              	INSERT INTO antworten (text, ID_FRAGE)
+              	INSERT INTO antwort (text, ID_FRAGE)
 				VALUES (:text, :fragenid)
             ');
             $stmt->bindParam(':text', $text);
@@ -704,7 +704,7 @@ class antwort extends mother
     public function delete($id)
     {
         try {
-            $stmt = $this->pdo->prepare('DELETE FROM antworten WHERE id = :id');
+            $stmt = $this->pdo->prepare('DELETE FROM antwort WHERE id = :id');
             $stmt->bindParam(':id', $id);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
