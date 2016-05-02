@@ -22,6 +22,7 @@ session_start();
 $schluessel=$_POST['schluessel'];
 $schluesselsent=$_POST['schluesselsent'];
 $fragerundeset=$_POST["fragerunde"];
+$notification=$_GET['notification'];
 
 //Instanzen
 $votingInstnc = new voting();
@@ -120,6 +121,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             $_SESSION['votingid']= $voting['ID'];
         header('location:vote.php');
         }
+        else {$getNot = "Falscher Schlüssel";}
+        header('location:vote.php?notification=' . $getNot);
 
     }
     ?>
@@ -140,7 +143,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
             </div>
         </form>
-
+<?php echo $getNot; ?>
     </div>
 
     </body>
