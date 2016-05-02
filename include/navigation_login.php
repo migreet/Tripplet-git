@@ -74,7 +74,7 @@ if (isset($_POST["sentlogin"])) {
     }
     else {
         $getNot = "Bitte geben Sie eine korrekte Passwort und Emailadressenkombination ein.";
-        header('location:index.php?notification=' . $getNot);
+        header('location:index.php?notification_login=' . $getNot);
     }
 }
 }

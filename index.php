@@ -20,6 +20,7 @@ session_start();
 
 //GETs & POSTs
 $notification=$_GET['notification'];
+$notificationLogin=$_GET['notification_login'];
 ?>
 
 
@@ -67,7 +68,7 @@ $notification=$_GET['notification'];
     </form>
 
     <?php
-    echo "$notification";
+    echo "$notificationLogin";
     if (isset($_POST["sentregister"])) {
         $vorname = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
         $nachname = htmlspecialchars($_POST["nachname"], ENT_QUOTES, "UTF-8");
