@@ -68,7 +68,7 @@ echo "<div id='loginWarning' class='col-sm-offset-6'> $notificationLogin </div>"
                 <button type="submit" name="registrieren" class="btn btn-default">Registrieren</button>
             </div>
         </div>
-        <?php echo "<div>$notification</div>"; ?>
+        <?php echo "<div class='col-sm-6'>$notification</div>"; ?>
     </form>
 
     <?php
