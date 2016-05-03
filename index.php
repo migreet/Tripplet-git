@@ -72,7 +72,7 @@ echo "<div id='loginWarning' class='col-sm-offset-6'> $notificationLogin </div>"
 
     <?php
     if (isset($_POST["sentregister"])) {
-        $vorname = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
+        $vorname = trim(stripslashes (strip_tags (mysqli_real_escape_string (htmlentities($_POST["vorname"], ENT_QUOTES, "UTF-8")))));
         $nachname = htmlspecialchars($_POST["nachname"], ENT_QUOTES, "UTF-8");
         $passwort = hash("MD5", htmlspecialchars($_POST["passwort"], ENT_QUOTES, "UTF-8"));
         $mail = htmlspecialchars($_POST["mail"], ENT_QUOTES, "UTF-8");
