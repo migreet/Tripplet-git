@@ -92,7 +92,7 @@ echo "<div id='loginWarning' class='col-sm-offset-6'> $notificationLogin </div>"
         }
 
     }
-    echo "<div class='col-sm-offset-6 col-sm-6'>$notification</div>";
+    echo "<div class='col-sm-offset-6 col-sm-4'>$notification</div>";
 
     ?>
 
