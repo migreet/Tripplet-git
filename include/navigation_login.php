@@ -57,7 +57,7 @@ $notification=$_GET['notification'];
 <?php
 if (isset($_POST["sentlogin"])) {
     $mail = $_POST["mail"];
-    $passwort = hash("MD5", $_POST["passwort"]);
+    $passwort = hash("MD5", trim(stripslashes (htmlentities($_POST["passwort"]))));
     $dozentInstnc = new dozent();
     $dozent = $dozentInstnc->getByMail($mail);
 
