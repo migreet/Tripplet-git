@@ -42,7 +42,7 @@ echo "<div id='loginWarning' class='col-sm-offset-6'> $notificationLogin </div>"
     <form name="registerform" class="form-horizontal col-sm-offset-6 loginform" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
         <div class="form-group">
             <div class="col-sm-6">
-                <input type="text" class="form-control" name="mail" placeholder="Emailadresse" id="mail" required>
+                <input type="email" class="form-control" name="mail" placeholder="Emailadresse" id="mail" required>
             </div>
         </div>
         <div class="form-group">
@@ -74,9 +74,9 @@ echo "<div id='loginWarning' class='col-sm-offset-6'> $notificationLogin </div>"
     <?php
     if (isset($_POST["sentregister"])) {
         $vorname = trim(stripslashes (htmlentities($_POST["vorname"], ENT_QUOTES, "UTF-8")));
-        $nachname = htmlspecialchars($_POST["nachname"], ENT_QUOTES, "UTF-8");
-        $passwort = hash("MD5", htmlspecialchars($_POST["passwort"], ENT_QUOTES, "UTF-8"));
-        $mail = htmlspecialchars($_POST["mail"], ENT_QUOTES, "UTF-8");
+        $nachname = trim(stripslashes (htmlentities($_POST["nachname"], ENT_QUOTES, "UTF-8")));
+        $passwort = hash("MD5", trim(stripslashes (htmlentities($_POST["passwort"], ENT_QUOTES, "UTF-8"))));
+        $mail = trim(stripslashes (htmlentities($_POST["mail"], ENT_QUOTES, "UTF-8")));
 
         if (!empty ($mail) && !empty ($passwort) && !empty ($nachname) && !empty ($vorname)) {
             $dozentInstnc = new dozent();
