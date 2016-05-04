@@ -21,8 +21,8 @@ $ID_Vorlesung=$_GET['id'];
 
     $postVoting=$_POST["votingcreate"];
     if (isset($postVoting)) {
-        $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
-        $vorlesungsId= htmlspecialchars($_GET["id"], ENT_QUOTES, "UTF-8");
+        $bezeichnung = trim(stripslashes (htmlentities($_POST["bezeichnung"], ENT_QUOTES, "UTF-8")));
+        $vorlesungsId= trim(stripslashes (htmlentities($_GET["id"], ENT_QUOTES, "UTF-8")));
 
         if (!empty ($bezeichnung)) {
             $votingInstnc = new voting();
