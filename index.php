@@ -42,7 +42,7 @@ echo "<div id='loginWarning' class='col-sm-offset-6'> $notificationLogin </div>"
     <form name="registerform" class="form-horizontal col-sm-offset-6 loginform" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
         <div class="form-group">
             <div class="col-sm-6">
-                <input type="email" class="form-control" name="mail" placeholder="Emailadresse" id="mail" required>
+                <input type="email"  class="form-control" name="mail" placeholder="Emailadresse" id="mail" required>
             </div>
         </div>
         <div class="form-group">
