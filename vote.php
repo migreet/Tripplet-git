@@ -57,7 +57,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     $countfinished=$auswertungInstnc->countFragen(1,$_SESSION['votingid'],$_SESSION['id']);
 
     if (isset($fragerundeset)) {
-        $eintragID = htmlspecialchars($_POST['antwort'], ENT_QUOTES, "UTF-8");
+        $eintragID = trim(stripslashes (htmlentities($_POST['antwort'], ENT_QUOTES, "UTF-8")));
         $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
         header('location:vote.php');
     }
