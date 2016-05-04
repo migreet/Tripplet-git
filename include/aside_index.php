@@ -9,7 +9,7 @@
 
 $postVorlesung=$_POST["vorlesungcreate"];
 if (isset($postVorlesung)) {
-$bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
+$bezeichnung = trim(stripslashes (htmlentities($_POST["bezeichnung"], ENT_QUOTES, "UTF-8")));
 
 
 if (!empty ($bezeichnung)) {
