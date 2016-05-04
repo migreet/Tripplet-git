@@ -28,7 +28,7 @@ $ID_Voting=$_GET['id'];
 
 //Voting Aside Logik
 $frageCreate=$_POST["fragecreate"];
-$frageText = htmlspecialchars($_POST["frage"], ENT_QUOTES, "UTF-8");
+$frageText = trim(stripslashes (htmlentities($_POST["frage"], ENT_QUOTES, "UTF-8")));
 
 
 if (isset($frageCreate)) {
@@ -48,9 +48,9 @@ if (isset($frageCreate)) {
     //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
     $antwort= array ();
     for ($i = 0; $i <= 9; $i++) {
-        if (!empty (htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))){
+        if (!empty (trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))))){
             //$antwort[] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
-            $antwortText = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
+            $antwortText = trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8")));
             $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
 
         }
@@ -64,9 +64,9 @@ if (isset($frageCreate)) {
 
 $postVoting=$_POST["votingcreate"];
 if (isset($postVoting)) {
-    $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
-    $schluessel= htmlspecialchars($_POST["schluessel"], ENT_QUOTES, "UTF-8");
-    $vorlesungsId= htmlspecialchars($_GET["id"], ENT_QUOTES, "UTF-8");
+    $bezeichnung = trim(stripslashes (htmlentities($_POST["bezeichnung"], ENT_QUOTES, "UTF-8")));
+    $schluessel= trim(stripslashes (htmlentities($_POST["schluessel"], ENT_QUOTES, "UTF-8")));
+    $vorlesungsId= trim(stripslashes (htmlentities($_GET["id"], ENT_QUOTES, "UTF-8")));
 
     if (!empty ($bezeichnung)) {
         $voting = $votingInstnc->createVoting($bezeichnung, $schluessel, $vorlesungsId);
