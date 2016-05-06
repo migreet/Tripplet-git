@@ -74,6 +74,9 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
         if ($notification=="right") {
             echo "<div class='col-sm-6'>Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.</div>";
         }
+        if ($notification=="wrong") {
+            echo "<div class='col-sm-6'>Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
+        }
 
         ?>
     </form>
@@ -94,7 +97,7 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
                 $getNot = "right";
                 header('location:index.php?notification=' . $getNot);
             } else {
-                $getNot = "Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.";
+                $getNot = "wrong";
                 header('location:index.php?notification=' . $getNot);
             }
         }
