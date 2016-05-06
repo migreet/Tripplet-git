@@ -70,7 +70,12 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
                 <button type="submit" name="registrieren" class="btn btn-default">Registrieren</button>
             </div>
         </div>
-        <?php echo "<div class='col-sm-6'>$notification</div>"; ?>
+        <?php
+        if ($notification=="right") {
+            echo "<div class='col-sm-6'>Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.</div>";
+        }
+
+        ?>
     </form>
 
     <?php
@@ -86,7 +91,7 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
 
             if (empty($dozent)) {
                 $liste = $dozentInstnc->signup($nachname, $vorname, $passwort, $mail);
-                $getNot = "Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.";
+                $getNot = "right";
                 header('location:index.php?notification=' . $getNot);
             } else {
                 $getNot = "Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.";
