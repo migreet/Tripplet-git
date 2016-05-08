@@ -29,7 +29,7 @@ else {echo "<div> Anlegen der Vorlesung nicht erfolgreich! Wenden Sie sich bitte
 
     Eine neue Vorlesung hinzufügen!
 
-<form name="registerform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+<form name="registerform" id="aside-index" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
     <div class="form-group">
         <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnung" id="mail" required>
         <input type="hidden" value="1" name="vorlesungcreate">
