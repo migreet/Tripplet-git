@@ -54,7 +54,7 @@ $vorlesungInstnc = new vorlesung();
 $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 ?>
 
-<div class="container">
+<div id="votingubersicht" class="container">
 <h1> <?php echo $vorlesung['bezeichnung']; ?></h1>
 <div class="col-md-8">
     <?php
