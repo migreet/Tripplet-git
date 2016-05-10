@@ -47,7 +47,7 @@ require_once("include/header.php");
         color: DarkTurquoise;
     }
 
-    footer{
+    .footer{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -161,12 +161,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         }
 
         ?>
-    </div>
-
-    <div class="footer" >
-        <div class="container">
-            <p class="text-muted">Place sticky footer content here.</p>
-        </div>
     </div>
 
     </body>
