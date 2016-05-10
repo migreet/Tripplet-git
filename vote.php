@@ -163,6 +163,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         ?>
     </div>
 
+    <div class="footer" >
+        <div class="container">
+            <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+    </div>
+
     </body>
 <?php else:
     if (isset($schluesselsent)) {
@@ -204,12 +210,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             ?>
         </form>
 
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <p class="text-muted">Place sticky footer content here.</p>
-        </div>
     </div>
 
     </body>
