@@ -156,7 +156,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         }
 
         else {
-            echo "<i class='fa fa-circle-o fa-stack-1x'></i>";
+            echo "o";
         }
 
         }
