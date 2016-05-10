@@ -44,16 +44,6 @@ require_once("include/header.php");
     }
 
 </style>
-
-<form>
-    <input type="radio" name="option" id="radio1" checked/>
-    <label for="radio1">
-            <span class="fa-stack">
-                <i class="fa fa-circle-o fa-stack-1x"></i>
-                <i class="fa fa-circle fa-stack-1x"></i>
-            </span>
-        Hombre
-    </label><br />
     <input type="radio" name="option" id="radio2" />
     <label for="radio2">
             <span class="fa-stack">
@@ -62,25 +52,8 @@ require_once("include/header.php");
             </span>
         Mujer
     </label><br />
-    <input type="checkbox" name="option" id="check1" checked/>
-    <label for="check1">
-            <span class="fa-stack">
-                <i class="fa fa-square-o fa-stack-1x"></i>
-                <i class="fa fa-check fa-stack-1x"></i>
-            </span>
-        DVD
-    </label><br />
-    <input type="checkbox" name="option" id="check2" />
-    <label for="check2">
-            <span class="fa-stack">
-                <i class="fa fa-square-o fa-stack-1x"></i>
-                <i class="fa fa-check fa-stack-1x"></i>
-            </span>
-        CD
-    </label><br />
-</form>
-</body>
-</html>
+
+
 
 
 <?php
@@ -145,7 +118,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             if (!empty($antwort)):
             foreach ($antwort as $eintrag) {
 
-                echo "<input class='with-font' value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
+                echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>
+<label for='antwort'>
+            <span class='fa-stack'>
+                <i class='fa fa-circle-o fa-stack-1x'></i>
+                <i class='fa fa-circle fa-stack-1x'></i>
+            </span>"
+                . $eintrag['text'] .
+                "</label>
+<br />";
 
             }
             echo "<input type='hidden' value='1' name='fragerunde'>";
