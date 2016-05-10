@@ -152,11 +152,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         }
 
         elseif ($i==$anzahlFragenready) { //Grafiken einfügen für die Navi
-            echo "<i class='fa fa-circle fa-stack-1x'></i>";
+            echo "x";
         }
 
         else {
-            echo "<i class='fa fa-circle-o fa-stack-1x'></i>";
+            echo "o";
         }
 
         }
