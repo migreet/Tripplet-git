@@ -122,7 +122,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             if (!empty($antwort)):
             foreach ($antwort as $eintrag) {
 
-                echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
+                echo "<input class='with-font' value='" . $eintrag['ID'] . "'type='radio' name='antwort'>". $eintrag['text'] . "<br />";
 
             }
             echo "<input type='hidden' value='1' name='fragerunde'>";
