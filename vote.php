@@ -40,8 +40,7 @@ require_once("include/header.php");
     }
     /* Styling radiobuttons */
     input[type="radio"]:checked + label .fa-circle {
-        display: block;
-        color: DarkTurquoise;
+        display: none;
     }
 
 </style>
