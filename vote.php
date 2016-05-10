@@ -114,7 +114,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 <label for='". $eintrag['ID'] ."'>
             <span class='fa-stack'>
                 <i class='fa fa-circle-o fa-stack-1x'></i>
-                <i class='fa fa-check-circle fa-stack-1x'></i>
+                <i class='fa fa-check-circle fa-stack-2x'></i>
             </span>"
                 . $eintrag['text'] .
                 "</label>
