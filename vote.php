@@ -33,7 +33,7 @@
 
     /* Styling radiobuttons */
     input[type="radio"]:checked + label .fa-circle-o {
-        display: none;
+
     }
 
 </style>
