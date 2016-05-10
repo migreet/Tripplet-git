@@ -119,7 +119,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             if (!empty($antwort)):
             foreach ($antwort as $eintrag) {
 
-                echo "<input value='" . $eintrag['ID'] . "'type='radio' name='antwort'>
+                echo "<input value='" . $eintrag['ID'] . "' id='" . $eintrag['ID'] . "' type='radio' name='antwort'>
 <label for='antwort'>
             <span class='fa-stack'>
                 <i class='fa fa-circle-o fa-stack-1x'></i>
