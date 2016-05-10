@@ -22,12 +22,12 @@ require_once("include/header.php");
         display: none;
     }
     /* Hidding the "check" status of inputs */
-    input[type="radio"] + label .fa-circle,
+    input[type="radio"] + label .fa-check-circle,
     input[type="checkbox"] + label .fa-check  {
         display: none;
     }
     /* Styling the "check" status */
-    input[type="radio"]:checked + label .fa-circle,
+    input[type="radio"]:checked + label .fa-check-circle,
     input[type="checkbox"]:checked + label .fa-check {
         display: block;
         color: DarkTurquoise;
