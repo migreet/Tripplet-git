@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <style>
+    @import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
 
     #vote input[type=radio].with-font,
     #vote input[type=checkbox].with-font {
