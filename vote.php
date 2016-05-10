@@ -46,6 +46,13 @@ require_once("include/header.php");
     input[type="radio"] + label .fa-circle {
         color: DarkTurquoise;
     }
+    footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+    }
 
 </style>
 
@@ -197,6 +204,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         </form>
 
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+    </footer>
 
     </body>
 
