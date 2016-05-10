@@ -43,6 +43,9 @@ require_once("include/header.php");
         display: none;
         color: DarkTurquoise;
     }
+    input[type="radio"] + label .fa-circle {
+        color: DarkTurquoise;
+    }
 
 </style>
 
