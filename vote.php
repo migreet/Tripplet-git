@@ -10,6 +10,54 @@
 
 <!DOCTYPE html>
 <html lang="de">
+<style>
+
+    #vote input[type=radio].with-font,
+    #vote input[type=checkbox].with-font {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    #vote input[type=radio].with-font ~ label:before,
+    #vote input[type=checkbox].with-font ~ label:before {
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f1db";
+        letter-spacing: 10px;
+        font-size: 1.2em;
+        color: #535353;
+        width: 1.4em;
+    }
+
+    #vote input[type=radio].with-font:checked ~ label:before,
+    #vote input[type=checkbox].with-font:checked ~ label:before  {
+        content: "\f00c";
+        font-size: 1.2em;
+        color: darkgreen;
+        letter-spacing: 5px;
+    }
+    #vote input[type=checkbox].with-font ~ label:before {
+        content: "\f096";
+    }
+    #vote input[type=checkbox].with-font:checked ~ label:before {
+        content: "\f046";
+        color: darkgreen;
+    }
+    #vote input[type=radio].with-font:focus ~ label:before,
+    #vote input[type=checkbox].with-font:focus ~ label:before,
+    #vote input[type=radio].with-font:focus ~ label,
+    #vote input[type=checkbox].with-font:focus ~ label
+    {
+        color: green;
+    }
+
+</style>
 
 
 <?php
