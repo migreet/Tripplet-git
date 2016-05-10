@@ -10,6 +10,11 @@
 
 <!DOCTYPE html>
 <html lang="de">
+
+<?php
+require_once("include/header.php");
+?>
+
 <style>
     @import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
 
@@ -38,9 +43,8 @@
 
 </style>
 
-
 <?php
-require_once("include/header.php");
+
 require_once("php/classes.php");
 
 session_start();
