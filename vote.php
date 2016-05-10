@@ -206,11 +206,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
     </div>
 
-    <footer class="footer">
+    <div class="footer">
         <div class="container">
             <p class="text-muted">Place sticky footer content here.</p>
         </div>
-    </footer>
+    </div>
 
     </body>
 
