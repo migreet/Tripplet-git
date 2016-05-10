@@ -44,7 +44,14 @@ require_once("include/header.php");
     }
 
 </style>
-
+<input type="radio" name="option" id="radio2" />
+<label for="radio2">
+            <span class="fa-stack">
+                <i class="fa fa-circle-o fa-stack-1x"></i>
+                <i class="fa fa-circle fa-stack-1x"></i>
+            </span>
+    Mujer
+</label><br />
 
 
 
