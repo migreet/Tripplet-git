@@ -111,6 +111,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     <a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a>
     <div class="container" id="vote">
 
+        <input type="radio" name="option" id="radio2" />
+        <label for="radio2">
+            <span class="fa-stack">
+                <i class="fa fa-circle-o fa-stack-1x"></i>
+                <i class="fa fa-circle fa-stack-1x"></i>
+            </span>
+            Mujer
+        </label><br />
+
         <h1>Fragerunde</h1>
         <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
