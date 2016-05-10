@@ -39,8 +39,9 @@ require_once("include/header.php");
         bottom: .125em;
     }
     /* Styling radiobuttons */
-    input[type="radio"]:checked + label .fa-circle-o {
-        display: none;
+    input[type="radio"]:checked + label .fa-circle {
+        display: block;
+        color: DarkTurquoise;
     }
 
 </style>
@@ -113,7 +114,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                 echo "<input value='" . $eintrag['ID'] . "' id='" . $eintrag['ID'] . "' type='radio' name='antwort'>
 <label for='". $eintrag['ID'] ."'>
             <span class='fa-stack'>
-                <i class='fa fa-circle-o fa-stack-1x'></i>
+                <i class='fa fa-circle fa-stack-1x'></i>
                 <i class='fa fa-check-circle fa-stack-2x'></i>
             </span>"
                 . $eintrag['text'] .
