@@ -120,7 +120,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             foreach ($antwort as $eintrag) {
 
                 echo "<input value='" . $eintrag['ID'] . "' id='" . $eintrag['ID'] . "' type='radio' name='antwort'>
-<label for='antwort'>
+<label for='". $eintrag['ID'] ."'>
             <span class='fa-stack'>
                 <i class='fa fa-circle-o fa-stack-1x'></i>
                 <i class='fa fa-circle fa-stack-1x'></i>
