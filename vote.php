@@ -46,6 +46,7 @@ require_once("include/header.php");
     input[type="radio"] + label .fa-circle {
         color: DarkTurquoise;
     }
+
     footer{
     position: absolute;
     bottom: 0;
