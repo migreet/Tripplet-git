@@ -29,7 +29,7 @@
     #vote input[type=checkbox].with-font ~ label:before {
         font-family: FontAwesome;
         display: inline-block;
-        content: "\f1db";
+        content: "sasda";
         letter-spacing: 10px;
         font-size: 1.2em;
         color: #535353;
