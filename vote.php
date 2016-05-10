@@ -13,50 +13,30 @@
 <style>
     @import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
 
-    #vote input[type=radio].with-font,
-    #vote input[type=checkbox].with-font {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
+    /* Hidding the radiobuttons & checkboxes */
+    input[type="radio"], input[type="checkbox"] {
+        display: none;
     }
 
-    #vote input[type=radio].with-font ~ label:before,
-    #vote input[type=checkbox].with-font ~ label:before {
-        font-family: FontAwesome;
-        display: inline-block;
-        content: "sasda";
-        letter-spacing: 10px;
-        font-size: 1.2em;
-        color: #535353;
-        width: 1.4em;
+    /* Hidding the "check" status of inputs */
+    input[type="radio"] + label .fa-circle,
+    input[type="checkbox"] + label .fa-check  {
+        display: none;
     }
 
-    #vote input[type=radio].with-font:checked ~ label:before,
-    #vote input[type=checkbox].with-font:checked ~ label:before  {
-        content: "\f00c";
-        font-size: 1.2em;
-        color: darkgreen;
-        letter-spacing: 5px;
+    /* Styling the "check" status */
+    input[type="radio"]:checked + label .fa-circle,
+    input[type="checkbox"]:checked + label .fa-check {
+        display: block;
+        color: DarkTurquoise;
     }
-    #vote input[type=checkbox].with-font ~ label:before {
-        content: "\f096";
+
+    /* Styling radiobuttons */
+    input[type="radio"]:checked + label .fa-circle-o {
+        display: none;
     }
-    #vote input[type=checkbox].with-font:checked ~ label:before {
-        content: "\f046";
-        color: darkgreen;
-    }
-    #vote input[type=radio].with-font:focus ~ label:before,
-    #vote input[type=checkbox].with-font:focus ~ label:before,
-    #vote input[type=radio].with-font:focus ~ label,
-    #vote input[type=checkbox].with-font:focus ~ label
-    {
-        color: green;
-    }
+
+
 
 </style>
 
