@@ -148,11 +148,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         $anzahlFragenready=$countfinished ['COUNT(*)'];
         for ($i = 0; $i < $anzahlFragen; $i++)
         {if ($i<$anzahlFragenready) {
-            echo "<i class='fa fa-circle fa-stack-2x stack-active'></i>" ;
+            echo "<i class='fa fa-circle fa-stack-2x stack-done'></i>" ;
         }
 
         elseif ($i==$anzahlFragenready) { //Grafiken einfügen für die Navi
-            echo "<i class='fa fa-circle fa-stack-2x stack-done'></i>";
+            echo "<i class='fa fa-circle fa-stack-2x stack-active'></i>";
         }
 
         else {
