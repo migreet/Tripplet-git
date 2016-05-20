@@ -120,11 +120,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         <h1>Fragerunde</h1>
         <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
+            <ul class="list-group">
             <?php
             if (!empty($antwort)):
             foreach ($antwort as $eintrag) {
 
-                echo "<input value='" . $eintrag['ID'] . "' id='" . $eintrag['ID'] . "' type='radio' name='antwort'>
+                echo "<input value='" . $eintrag['ID'] . "' id='" . $eintrag['ID'] . "' type='radio' name='antwort' class='list-group-item'>
 <label for='". $eintrag['ID'] ."'>
             <span class='fa-stack'>
                 <i class='fa fa-circle fa-stack-1x'></i>
@@ -137,6 +138,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             }
             echo "<input type='hidden' value='1' name='fragerunde'>";
             ?>
+                </ul>
             </div><input type="submit" class="btn btn-danger vote-btn vote-sbmt-btn"> <br />
         </form>
         <?php else: ?>
