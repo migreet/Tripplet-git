@@ -114,7 +114,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     <body>
     <a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a>
     <div class="container" id="vote">
-        <div class="col-md-6">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
 
         <h1>Fragerunde</h1>
         <?php echo $fragerunde['text']."<br>"; ?>
