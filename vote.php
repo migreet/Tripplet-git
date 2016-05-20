@@ -143,7 +143,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         Du hast alle Fragen beantwortet! :) <br>
         <?php endif; ?>
         <?php
-        echo "</div><div class='container'>";
+        echo "</div><div class='container vote-navi'>";
         $anzahlFragen=$countFragen['COUNT(*)'];
         $anzahlFragenready=$countfinished ['COUNT(*)'];
         for ($i = 0; $i < $anzahlFragen; $i++)
