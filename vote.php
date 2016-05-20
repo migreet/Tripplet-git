@@ -137,7 +137,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             }
             echo "<input type='hidden' value='1' name='fragerunde'>";
             ?>
-                <input type="submit" class="btn btn-danger vote-btn vote-sbmt-btn class='list-group-item'">
+                <input type="submit" class="btn btn-danger vote-btn vote-sbmt-btn list-group-item'">
                 </ul>
             </div>
         </form>
