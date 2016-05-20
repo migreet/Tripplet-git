@@ -112,7 +112,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     ?>
 
     <body>
-    <div class="col-md-1"><a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a></div>
     <div class="container" id="vote">
         <div class="col-md-4"></div>
         <div class="col-md-4">
@@ -145,7 +144,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         Du hast alle Fragen beantwortet! :) <br>
         <?php endif; ?>
         <?php
-        echo "</div><div class='container vote-navi'><div class='col-md-4'></div><div class='col-md-4'>";
+        echo "</div>
+        <div class="col-md-1"><a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a></div>
+        <div class='container vote-navi'><div class='col-md-4'></div><div class='col-md-4'>";
         $anzahlFragen=$countFragen['COUNT(*)'];
         $anzahlFragenready=$countfinished ['COUNT(*)'];
         for ($i = 0; $i < $anzahlFragen; $i++)
