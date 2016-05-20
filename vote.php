@@ -115,7 +115,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     <a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a>
     <div class="container" id="vote">
         <div class="col-md-4"></div>
-        < class="col-md-4">
+        <div class="col-md-4">
             <div class="fragerunde">
         <h1>Fragerunde</h1>
         <?php echo $fragerunde['text']."<br>"; ?>
@@ -143,7 +143,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         Du hast alle Fragen beantwortet! :) <br>
         <?php endif; ?>
         <?php
-        echo "</div><div class='container'>";
+        echo "</div><div class='footer'><div class='container'>";
         $anzahlFragen=$countFragen['COUNT(*)'];
         $anzahlFragenready=$countfinished ['COUNT(*)'];
         for ($i = 0; $i < $anzahlFragen; $i++)
@@ -162,6 +162,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         }
         echo "</div>";
         ?>
+
+    </div>
     </div>
 
     </body>
