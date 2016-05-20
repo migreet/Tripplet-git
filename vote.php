@@ -132,8 +132,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                 <i class='fa fa-check-circle fa-stack-2x'></i>
             </span>"
                 . $eintrag['text'] .
-                "</label>
-<br />";
+                "</label>";
 
             }
             echo "<input type='hidden' value='1' name='fragerunde'>";
