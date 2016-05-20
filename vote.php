@@ -145,7 +145,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         <?php echo "Beantwortete Fragen " .$countfinished ['COUNT(*)']; ?> <br>
         <?php echo "Gesamtfragen " .$countFragen['COUNT(*)']; ?> <br>
         <?php
-        echo "<div class='footer'>";
+        echo "</div><div class='footer'>";
         $anzahlFragen=$countFragen['COUNT(*)'];
         $anzahlFragenready=$countfinished ['COUNT(*)'];
         for ($i = 0; $i < $anzahlFragen; $i++)
@@ -164,7 +164,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         }
         echo "</div>";
         ?>
-        </div>
+
     </div>
 
     </body>
