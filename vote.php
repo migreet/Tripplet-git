@@ -146,8 +146,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         <?php
         echo "</div>
         <div class='col-md-3'></div><div>
-        <div class='col-md-1'><a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a></div>
-        <div class='container vote-navi'><div class='col-md-4'></div><div class='col-xs-12 col-sm-12 col-md-4'>";
+        <div class='col-xs-12 col-sm-12 col-md-1'><a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a></div>
+        <div class='container vote-navi'><div class='col-md-4'></div><div class='col-md-4'>";
         $anzahlFragen=$countFragen['COUNT(*)'];
         $anzahlFragenready=$countfinished ['COUNT(*)'];
         for ($i = 0; $i < $anzahlFragen; $i++)
