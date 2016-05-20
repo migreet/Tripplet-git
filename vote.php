@@ -142,8 +142,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         <?php else: ?>
         Du hast alle Fragen beantwortet! :) <br>
         <?php endif; ?>
-        <?php echo "Beantwortete Fragen " .$countfinished ['COUNT(*)']; ?> <br>
-        <?php echo "Gesamtfragen " .$countFragen['COUNT(*)']; ?> <br>
         <?php
         echo "</div><div class='footer'>";
         $anzahlFragen=$countFragen['COUNT(*)'];
