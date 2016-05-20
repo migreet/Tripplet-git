@@ -116,7 +116,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     <div class="container" id="vote">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-
+            <div class="fragerunde">
         <h1>Fragerunde</h1>
         <?php echo $fragerunde['text']."<br>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
@@ -137,7 +137,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             }
             echo "<input type='hidden' value='1' name='fragerunde'>";
             ?>
-            <input type="submit" class="btn btn-danger vote-btn vote-sbmt-btn"> <br />
+            </div><input type="submit" class="btn btn-danger vote-btn vote-sbmt-btn"> <br />
         </form>
         <?php else: ?>
         Du hast alle Fragen beantwortet! :) <br>
