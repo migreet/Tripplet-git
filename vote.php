@@ -122,7 +122,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
 
         <?php
-        echo "<div class=''>". $votingName['bezeichnung']."</div>";
+        echo "<h4>". $votingName['bezeichnung']."</h4>";
         echo "<h3>". $fragerunde['text']."</h3>"; ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
             <ul class="list-group">
