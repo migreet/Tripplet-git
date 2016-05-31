@@ -83,7 +83,7 @@ $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 $votingName=$votingInstnc->getById($_SESSION['votingid']);
 print_r($votingName);
             //debug section
-            ///*
+            /*
             echo"<br />=== voting === <br />";
             print_r($voting)."<br />";
             echo"<br />=== frage === <br />";
@@ -92,7 +92,7 @@ print_r($votingName);
             print_r($fragerunde)."<br />";
             echo "<br />=== Session === <br />";
             print_r( $_SESSION);
-            //*/
+            */
 
 
 
