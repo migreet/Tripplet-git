@@ -81,7 +81,7 @@ $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Sc
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 $votingName=$votingInstnc->getById($_SESSION['votingid']);
-print_r($votingName);
+
             //debug section
             /*
             echo"<br />=== voting === <br />";
