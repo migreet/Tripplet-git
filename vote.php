@@ -81,17 +81,7 @@ $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Sc
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 
-//debug section
-///*
-echo"<br />=== voting === <br />";
-print_r($voting)."<br />";
-echo"<br />=== frage === <br />";
-print_r($frage) ."<br />";
-echo "<br />=== fragerunde === <br />";
-print_r($fragerunde)."<br />";
-echo "<br />=== Session === <br />";
-print_r( $_SESSION);
-//*/
+
 
 
 if ($_SESSION['rights']>0){
@@ -117,6 +107,20 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <div class="fragerunde">
+
+                <?php
+                //debug section
+                ///*
+                echo"<br />=== voting === <br />";
+                print_r($voting)."<br />";
+                echo"<br />=== frage === <br />";
+                print_r($frage) ."<br />";
+                echo "<br />=== fragerunde === <br />";
+                print_r($fragerunde)."<br />";
+                echo "<br />=== Session === <br />";
+                print_r( $_SESSION);
+                //*/
+                ?>
 
         <?php
         echo "<div class=''>". $voting['text']."</div>";
