@@ -80,7 +80,19 @@ $antwortInstnc = new antwort();
 $voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
-
+$votingName=$votingInstnc->getById($_SESSION['votingid']);
+print_r($votingName);
+            //debug section
+            ///*
+            echo"<br />=== voting === <br />";
+            print_r($voting)."<br />";
+            echo"<br />=== frage === <br />";
+            print_r($frage) ."<br />";
+            echo "<br />=== fragerunde === <br />";
+            print_r($fragerunde)."<br />";
+            echo "<br />=== Session === <br />";
+            print_r( $_SESSION);
+            //*/
 
 
 
@@ -159,19 +171,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <div class='col-md-12 no-padding vote-logout'><a href='vote_logout.php' class='btn btn-danger vote-btn logout-btn'>Ausloggen</a></div>
             ";
             ?>
-            <?php
-            //debug section
-            ///*
-            echo"<br />=== voting === <br />";
-            print_r($voting)."<br />";
-            echo"<br />=== frage === <br />";
-            print_r($frage) ."<br />";
-            echo "<br />=== fragerunde === <br />";
-            print_r($fragerunde)."<br />";
-            echo "<br />=== Session === <br />";
-            print_r( $_SESSION);
-            //*/
-            ?>
+
             </div>
         </form>
         <?php else: ?>
