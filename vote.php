@@ -138,34 +138,35 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             ?>
                 <input type="submit" class="list-group-item vote-sbmt-btn">
                 </ul>
+            <?php
+            echo "</div>
+        <div class='col-md-3'></div><div>
+        <div class='col-xs-12 col-sm-12 col-md-1'><a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a></div>
+        <div class='container vote-navi'><div class='col-md-4'></div><div class='col-md-4'>";
+            $anzahlFragen=$countFragen['COUNT(*)'];
+            $anzahlFragenready=$countfinished ['COUNT(*)'];
+            for ($i = 0; $i < $anzahlFragen; $i++)
+            {if ($i<$anzahlFragenready) {
+                echo "<i class='fa fa-circle fa-stack-1x stack-done'></i>" ;
+            }
+
+            elseif ($i==$anzahlFragenready) { //Grafiken einfügen für die Navi
+                echo "<i class='fa fa-circle fa-stack-1x stack-active'></i>";
+            }
+
+            else {
+                echo "<i class='fa fa-circle fa-stack-1x stack-open'></i>";
+            }
+
+            }
+            echo "</div></div><div class='col-md-4'></div>";
+            ?>
             </div>
         </form>
         <?php else: ?>
         Du hast alle Fragen beantwortet! :) <br>
         <?php endif; ?>
-        <?php
-        echo "</div>
-        <div class='col-md-3'></div><div>
-        <div class='col-xs-12 col-sm-12 col-md-1'><a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a></div>
-        <div class='container vote-navi'><div class='col-md-4'></div><div class='col-md-4'>";
-        $anzahlFragen=$countFragen['COUNT(*)'];
-        $anzahlFragenready=$countfinished ['COUNT(*)'];
-        for ($i = 0; $i < $anzahlFragen; $i++)
-        {if ($i<$anzahlFragenready) {
-            echo "<i class='fa fa-circle fa-stack-2x stack-done'></i>" ;
-        }
 
-        elseif ($i==$anzahlFragenready) { //Grafiken einfügen für die Navi
-            echo "<i class='fa fa-circle fa-stack-2x stack-active'></i>";
-        }
-
-        else {
-            echo "<i class='fa fa-circle fa-stack-2x stack-open'></i>";
-        }
-
-        }
-        echo "</div></div><div class='col-md-4'></div>";
-        ?>
 
     </div>
 
