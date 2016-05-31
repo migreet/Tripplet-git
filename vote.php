@@ -84,7 +84,7 @@ $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 //debug section
 /*
 echo"<br />=== voting === <br />";
-print_r($voting)."<br />";
+
 echo"<br />=== frage === <br />";
 print_r($frage) ."<br />";
 echo "<br />=== fragerunde === <br />";
@@ -92,6 +92,7 @@ print_r($fragerunde)."<br />";
 echo "<br />=== Session === <br />";
 print_r( $_SESSION);
 */
+print_r($voting)."<br />";
 
 if ($_SESSION['rights']>0){
     header ('location: index.php');
