@@ -161,7 +161,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             }
 
             echo "
-
+            <div class='col-xs-12 col-sm-12 col-md-1'><a href='vote_logout.php' class='btn btn-danger vote-btn'>Ausloggen</a></div>
             </div>";
             ?>
             </div>
