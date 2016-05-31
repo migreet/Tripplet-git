@@ -142,7 +142,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             echo "</div>
 
 
-            <div class='vote-dot'>";
+            <div class='col-md-12 vote-dot'>";
             $anzahlFragen=$countFragen['COUNT(*)'];
             $anzahlFragenready=$countfinished ['COUNT(*)'];
             for ($i = 0; $i < $anzahlFragen; $i++)
