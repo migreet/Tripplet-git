@@ -108,19 +108,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         <div class="col-md-4">
             <div class="fragerunde">
 
-                <?php
-                //debug section
-                ///*
-                echo"<br />=== voting === <br />";
-                print_r($voting)."<br />";
-                echo"<br />=== frage === <br />";
-                print_r($frage) ."<br />";
-                echo "<br />=== fragerunde === <br />";
-                print_r($fragerunde)."<br />";
-                echo "<br />=== Session === <br />";
-                print_r( $_SESSION);
-                //*/
-                ?>
 
         <?php
         echo "<div class=''>". $voting['text']."</div>";
@@ -171,6 +158,19 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             </div>
             <div class='col-md-12 no-padding vote-logout'><a href='vote_logout.php' class='btn btn-danger vote-btn logout-btn'>Ausloggen</a></div>
             ";
+            ?>
+            <?php
+            //debug section
+            ///*
+            echo"<br />=== voting === <br />";
+            print_r($voting)."<br />";
+            echo"<br />=== frage === <br />";
+            print_r($frage) ."<br />";
+            echo "<br />=== fragerunde === <br />";
+            print_r($fragerunde)."<br />";
+            echo "<br />=== Session === <br />";
+            print_r( $_SESSION);
+            //*/
             ?>
             </div>
         </form>
