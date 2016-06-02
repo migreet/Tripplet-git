@@ -59,6 +59,11 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 <div class="col-md-8">
     <?php
 
+    //Breadcrumb
+    echo"
+    <div calss='breadcrumb'>
+    <a href='index.php'>home</a>><a href='index.php'>Vorlesungsübersicht</a>>Votingübersicht
+    </div>";
 
     echo "<p><strong>Votings in dieser Vorlesung</strong></p>";
     $voting = $votingInstnc->getByVorlesungsId($ID_Vorlesung);
