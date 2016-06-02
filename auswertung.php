@@ -96,6 +96,13 @@ if (isset($postVoting)) {
     ?>
 
     <div class="container">
+        <?php
+        //Breadcrumb
+        echo"
+        <div calss='breadcrumb'>
+        <a href='index.php'>home</a>><a href='index.php'>Vorlesungsübersicht</a>><a href='voting.php?id=$votingId'>Votingübersicht</a>>Auswertung
+        </div>";
+        ?>
         <h1> Auswertung <?php echo $voting['bezeichnung']; ?></h1>
         <div class="col-md-8">
             <?php
