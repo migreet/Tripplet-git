@@ -102,7 +102,7 @@ if (isset($postVoting)) {
         //Breadcrumb
         echo"
         <div calss='breadcrumb'>
-        <a href='index.php'>home</a>><a href='index.php'>Vorlesungsübersicht</a>><a> href='voting.php?id=' .$ID_Voting.'>Votingübersicht<</a>
+        <a href='index.php'>home</a>><a href='index.php'>Vorlesungsübersicht</a>><a href='voting.php?id=' .$ID_Voting.'>Votingübersicht<</a>
         </div>";
         ?>
 
