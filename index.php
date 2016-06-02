@@ -120,9 +120,9 @@ $eintragManager = new vorlesung();
 
 <div class="container" id="vorlesungsubersicht">
 
-    //Breadcrumb
+    <!--Breadcrumb-->
     <div calss="breadcrumb" >
-    <a href='do/index.php'>home</a>>Vorlesungsübersicht
+    <a href='index.php'>home</a>>Vorlesungsübersicht
     </div>
 
     <h1> Vorlesungsübersicht</h1>
