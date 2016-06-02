@@ -95,16 +95,15 @@ if (isset($postVoting)) {
     $voting=$votingInstnc->getById($ID_Voting);
     ?>
 
-    <div class="container">
-
-        <?php
-        //Breadcrumb
-        echo"
+    <?php
+    //Breadcrumb
+    echo"
         <div calss='breadcrumb'>
         <a href='index.php'>home</a>><a href='index.php'>Vorlesungsübersicht</a>><a href='vorlesung.php?id=".$ID_Voresung.">Votingübersicht<</a>
         </div>";
-        ?>
+    ?>
 
+    <div class="container">
         <h1> Voting <?php echo $voting['bezeichnung']; ?></h1>
         <div class="col-md-8">
             <?php
