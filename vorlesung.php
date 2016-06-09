@@ -109,10 +109,10 @@ endif;
                 <input type="hidden" value="1" name="votingcreate">
 
 
-        </div>
 
 
-        <div class="form-group">
+
+
             <div class="col-sm-12">
                 <button type="submit" class="btn btn-default">Voting hinzufügen</button>
             </div>
