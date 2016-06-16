@@ -174,9 +174,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
             </div>
         </form>
-        <?php else: ?>
-        Du hast alle Fragen beantwortet! :) <br>
-        <?php endif; ?>
+        <?php else:
+            $getNot=0;
+            header('location:vote.php?notification=' . $getNot);
+        endif; ?>
 
 
     </div>
