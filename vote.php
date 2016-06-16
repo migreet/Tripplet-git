@@ -205,15 +205,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     <body>
 
     <div class="container" id="vote">
+    <div class="col-md-4">
+    </div>
+        <div class="col-md-4">
+        <h3>Schlüssel eingeben</h3>
 
-        <h1 style="text-align: center;">Schlüssel eingeben</h1>
-
-        <form name="signinform" class="form-inline" style="padding-top: 7px;" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <div class="form-group">
+        <form name="signinform" class="form-inline"  action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+            <ul class="list-group">
                 <label class="sr-only" for="schluessel">Schlüssel</label>
                 <input type="password" class="form-control" name="schluessel" id="schluessel" placeholder="Schlüssel" required>
                 <input type="hidden" value="1" name="schluesselsent">
-            </div>
+            </ul>
             <div>
             <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
             </div>
@@ -222,7 +224,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             echo $notification;
             ?>
         </form>
-
+        </div>
     </div>
 
     </body>
