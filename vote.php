@@ -217,7 +217,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                 <input type="hidden" value="1" name="schluesselsent">
             </ul>
             <div>
-            <button type="submit" name="login" class="btn btn-default">Einschreiben</button>
+            <button type="submit" name="login" class="btn btn-danger vote-btn logout-btn">Einschreiben</button>
             </div>
             <?php
             //Ausgabe der Warnung bei falsher Schlüsseleingabe
