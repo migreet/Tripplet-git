@@ -17,6 +17,7 @@ require_once("php/classes.php");
 
 session_start();
 //Instanzen
+$vorlesungInstnc = new vorlesung();
 $antwortInstnc = new antwort();
 $votingInstnc = new voting();
 $frageInstnc = new frage();

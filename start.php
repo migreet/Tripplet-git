@@ -21,6 +21,7 @@ $votingsent=$_POST['votingstart'];
 $schluessel=$_POST['schluessel'];
 
 //Instanzen
+$vorlesungInstnc = new vorlesung();
 $votingInstnc = new voting();
 $voting=$votingInstnc->getById($votingId);
 $schluesselcheck=$votingInstnc->getByKey($schluessel);
