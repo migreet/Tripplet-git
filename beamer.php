@@ -36,8 +36,8 @@ echo "<div id='beamer' class='col-md-10'>";
                 }
                 echo "<h3 style='float:left'>".$eintragFrage['text'] ." (Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)"."</h3>";
                 echo "
-<div class='progress'>
-                    <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='height:40px; width: $percent%'>
+<div class='progress' style='height:40px;'>
+                    <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='width: $percent%'>
                 <span class='sr-only'>20% Complete</span>
                 </div>
                 </div>";
