@@ -21,7 +21,7 @@ $frage=$frageInstnc->getById($ID_Frage);
 echo "<div id='beamer' class='col-md-10'>";
 
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($frage['ID']);
-            echo "<h2>" . $frage['text'] . " (" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)"."</h2></br>";
+            echo "<h2>" . $frage['text'] . "(" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)"."</h2></br>";
 
             ?>
 
@@ -34,7 +34,7 @@ echo "<div id='beamer' class='col-md-10'>";
                 if(intval($anzahlTeilnehmer['COUNT(*)']!=0)) {
                 $percent=round(100/intval($anzahlTeilnehmer['COUNT(*)'])*intval($anzahlAntworten['COUNT(*)']),2);
                 }
-                echo $eintragFrage['text'] ." (Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)";
+                echo "<h3>".$eintragFrage['text'] ." (Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)"."<h3>";
                 echo "
 <div class='progress'>
                     <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='width: $percent%'>
