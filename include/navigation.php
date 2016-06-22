@@ -9,7 +9,8 @@
 
 <nav class="navbar navbar-inverse">
     <div class="container">
-    <ul class="nav navbar-nav">
+
+    <ul class="nav navbar-nav col-md-offset-8 col-md-4">
         <li>
             <a href="admin.php" >Accountverwaltung</a>
         </li>
