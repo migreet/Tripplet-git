@@ -16,7 +16,7 @@ $notification=$_GET['notification'];
 
             </li>
             <li>
-                <a href="index.php" >teööööst2</a>
+                <a href="index.php" >teööööst</a>
             </li>
             <li>
 
