@@ -26,6 +26,7 @@ echo "<div id='beamer' class='container'>";
             ?>
 
             <!--Ausgabe der Antworten zu der passenden Frage-->
+            <div class="col-md-12">
             <?php
             $antwort=$antwortInstnc->getByFragenId($frage['ID']);
             foreach ($antwort as $eintragFrage) {
@@ -40,7 +41,9 @@ echo "<div id='beamer' class='container'>";
                     <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='background-color:#55d6ba; width: $percent%'>
                 <span class='sr-only'>20% Complete</span>
                 </div>
-                </div>";
+                </div>
+                </div>
+                ";
 
             }
             ?>
