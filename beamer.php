@@ -18,10 +18,10 @@ $auswertungInstnc = new auswertung();
 $ID_Frage=$_GET['id'];
 $frage=$frageInstnc->getById($ID_Frage);
 
-echo "<div class='col-md-10'>";
+echo "<div id='beamer' class='col-md-10'>";
 
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($frage['ID']);
-            echo "<h3>" . $frage['text'] . " (" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)"."</h3></br>";
+            echo "<h2>" . $frage['text'] . " (" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)"."</h2></br>";
 
             ?>
 
