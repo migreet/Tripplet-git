@@ -17,6 +17,7 @@ require_once("php/classes.php");
 
 session_start();
 //Instanzen
+$vorlesungInstnc = new vorlesung();
 $antwortInstnc = new antwort();
 $votingInstnc = new voting();
 $frageInstnc = new frage();
@@ -98,6 +99,7 @@ if (isset($postVoting)) {
     <div class="container">
         <?php
         //Breadcrumb
+        $vorlesung = $vorlesungInstnc->getById($voting['ID_VORLESUNG']);
         echo"
         <div class='breadcrumb'>
         > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > Auswertung zu ". $voting['bezeichnung'] ."
