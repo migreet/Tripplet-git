@@ -53,9 +53,10 @@ require_once("include/navigation.php");
 <div class="container">
     <?php
     //Breadcrumb
+    $vorlesung = $vorlesungInstnc->getById($voting['ID_VORLESUNG']);
     echo"
         <div class='breadcrumb'>
-        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > ". $voting['bezeichnung'] ." starten
+        > <a href='index.php'>Vorlesungen</a> > <a href='vorlesung.php?id=".$vorlesung['ID'] ."'>". $vorlesung['bezeichnung']. "</a> > ". $voting['bezeichnung'] ." starten
         </div>";
     ?>
 <h1>Voting <?php echo $voting['bezeichnung']; ?> starten</h1>
