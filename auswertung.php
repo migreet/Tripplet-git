@@ -100,7 +100,7 @@ if (isset($postVoting)) {
         //Breadcrumb
         echo"
         <div class='breadcrumb'>
-        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > Auswertung zu <?php echo $voting['bezeichnung']; ?>
+        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > Auswertung zu ". $voting['bezeichnung'] ."
         </div>";
         ?>
 
