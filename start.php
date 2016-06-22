@@ -55,7 +55,7 @@ require_once("include/navigation.php");
     //Breadcrumb
     echo"
         <div class='breadcrumb'>
-        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsübersicht</a> > Voting starten
+        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > Voting XY starten
         </div>";
     ?>
 <h1>Voting <?php echo $voting['bezeichnung']; ?> starten</h1>
