@@ -6,6 +6,9 @@
  * Time: 15:27
  */
 
+require_once("include/header.php");
+require_once("php/classes.php");
+
 $antwortInstnc = new antwort();
 $votingInstnc = new voting();
 $frageInstnc = new frage();
