@@ -11,11 +11,6 @@
     <div class="container">
     <ul class="nav navbar-nav">
         <li>
-            <a href="index.php" >home</a>
-
-
-        </li>
-        <li>
             <a href="admin.php" >Accountverwaltung</a>
         </li>
         <li>
