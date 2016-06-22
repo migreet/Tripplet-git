@@ -99,6 +99,7 @@ if (isset($postVoting)) {
 
         <?php
         //Breadcrumb
+        $vorlesung = $vorlesungInstnc->getById($voting['ID_VORLESUNG']);
         echo"
         <div class='breadcrumb'>
         > <a href='index.php'>Vorlesungen</a> > <a href='vorlesung.php?id=".$vorlesung['ID'] ."'>". $vorlesung['bezeichnung']. "</a> > ". $voting['bezeichnung'] ." bearbeiten
