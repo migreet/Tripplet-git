@@ -102,7 +102,7 @@ if (isset($postVoting)) {
         $vorlesung = $vorlesungInstnc->getById($voting['ID_VORLESUNG']);
         echo"
         <div class='breadcrumb'>
-        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > Auswertung zu ". $voting['bezeichnung'] ."
+        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>". $vorlesung. "</a> > Auswertung zu ". $voting['bezeichnung'] ."
         </div>";
         ?>
 
