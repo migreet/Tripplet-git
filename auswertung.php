@@ -89,6 +89,8 @@ if (isset($postVoting)) {
 <style>
 .breadcrumb a{
     color: #55d6ba;
+}
+.breadcrumb {
     background-color: transparent;
 }
 </style>
