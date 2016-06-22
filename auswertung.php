@@ -99,10 +99,11 @@ if (isset($postVoting)) {
         <?php
         //Breadcrumb
         echo"
-        <div calss='breadcrumb'>
-        <a href='index.php'>home</a>><a href='index.php'>Vorlesungsübersicht</a>><a href='voting.php?id=$votingId'>Votingübersicht</a>>Auswertung
+        <div class='breadcrumb'>
+        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > Voting XY starten
         </div>";
         ?>
+
         <h1> Auswertung <?php echo $voting['bezeichnung']; ?></h1>
         <div class="col-md-8">
             <?php
