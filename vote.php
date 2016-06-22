@@ -55,7 +55,7 @@ require_once("include/header.php");
     background-color: #f5f5f5;
     }
 
-    #vote .form-inline{
+    #vote .form-control{
         width: 100%
     }
 
