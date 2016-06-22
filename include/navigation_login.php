@@ -7,31 +7,7 @@ $notification=$_GET['notification'];
 <div class="navbar navbar-inverse">
     <div class="container">
         <ul class="nav navbar-nav">
-            <a class="navbar-brand" href="index.php">
-                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
-            </a>
-            <li>
-                <a href="index.php" >home</a>
 
-
-            </li>
-            <li>
-                <a href="index.php" >teööööst</a>
-            </li>
-            <li>
-
-            </li>
-            <li>
-                <a href="index.php" >test4</a>
-            </li>
-            <li>
-                <a href="index.php" >test5</a>
-            </li>
-            <li>
-
-            </li>
-
-            </li>
 
         </ul>
         <form name="loginform" class="form-inline col-sm-offset-6" style="padding-top: 7px;" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
