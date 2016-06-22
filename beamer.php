@@ -21,7 +21,7 @@ $frage=$frageInstnc->getById($ID_Frage);
 echo "<div id='beamer' class='container'>";
 
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($frage['ID']);
-            echo "<h2 style='#808080'>" . $frage['text'] . "(" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)"."</h2></br>";
+            echo "<h2 style='color:#808080'>" . $frage['text'] . "(" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)"."</h2></br>";
 
             ?>
 
