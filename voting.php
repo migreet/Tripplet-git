@@ -101,7 +101,7 @@ if (isset($postVoting)) {
         //Breadcrumb
         echo"
         <div class='breadcrumb'>
-        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > Voting XY starten
+        > <a href='index.php'>Vorlesungen</a> > <a href='index.php'>Vorlesungsname</a> > Voting XY bearbeiten
         </div>";
         ?>
 
