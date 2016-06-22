@@ -34,9 +34,9 @@ echo "<div id='beamer' class='col-md-10'>";
                 if(intval($anzahlTeilnehmer['COUNT(*)']!=0)) {
                 $percent=round(100/intval($anzahlTeilnehmer['COUNT(*)'])*intval($anzahlAntworten['COUNT(*)']),2);
                 }
-                echo "<h3 style='float:left; margin-top: 20px; margin-bottom: 10px;'>".$eintragFrage['text'] ." (Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)"."</h3>";
+                echo "<h3 style='float:left; '>".$eintragFrage['text'] ." (Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)"."</h3>";
                 echo "
-<div class='progress' style='height:40px;'>
+                <div class='progress' style='margin-top: 20px; margin-bottom: 10px;height:40px;'>
                     <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='background-color:#55d6ba; width: $percent%'>
                 <span class='sr-only'>20% Complete</span>
                 </div>
