@@ -26,7 +26,7 @@ echo "<div id='beamer' class='container'>";
             ?>
 
             <!--Ausgabe der Antworten zu der passenden Frage-->
-            <div class="col-md-12">
+            <div class="col-md-12" style="clear:both;">
             <?php
             $antwort=$antwortInstnc->getByFragenId($frage['ID']);
             foreach ($antwort as $eintragFrage) {
