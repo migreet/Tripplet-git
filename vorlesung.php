@@ -78,11 +78,11 @@ if (!empty ($voting)):
             echo $eintrag['datum'] . " ";
             echo "</div> ";
             echo " <div class='col-md-6'>";?>
-            <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Start</a>
-            <a href="voting.php?id=<?php echo $eintrag['ID']?>" type='button' class='btn btn-default'>edit</a>
-            <a href="auswertung.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Auswertung</a>
+            <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">starten</a>
+            <a href="voting.php?id=<?php echo $eintrag['ID']?>" type='button' class='btn btn-default'>editieren</a>
+            <a href="auswertung.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Ergebnis</a>
             <!-- Votings loeschen -->
-            <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-default">Löschen</a>
+            <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-default">löschen</a>
     <?php echo"</div>";
     echo"</div>";
 
