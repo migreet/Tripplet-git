@@ -114,7 +114,7 @@ endif;
 
 
             <div class="col-sm-12">
-                <button type="submit" class="btn btn-default">Voting hinzufügen</button>
+                <button type="submit" class="btn btn-default">hinzufügen</button>
             </div>
         </div>
     </form>
