@@ -324,9 +324,10 @@ body {
     background-color: #c9302c;
     color: white;
     width: 187px;
-    border-color: black;
+    border-color: #ac2925;
 }
 
 .btn-doppel:hover {
-    background-color: blue;
+    background-color: #C96E68;
+    color: white;
 }
