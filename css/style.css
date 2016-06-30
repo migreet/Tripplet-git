@@ -166,6 +166,10 @@ body {
     float:right;
 }
 
+#aside-index .form-horizontal .form-group{
+    margin-left: -15px;
+}
+
 .vote-sbmt-btn {
     width: 100%;
     font-size: 20px;

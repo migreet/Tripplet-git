@@ -229,6 +229,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             ?>
         </form>
         </div>
+
+
     </div>
 
     </body>
