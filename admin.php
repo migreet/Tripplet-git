@@ -74,6 +74,8 @@ if(!isset($_SESSION['login'])):
 
                     echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'>Löschen</a>";
 
+                } else {
+                    echo "<a href='' class='btn btn-danger'>ACCESS DENIED!</a>";
                 }
                 echo "</div></div>" ;
             }
