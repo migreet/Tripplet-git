@@ -173,8 +173,9 @@ body {
     padding-left: 0;
 }
 
-#votingubersicht .col-md-12 .col-md-8  {
+#votingubersicht .col-md-12 .col-md-8 {
     padding-left: 0;
+}
 
 #aside-index .btn-default {
     float:right;
@@ -300,10 +301,6 @@ body {
 
 .breadcrumb {
     background-color: transparent;
-}
-
-.breadcrumb {
-background-color: red
 }
 
 .form-horizontal .form-group {
