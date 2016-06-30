@@ -62,10 +62,12 @@ if(!isset($_SESSION['login'])):
                     if (empty($user['ID_RECHTE'])) {
                         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-default'>Freischalten</a>";
                     }
-                    if ($user['ID_RECHTE']==1){
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 'class='btn btn-default'>Grant Admin</a>";
+
 
                     echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'>Löschen</a>";
+
+                    if ($user['ID_RECHTE']==1){
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 'class='btn btn-default'>Grant Admin</a>";
 
                     } elseif($user['ID_RECHTE']>1) {
                         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-default'>Take Admin</a>";
