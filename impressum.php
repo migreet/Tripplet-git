@@ -42,7 +42,7 @@ Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorg
 Quelle: Disclaimer powered by fachanwalt.de ";
         echo "</div>";
 
-        echo "<div class='col-md-4'>";
+        echo "<div class='col-md-4'> id='impressim_aside'";
         require_once("include/aside_impressum.php");
         echo "</div>";
         ?>
