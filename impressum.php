@@ -34,7 +34,7 @@ session_start();
 
     </body>
 
-<?php endif; ?>
+
 </html>
 
 
