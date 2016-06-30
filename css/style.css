@@ -302,6 +302,10 @@ body {
     background-color: transparent;
 }
 
+.breadcrumb {
+background-color: red
+}
+
 .form-horizontal .form-group {
     margin-left: 0px;
 }
