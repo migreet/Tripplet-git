@@ -1066,4 +1066,49 @@ class rechte extends mother
 	
 }
 
+class breadcrumb extends mother
+{
+
+
+    protected $pdo;
+
+    public function __construct($connection = null)
+    {
+        parent::__construct($connection);
+    }
+
+    public function __destruct()
+    {
+        parent::__destruct();
+    }
+
+    /***
+     * @param int $id
+     * @return null
+     */
+
+    public function getPath($id, $level)
+    {
+        if ($level==2){
+
+        }
+        else {
+            $path=array($id);
+            try {
+                $stmt = $this->pdo->prepare('SELECT * FROM voting WHERE id = :id');
+                $stmt->bindParam(':id', $path[0]);
+                $stmt->execute();
+                $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                $n = $stmt->fetch();
+            } catch (PDOException $e) {
+                echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+                die();
+            }
+            if (!$n) $n = null;
+            return $path[1][0];
+        }
+            //$path=array($votingid, $vorlesungsid, $profid);
+        }
+
+    }
 
