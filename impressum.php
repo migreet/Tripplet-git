@@ -21,7 +21,7 @@ session_start();
         <div class='breadcrumb'>
         > <a href='index.php'> Vorlesungen</a> > Impressum
         </div>";
-        require_once(include/aside_impressum);
+        require_once("include/aside_impressum.php");
         ?>
 
     </div>
