@@ -19,14 +19,11 @@ session_start();
         //Breadcrumb
         echo"
         <div class='breadcrumb'>
-        > <a href='index.php'> Vorlesungen</a> > Accountverwaltung
+        > <a href='index.php'> Vorlesungen</a> > Impressum
         </div>";
+        require_once(include/aside_impressum);
         ?>
-        <h1>Impressum</h1>
-        <div>Hochschule der Medien<br>
-            Nobelstraße 10 <br>
-            70569 Stuttgart
-        </div>
+
     </div>
 
 
