@@ -47,6 +47,11 @@ body {
     text-decoration: none;
 }
 
+.btn-doppel {
+    background-color: red;
+    width: 187px;
+}
+
 .navbar-inverse {
     background-color: #808080;
     border-color: #808080;
