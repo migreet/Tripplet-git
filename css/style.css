@@ -332,3 +332,8 @@ body {
     color: white;
     border-color: #C96E68;
 }
+
+.footer {
+    float: left;
+    text-align: center;
+}
