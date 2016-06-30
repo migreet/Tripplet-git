@@ -72,12 +72,12 @@ if (!empty ($voting)):
 
     foreach ($voting as $eintrag) {
         echo "<div class='col-md-12'>
-              <div class='col-md-6'>";
+              <div class='col-md-4'>";
         //if (empty($eintrag['schluessel'])){
             echo $eintrag['bezeichnung'] . " ";
 
             echo "</div> ";
-            echo " <div class='col-md-6'>";?>
+            echo " <div class='col-md-8'>";?>
             <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">starten</a>
             <a href="voting.php?id=<?php echo $eintrag['ID']?>" type='button' class='btn btn-default'>bearbeiten</a>
             <a href="auswertung.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Ergebnis</a>
