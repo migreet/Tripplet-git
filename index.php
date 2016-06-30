@@ -125,7 +125,7 @@ $eintragManager = new vorlesung();
     > Vorlesungen
     </div>
 
-    <h1> Vorlesungsübersicht</h1>
+    <h1> Vorlesungen</h1>
     <div class="col-md-8">
     <?php
 
