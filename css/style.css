@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+body {
+    background-color: #efefef;
+    font-family: 'Roboto', sans-serif;
+}
+
+.h1,h1 {
+    color:#808080;
+}
+.loginform.form-control {
+    margin: 0px;
+}
+
+.form-control:focus {
+    border-color: #55d6ba;
+
+}
+
+.btn-default {
+    color: #55d6ba;
+    background-color: #808080;
+    border-color: #808080;
+
+}
+
+.btn:hover {
+    background-color: #a6a6a6;
+    color: #55d6ba;
+    text-decoration: none;
+}
+
+.btn-login {
+    background-color: #55d6ba;
+    border-color: #55d6ba;
+    color: #fff;
+    float: none;
+    margin-bottom: 5px;
+}
+
+.btn-login:hover {
+    background-color: #53e0cb;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-inverse {
+    background-color: #808080;
+    border-color: #808080;
+    border-radius: 0px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #55d6ba;
+    background-color: transparent;
+}
+
+#votingubersicht .list-group-item, #vorlesungsubersicht .list-group-item, #admin .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #efefef;
+    border-right: none;
+    border-left: none;
+    border-radius: none;
+}
+
+.list-group a{
+    margin-left: 5px;
+}
+
+.btn-danger {
+    color: #55d6ba;
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.btn-danger:hover {
+    color: #55d6ba;
+    background-color: #a6a6a6;
+    border-color: #a6a6a6;
+}
+
+.btn-success {
+    color: #55d6ba;
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.btn-success:hover {
+    color: #55d6ba;
+    background-color: #a6a6a6;
+    border-color: #a6a6a6;
+}
+
+.btn-success.focus, .btn-success:focus {
+    color: #55d6ba;
+    background-color: #a6a6a6;
+    border-color: #a6a6a6;
+}
+
+.btn-success.active, .btn-success:active, .open>.dropdown-toggle.btn-success {
+    color: #55d6ba;
+    background-color: #a6a6a6;
+    border-color: #a6a6a6;
+}
+
+.btn-success {
+    color: #55d6ba;
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.seperator-line {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    margin-bottom: 5px;
+}
+
+#vote .btn-default{
+    margin-left: auto;
+    margin-right: auto;
+    display: inherit;
+    float: none;
+}
+
+#vote .form-inline .form-group {
+    display: block;
+    width: auto;
+    vertical-align: middle;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+#vorlesungsubersicht .btn-default{
+    float: left;
+}
+
+#aside-index .btn-default {
+    float:right;
+}
+
+.vote-sbmt-btn {
+    width: 100%;
+    font-size: 20px;
+    border-top: 2px solid #55d6ba;
+    color: #808080;
+
+}
+
+.fa-stack-1x {
+    position:relative;
+    float:left;
+    width:auto;
+    margin-left: 5px;
+}
+
+.vote-dot .fa-stack-1x {
+    float:none;
+}
+
+.vote-dot {
+    text-align: center;
+}
+
+.vote-dot .stack-active:before {
+    color:#55d6ba;
+}
+
+.vote-dot .stack-open:before {
+    color:#808080;
+}
+
+.vote-dot .stack-done:before {
+    color:#808080;
+}
+
+.vote-navi {
+    position:absolute;
+    bottom: 0px;
+    padding: 15px;
+}
+
+#vote .h3,h3 {
+    color: #808080;
+}
+
+.fa-stack-1x:before {
+    color:#55d6ba;
+}
+
+
+.fa-check-circle:before {
+    color:#55d6ba;
+}
+
+.btn-danger.focus, .btn-danger:focus {
+    color: #55d6ba;
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.btn-danger.active.focus, .btn-danger.active:focus, .btn-danger.active:hover, .btn-danger:active.focus, .btn-danger:active:focus, .btn-danger:active:hover, .open>.dropdown-toggle.btn-danger.focus, .open>.dropdown-toggle.btn-danger:focus, .open>.dropdown-toggle.btn-danger:hover{
+    color: #55d6ba;
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.btn-danger.active, .btn-danger:active, .open>.dropdown-toggle.btn-danger {
+    color: #55d6ba;
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.logout-btn {
+    width: 100%;
+}
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.vote-logout {
+    margin-top: 20px;
+}
+
+.h5, h5 {
+    color: #a6a6a6;
+}
+
+.fragerunde, .h1 {
+    color: #808080;
+}
+
+.sidebar .btn-default {
+    float:right;
+}
+
+.h2 {
+    color:#808080;
+}
+
+.h3-beamer {
+    float:left;
+}
+
+.btn-default {
+    width: 91px;
+    margin-bottom: 5px;
+}
