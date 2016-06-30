@@ -149,7 +149,7 @@ body {
 
 #vorlesungsubersicht .col-md-12{
     clear: both;
-    padding: 0;
+    padding-left: 0;
     border-bottom: #ccc dotted 1px;
     padding-top: 5px;
 }
