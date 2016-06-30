@@ -86,15 +86,6 @@ if (isset($postVoting)) {
 ?>
 
 
-<style>
-.breadcrumb a{
-    color: #55d6ba;
-}
-.breadcrumb {
-    background-color: transparent;
-}
-</style>
-
 
 <?php if(!isset($_SESSION['login'])):
     header ('location: index.php');?>

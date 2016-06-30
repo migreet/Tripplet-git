@@ -279,3 +279,10 @@ body {
     width: 91px;
     margin-bottom: 5px;
 }
+
+.breadcrumb a{
+    color: #55d6ba;
+}
+.breadcrumb {
+    background-color: transparent;
+}
