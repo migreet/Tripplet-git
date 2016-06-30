@@ -75,7 +75,7 @@ if (!empty ($voting)):
               <div class='col-md-6'>";
         //if (empty($eintrag['schluessel'])){
             echo $eintrag['bezeichnung'] . " ";
-            echo $eintrag['datum'] . " ";
+
             echo "</div> ";
             echo " <div class='col-md-6'>";?>
             <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">starten</a>
