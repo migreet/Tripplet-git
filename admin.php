@@ -29,7 +29,7 @@ if(!isset($_SESSION['login'])):
         <?php
         //Breadcrumb
         echo"
-        <div calss='breadcrumb'>
+        <div class='breadcrumb'>
         > <a href='index.php'> Vorlesungen</a> > Accountverwaltung
         </div>";
         ?>
