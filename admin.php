@@ -53,7 +53,7 @@ if(!isset($_SESSION['login'])):
             <div class="col-md-12">
         <?php
             foreach ($userlist as $user){
-                echo "<div class="col-md-12">";
+                echo "<div class='col-md-12'>";
                 echo "<div class='col-md-6'>";
                 echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
                 echo "</div>";
