@@ -158,6 +158,9 @@ body {
     padding-left: 0;
 }
 
+#vorlesungsubersicht .col-md-12 .col-md-8  {
+    padding-left: 0;
+}
 
 #aside-index .btn-default {
     float:right;
