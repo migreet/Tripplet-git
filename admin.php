@@ -34,7 +34,7 @@ if(!isset($_SESSION['login'])):
         </div>";
         ?>
         <h1> Accountverwaltung</h1>
-        <h2> Mein Account</h2>
+        <p><strong> Mein Account</strong></p>
         <div class="panel panel-default">
             <div class="panel-body">
         <?php
@@ -49,7 +49,7 @@ if(!isset($_SESSION['login'])):
         if ($_SESSION['rights']>1){
         ?>
 
-        <h2>Admin Area</h2>
+                <p><strong>Admin Area</strong></p>
             <div class="col-md-12">
         <?php
             foreach ($userlist as $user){
@@ -75,7 +75,7 @@ if(!isset($_SESSION['login'])):
                     echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'>Löschen</a>";
 
                 } else {
-                    echo "<a href='' class='btn btn-danger'>ACCESS DENIED!</a>";
+                    echo "<a href='' class='btn btn-default'>ACCESS DENIED!</a>";
                 }
                 echo "</div></div>" ;
             }
