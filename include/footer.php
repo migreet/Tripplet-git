@@ -1,6 +1,6 @@
 <div class="footer">
 
-        <a>Impressum</a>
+        <ahref="./impressum.php">Impressum</a>
         <a>Kontakt</a>
 
 </div>
