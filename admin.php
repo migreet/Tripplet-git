@@ -72,7 +72,7 @@ if(!isset($_SESSION['login'])):
                         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-default'>Take Admin</a>";
                     }
 
-                    echo "btn-default";
+                    echo "btn-defaul";
 
                 }
                 echo "</div></div>" ;
