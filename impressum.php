@@ -21,7 +21,12 @@ session_start();
         <div class='breadcrumb'>
         > <a href='index.php'> Vorlesungen</a> > Impressum
         </div>";
+        echo "<div class='col-md-8'>";
+        echo "<div>";
+
+        echo "<div class='col-md-4'>";
         require_once("include/aside_impressum.php");
+        echo "<div>";
         ?>
 
     </div>
