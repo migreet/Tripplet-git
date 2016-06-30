@@ -96,7 +96,7 @@ if (isset($postVoting)) {
     $voting=$votingInstnc->getById($ID_Voting);
     ?>
 
-    <div class="container">
+    <div class="container" id="voting">
 
         <?php
         //Breadcrumb
