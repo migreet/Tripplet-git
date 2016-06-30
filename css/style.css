@@ -7,7 +7,9 @@ body {
 
 .h1,h1 {
     color:#808080;
+    margin-bottom: 20px;
 }
+
 .loginform.form-control {
     margin: 0px;
 }
