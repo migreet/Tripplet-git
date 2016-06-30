@@ -50,7 +50,7 @@ if(!isset($_SESSION['login'])):
         ?>
 
         <h2>Admin Area</h2>
-            <div class="col-md-8">
+            <div class="col-md-12">
         <?php
             foreach ($userlist as $user){
                 echo "<div class='col-md-6'>";
