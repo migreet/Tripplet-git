@@ -333,7 +333,7 @@ class voting extends mother
 	    public function getByVorlesungsId($vorlesungsid)
     {
         try {
-            $stmt = $this->pdo->prepare('SELECT * FROM voting WHERE ID_VORLESUNG = :vorlesungsid ORDER BY datum ASC');
+            $stmt = $this->pdo->prepare('SELECT * FROM voting WHERE ID_VORLESUNG = :vorlesungsid ORDER BY datum DESC');
             $stmt->bindParam(':vorlesungsid', $vorlesungsid);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
