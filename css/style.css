@@ -147,6 +147,10 @@ body {
     float: left;
 }
 
+#vorlesungsubersicht .col-md-12{
+    clear: both;
+}
+
 #aside-index .btn-default {
     float:right;
 }
