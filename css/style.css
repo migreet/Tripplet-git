@@ -149,6 +149,7 @@ body {
 
 #vorlesungsubersicht .col-md-12{
     clear: both;
+    padding: 0;
 }
 
 #vorlesungsubersicht .col-md-4 {
