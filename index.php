@@ -159,8 +159,9 @@ $eintragManager = new vorlesung();
     <div class="col-md-4">
         <?php require_once('include/aside_index.php'); ?>
     </div>
-    <?php require_once('include/footer.php'); ?>
+
     </div>
+    <?php require_once('include/footer.php'); ?>
    </body>
    
     <?php endif; ?>
