@@ -149,7 +149,7 @@ $eintragManager = new vorlesung();
 
 
     }
-    echo "</div>";
+   // echo "</div>";
     }
     else {
         echo "Es sind keine Vorlesungen Vorhanden";
