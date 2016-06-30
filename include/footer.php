@@ -1,4 +1,4 @@
-<div class="footer col-md-12">
+<div class="footer">
 
         <a>Impressum</a>
         <a>Kontakt</a>
