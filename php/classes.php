@@ -207,7 +207,7 @@ class vorlesung extends mother
 		    public function getByDozentenId($dozentenid)
     {
         try {
-            $stmt = $this->pdo->prepare('SELECT * FROM vorlesung WHERE ID_DOZENT = :dozentenid ORDER BY bezeichnung DESC');
+            $stmt = $this->pdo->prepare('SELECT * FROM vorlesung WHERE ID_DOZENT = :dozentenid ORDER BY bezeichnung ASC');
             $stmt->bindParam(':dozentenid', $dozentenid);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
