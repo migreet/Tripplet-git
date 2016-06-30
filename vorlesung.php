@@ -84,12 +84,12 @@ if (!empty ($voting)):
             <!-- Votings loeschen -->
             <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-default">löschen</a>
     <?php echo"</div>";
-
+        echo "
+        </div>";
 
 
 }
-    echo "
-        </div>";
+
 else:
     echo "Es sind keine Votings Vorhanden";
 endif;
