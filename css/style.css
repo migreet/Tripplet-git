@@ -150,7 +150,7 @@ body {
 #vorlesungsubersicht .col-md-12{
     clear: both;
     padding: 0;
-    border-top: #ccc dotted 1px;
+    border-bottom: #ccc dotted 1px;
 }
 
 #vorlesungsubersicht .col-md-4 {
