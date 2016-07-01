@@ -135,9 +135,6 @@ $eintragManager = new vorlesung();
     <?php
 
 
-
-    echo "<p><strong>Ihre Vorlesungen im Überblick</strong></p> ";
-
     $liste = $eintragManager->getByDozentenId($_SESSION ['id']);
     if (!empty ($liste)) {
 
