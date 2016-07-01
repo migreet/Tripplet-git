@@ -63,7 +63,52 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
     </div>";
     ?>
 <h1> <?php echo $vorlesung['bezeichnung']; ?></h1>
-<div class="col-md-8">
+    <div class="col-md-4 sidebar">
+        <div >
+            <p><strong>Fügen sie eine neues Voting hinzu</strong></p>
+        </div>
+
+        <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnnung" id="bezeichnung" required>
+                </div>
+                <input type="hidden" value="1" name="votingcreate">
+
+
+
+
+
+
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-default">hinzufügen</button>
+                </div>
+            </div>
+        </form>
+        <?php
+        /* $postVoting=$_POST["votingcreate"];
+         if (isset($postVoting)) {
+             $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
+             $schluessel= htmlspecialchars($_POST["schluessel"], ENT_QUOTES, "UTF-8");
+             $vorlesungsId= htmlspecialchars($_GET["id"], ENT_QUOTES, "UTF-8");
+
+             if (!empty ($bezeichnung)) {
+                 $votingInstnc = new voting();
+                 $voting = $votingInstnc->createVoting($bezeichnung, $schluessel, $vorlesungsId);
+
+                 echo "<div> Die Registrierung war erfolgreich!</div>";
+
+                 header('Location: vorlesung.php?id='.$ID_Vorlesung);
+             }
+             else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.</div>";
+                 //header('Location: vorlesung.php'."?id=1");
+             }
+         }*/
+
+        ?>
+    </div>
+
+    <div class="col-md-8">
     <?php
 
         echo "<p><strong>Votings in dieser Vorlesung</strong></p>";
@@ -96,50 +141,7 @@ endif;
 ?>
 
 </div>
-<div class="col-md-4 sidebar">
-    <div >
-        <p><strong>Fügen sie eine neues Voting hinzu</strong></p>
-    </div>
 
-    <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-        <div class="form-group">
-            <div class="col-sm-12">
-                <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnnung" id="bezeichnung" required>
-            </div>
-                <input type="hidden" value="1" name="votingcreate">
-
-
-
-
-
-
-            <div class="col-sm-12">
-                <button type="submit" class="btn btn-default">hinzufügen</button>
-            </div>
-        </div>
-    </form>
-    <?php
-   /* $postVoting=$_POST["votingcreate"];
-    if (isset($postVoting)) {
-        $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
-        $schluessel= htmlspecialchars($_POST["schluessel"], ENT_QUOTES, "UTF-8");
-        $vorlesungsId= htmlspecialchars($_GET["id"], ENT_QUOTES, "UTF-8");
-
-        if (!empty ($bezeichnung)) {
-            $votingInstnc = new voting();
-            $voting = $votingInstnc->createVoting($bezeichnung, $schluessel, $vorlesungsId);
-
-            echo "<div> Die Registrierung war erfolgreich!</div>";
-
-            header('Location: vorlesung.php?id='.$ID_Vorlesung);
-        }
-        else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.</div>";
-            //header('Location: vorlesung.php'."?id=1");
-        }
-    }*/
-
-    ?>
-</div>
 </div>
 <?php require_once('include/footer.php'); ?>
 </body>
