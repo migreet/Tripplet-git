@@ -79,12 +79,12 @@ if(!isset($_SESSION['login'])):
                 } else {
                     echo "<a href='' class='btn btn-default btn-doppel'>ACCESS DENIED!</a>";
                 }
-                echo "</div></div></div>" ;
+                echo "</div></div>" ;
             }
         }
         ?>
 
-    </div>
+    </div></div>
                 <?php require_once('include/footer.php'); ?>
     </body>
 
