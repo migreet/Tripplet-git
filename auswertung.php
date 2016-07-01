@@ -115,7 +115,7 @@ if (isset($postVoting)) {
             <?php
 
             //Ausgeben der Fragen zur passenden Voting ID
-            echo "<p><strong>Statistiken im Überblick</strong></p>";
+
             $voting = $frageInstnc->getByVotingId($ID_Voting);
             if (!empty ($voting)):
             foreach ($voting as $eintrag) {
