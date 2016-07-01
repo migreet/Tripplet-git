@@ -108,6 +108,11 @@ if (isset($postVoting)) {
         ?>
 
         <h1> Voting <?php echo $voting['bezeichnung']; ?></h1>
+        <div class="col-md-4">
+            <?php require_once('include/aside_voting.php');
+            echo "$notification";
+            ?>
+        </div>
         <div class="col-md-8">
             <?php
 
@@ -149,11 +154,6 @@ if (isset($postVoting)) {
     endif;
     ?>
 
-    </div>
-    <div class="col-md-4">
-        <?php require_once('include/aside_voting.php');
-        echo "$notification";
-        ?>
     </div>
     </div>
     <?php require_once('include/footer.php'); ?>
