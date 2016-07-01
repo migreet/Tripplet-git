@@ -107,8 +107,6 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 
     <div class="col-md-8">
     <?php
-
-        echo "<p><strong>Votings in dieser Vorlesung</strong></p>";
     $voting = $votingInstnc->getByVorlesungsId($ID_Vorlesung);
 if (!empty ($voting)):
 
