@@ -140,23 +140,19 @@ if (isset($postVoting)) {
             echo "</ul>";
 
             ?>
-
-        <div class="col-md-5"
+        </div>
+        <div class="col-md-5">
         <!-- Fragenlöschen-->
         <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
         </div>
-
-    <div class='col-md-12 seperator-line'>
-    </div>
     <?php }
     else:
         echo "Es sind keine Fragen vorhanden";
     endif;
     ?>
     </div>
-    </div>
-    </div>
-    </div>
+
+
     <?php require_once('include/footer.php'); ?>
     </body>
 
