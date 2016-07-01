@@ -164,22 +164,22 @@ body {
     padding-left: 0;
 }
 
-#votingubersicht .col-md-12{
+#votingubersicht .col-md-12, #vorlesungsubersicht .col-md-12{
     clear: both;
     padding-left: 0;
     border-bottom: #ccc dotted 1px;
     padding-top: 5px;
 }
 
-#votingubersicht .col-md-4 {
+#votingubersicht .col-md-4, #vorlesungsubersicht .col-md-4{
     padding-left: 0;
 }
 
-#votingubersicht .col-md-12 .col-md-8 {
+#votingubersicht .col-md-12 .col-md-8 , #vorlesungsubersicht .col-md-12 .col-md-8{
     padding-left: 0;
 }
 
-#voting .col-md-12{
+#voting .col-md-12 {
     clear: both;
     padding-left: 0;
     border-bottom: #ccc dotted 1px;
