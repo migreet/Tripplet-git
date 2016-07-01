@@ -83,7 +83,7 @@ if(!isset($_SESSION['login'])):
         ?>
 
     </div>
-
+                <?php require_once('include/footer.php'); ?>
     </body>
 
 <?php endif; ?>

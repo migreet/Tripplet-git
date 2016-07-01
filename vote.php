@@ -232,7 +232,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
 
     </div>
-
+    <?php require_once('include/footer.php'); ?>
     </body>
 
 <?php endif; ?>

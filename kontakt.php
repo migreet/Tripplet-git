@@ -36,7 +36,7 @@ session_start();
 
 
 </div>
-
+<?php require_once('include/footer.php'); ?>
 </body>
 
 
