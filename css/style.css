@@ -150,6 +150,7 @@ body {
 #vorlesungsubersicht .col-md-12{
     clear: both;
     padding-left: 0;
+    padding-right: 0;
     border-bottom: #ccc dotted 1px;
     padding-top: 5px;
 }
@@ -161,11 +162,13 @@ body {
 #vorlesungsubersicht .col-md-8  {
     padding-left: 0;
     padding-left: 50px;
+    padding-right: 0;
 }
 
 #votingubersicht .col-md-12 {
     clear: both;
     padding-left: 0;
+    padding-right: 0;
     border-bottom: #ccc dotted 1px;
     padding-top: 5px;
 }
@@ -176,6 +179,7 @@ body {
 
 #votingubersicht .col-md-12 .col-md-8{
     padding-left: 0;
+    padding-right: 0;
 }
 
 #voting .col-md-12 {
@@ -184,14 +188,17 @@ body {
     border-bottom: #ccc dotted 1px;
     padding-top: 5px;
     padding-left: 50px;
+    padding-right: 0;
 }
 
 #voting .col-md-7 {
     padding-left: 0;
+    padding-right: 0;
 }
 
 #voting .col-md-12 .col-md-5 {
     padding-left: 0;
+    padding-right: 0;
 }
 
 #aside-index .btn-default {
