@@ -107,6 +107,10 @@ if (isset($postVoting)) {
         ?>
 
         <h1> Auswertung <?php echo $voting['bezeichnung']; ?></h1>
+        <div>
+        <?php require_once('include/aside_auswertung.php') ?>
+        </div>
+
         <div class="col-md-8">
             <?php
 
