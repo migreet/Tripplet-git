@@ -31,15 +31,16 @@ Die auf dieser Webseite durch den Anbieter veröffentlichten Inhalte unterliegen
 
 Diese Website darf ohne schriftliche Erlaubnis nicht durch Dritte in Frames oder iFrames dargestellt werden.
 </p>
-<h2>4. Keine Werbung</h2>
+<p> <strong>4. Keine Werbung</strong>
 
 Die Verwendung der Kontaktdaten des Impressums zur gewerblichen Werbung ist ausdrücklich nicht erwünscht, es sei denn der Anbieter hatte zuvor seine schriftliche Einwilligung erteilt oder es besteht bereits eine Geschäftsbeziehung. Der Anbieter und alle auf dieser Website genannten Personen widersprechen hiermit jeder kommerziellen Verwendung und Weitergabe ihrer Daten.
 
-<h2>5. Besondere Nutzungsbedingungen</h2>
+<p> <strong>5. Besondere Nutzungsbedingungen</strong>
 
 Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorgenannten Nummern 1. bis 4. abweichen, wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im jeweiligen Einzelfall die besonderen Bedingungen.
+</p>
 
-Quelle: Disclaimer powered by fachanwalt.de ";
+<p> <strong>Quelle: Disclaimer powered by fachanwalt.de </strong></p>";
         echo "</div>";
 
         echo "<div class='col-md-4' id='impressim_aside'> ";
