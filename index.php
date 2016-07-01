@@ -122,7 +122,7 @@ $eintragManager = new vorlesung();
 
     <!--Breadcrumb-->
     <div class="breadcrumb" >
-    > Vorlesungen
+    <i class="fa fa-angle-right"></i> Vorlesungen
     </div>
 
     <h1> Vorlesungen</h1>
