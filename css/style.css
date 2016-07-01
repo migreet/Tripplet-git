@@ -164,7 +164,7 @@ body {
     padding-left: 0;
 }
 
-#votingubersicht .col-md-12, #vorlesungsubersicht .col-md-12{
+#votingubersicht .col-md-12 {
     clear: both;
     padding-left: 0;
     border-bottom: #ccc dotted 1px;
@@ -175,7 +175,7 @@ body {
     padding-left: 0;
 }
 
-#votingubersicht .col-md-12 .col-md-8 , #vorlesungsubersicht .col-md-12 .col-md-8{
+#votingubersicht .col-md-12 .col-md-8 , #vorlesungsubersicht .col-md-8{
     padding-left: 0;
 }
 
