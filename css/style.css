@@ -203,6 +203,11 @@ body {
     margin-left: 0px;
 }
 
+#aside_voting .btn-default {
+    float: right;
+    margin-right: 0;
+}
+
 .vote-sbmt-btn {
     width: 100%;
     font-size: 20px;
@@ -298,6 +303,7 @@ body {
 
 .sidebar .btn-default {
     float:right;
+    margin-right: 0;
 }
 
 .h2 {
@@ -354,6 +360,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 99999;
 }
 
 .nav-abstand {

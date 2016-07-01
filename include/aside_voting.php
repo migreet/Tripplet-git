@@ -1,6 +1,6 @@
 
 
-
+<div id="aside_voting">
 <div>
     <p><strong>Fügen sie eine neue Frage hinzufügen</strong></p>
 </div>
@@ -54,4 +54,5 @@
         </div>
     </div>
 </form>
+</div>
 </div>
