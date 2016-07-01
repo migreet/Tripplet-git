@@ -1,5 +1,5 @@
 
-<div class="col-md-4">
+<div class="col-md-4 sidebar-left">
     Eine neues Voting hinzufügen!
 </div>
 <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
