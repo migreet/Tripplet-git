@@ -34,6 +34,7 @@ if(!isset($_SESSION['login'])):
         </div>";
         ?>
         <h1> Accountverwaltung</h1>
+        <div class='col-md-4'>
         <p><strong> Mein Account</strong></p>
         <div class="panel panel-default">
             <div class="panel-body">
@@ -45,7 +46,8 @@ if(!isset($_SESSION['login'])):
         echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'> Account Löschen</a>";
         echo "</div>
             </div>
-        </div>";
+        </div></div>";
+
         if ($_SESSION['rights']>1){
         ?>
 
