@@ -40,7 +40,7 @@ if(!isset($_SESSION['login'])):
         <?php
         echo "<div class='col-md-6'>";
         echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
-        echo "</div><div class='col-md-6'>";
+        echo "</div><div class='col-md-2'>";
         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-default'>Daten ändern</a>";
         echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'> Account Löschen</a>";
         echo "</div>
