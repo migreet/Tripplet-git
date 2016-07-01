@@ -71,9 +71,9 @@ require_once("include/navigation.php");
 
 <form name="registerform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
 
-    <div class="form-group">
+
             <input type="hidden" value="1" name="votingstart">
-    </div>
+
 
 <?php //Buttonänderung
 if (empty ($voting['schluessel'])):
