@@ -147,8 +147,6 @@ if (isset($postVoting)) {
         <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
         </div>
 </div>
-        </div>
-    </div>
     <?php }
     else:
         echo "Es sind keine Fragen vorhanden";
