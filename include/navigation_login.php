@@ -30,6 +30,9 @@ $notification=$_GET['notification'];
 
 </nav>
 </div>
+<div class="nav-abstand">
+
+</div>
 <?php
 if (isset($_POST["sentlogin"])) {
     $mail = $_POST["mail"];
@@ -56,6 +59,3 @@ if (isset($_POST["sentlogin"])) {
 }
 }
 ?>
-<div class="nav-abstand">
-
-</div>
