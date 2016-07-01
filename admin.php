@@ -52,7 +52,7 @@ if(!isset($_SESSION['login'])):
         ?>
 
                 <p><strong>Admin Area</strong></p>
-            <div class="col-md-12">
+
         <?php
             foreach ($userlist as $user){
                 echo "<div class='col-md-6'>";
@@ -83,7 +83,7 @@ if(!isset($_SESSION['login'])):
         }
         ?>
 
-    </div></div>
+    </div>
                 <?php require_once('include/footer.php'); ?>
     </body>
 
