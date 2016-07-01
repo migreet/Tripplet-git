@@ -61,6 +61,7 @@ require_once("include/navigation.php");
         </div>";
     ?>
 <h1>Voting <?php echo $voting['bezeichnung']; ?> starten</h1>
+    <div class="col-md-12">
     <div class="col-md-4">
 
 <form name="registerform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
@@ -94,6 +95,12 @@ endif;
 ?>
 </form>
 </div>
+        <div class="col-md-8">
+            <div>
+                In diesem Bereich werden Votings geöffnet und geschlossen. Wählen Sie einen Schlüssel um den Zugang zu Ihrem Voting zu beschränken.
+            </div>
+        </div>
+    </div>
 </div>
 <?php require_once('include/footer.php'); ?>
 
