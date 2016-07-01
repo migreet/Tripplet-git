@@ -368,6 +368,6 @@ body {
     margin-bottom: 100px;
 }
 
-#vorlesungsubersicht .container,  {
-    height: 1000px;
+#beamer .progress-bar .progress-bar-info {
+    background-color:#55d6ba;
 }
