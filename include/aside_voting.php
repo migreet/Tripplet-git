@@ -1,6 +1,6 @@
 
 
-<div id="aside_voting sidebar-left">
+<div id="aside_voting" class="sidebar-left">
     <div>
         <p><strong>Fügen sie eine neue Frage hinzufügen</strong></p>
     </div>
