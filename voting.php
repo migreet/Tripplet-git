@@ -151,7 +151,7 @@ if (isset($postVoting)) {
     endif;
     ?>
     </div>
-
+    </div>
 
     <?php require_once('include/footer.php'); ?>
     </body>
