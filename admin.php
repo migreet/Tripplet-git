@@ -46,7 +46,7 @@ if(!isset($_SESSION['login'])):
         echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'> Account Löschen</a>";
         echo "</div>
             </div>
-        </div></div>";
+        </div></div> <div class='col-md-8'>";
 
         if ($_SESSION['rights']>1){
         ?>
@@ -79,7 +79,7 @@ if(!isset($_SESSION['login'])):
                 } else {
                     echo "<a href='' class='btn btn-default btn-doppel'>ACCESS DENIED!</a>";
                 }
-                echo "</div></div>" ;
+                echo "</div></div></div>" ;
             }
         }
         ?>
