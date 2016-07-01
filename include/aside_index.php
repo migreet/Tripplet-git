@@ -28,7 +28,6 @@ else {echo "<div> Anlegen der Vorlesung nicht erfolgreich! Wenden Sie sich bitte
 ?>
 
 <div id="aside-index">
-<p><strong>Eine neue Vorlesung hinzufügen! </strong></p>
 
 <form name="registerform" id="aside-index" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
     <div class="form-group">
