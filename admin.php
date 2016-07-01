@@ -35,7 +35,7 @@ if(!isset($_SESSION['login'])):
         ?>
         <h1> Accountverwaltung</h1>
         <p><strong> Mein Account</strong></p>
-        <div class="panel panel-default col-md-8">
+        <div class="panel panel-default">
             <div class="panel-body">
         <?php
         echo "<div class='col-md-6'>";
