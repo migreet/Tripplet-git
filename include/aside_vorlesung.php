@@ -12,7 +12,7 @@
 
 
                 <div class="col-sm-12">
-                    <button type="submit" class="btn btn-default">hinzufügen</button>
+                    <button type="submit" class="btn btn-default">hinzufÃ¼gen</button>
                 </div>
             </div>
         </form>
@@ -20,7 +20,7 @@
 <?php
 /*
 <div class="col-md-4 sidebar-left">
-    Eine neues Voting hinzufügen!
+    Eine neues Voting hinzufÃ¼gen!
 </div>
 <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
     <div class="form-group">
@@ -37,7 +37,7 @@
 
     <div class="form-group">
         <div class="col-sm-12">
-            <button type="submit" class="btn btn-default">Voting hinzufügen</button>
+            <button type="submit" class="btn btn-default">Voting hinzufÃ¼gen</button>
         </div>
     </div>
 </form>
