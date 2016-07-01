@@ -84,6 +84,8 @@ if(!isset($_SESSION['login'])):
         ?>
 
     </div>
+            </div>
+            </div>
                 <?php require_once('include/footer.php'); ?>
     </body>
 
