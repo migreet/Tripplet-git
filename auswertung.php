@@ -105,11 +105,10 @@ if (isset($postVoting)) {
         <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <i class='fa fa-angle-right'></i> <a href='vorlesung.php?id=".$vorlesung['ID'] ."'>". $vorlesung['bezeichnung']. "</a> <i class='fa fa-angle-right'></i> Auswertung zu ". $voting['bezeichnung'] ."
         </div>";
         ?>
-
-        <h1> Auswertung <?php echo $voting['bezeichnung']; ?></h1>
         <div>
-        <?php require_once('include/aside_auswertung.php') ?>
+            <?php require_once('include/aside_auswertung.php') ?>
         </div>
+        <h1> Auswertung <?php echo $voting['bezeichnung']; ?></h1>
 
         <div class="col-md-8">
             <?php
