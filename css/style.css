@@ -314,10 +314,10 @@ body {
     float:left;
 }
 
-.btn-default {
+.btn-default{
     width: 91px;
     margin-bottom: 5px;
-    float: right;
+    float:  right;
 }
 
 .breadcrumb a{
