@@ -1,7 +1,7 @@
 <?php
 echo"<div class='col-md-4'>
             <div>
-In diesem Bereich werden Votings geöffnet und geschlossen. Wählen Sie einen Schlüssel um den Zugang zu Ihrem Voting zu beschränken.
+In diesem Bereich werden Votings geÃ¶ffnet und geschlossen. WÃ¤hlen Sie einen SchlÃ¼ssel um den Zugang zu Ihrem Voting zu beschrÃ¤nken.
             </div>
         </div>";
 ?>
