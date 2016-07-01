@@ -35,7 +35,6 @@ if(!isset($_SESSION['login'])):
         ?>
         <h1> Accountverwaltung</h1>
         <div class='col-md-4'>
-        <p><strong> Mein Account</strong></p>
         <div class="panel panel-default">
             <div class="panel-body">
         <?php
@@ -50,8 +49,6 @@ if(!isset($_SESSION['login'])):
 
         if ($_SESSION['rights']>1){
         ?>
-
-                <p><strong>Admin Area</strong></p>
 
         <?php
             foreach ($userlist as $user){
