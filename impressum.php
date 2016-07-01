@@ -22,6 +22,9 @@ session_start();
         <i class='fa fa-angle-right'></i> <a href='index.php'> Vorlesungen</a> <i class='fa fa-angle-right'></i> Impressum
         </div>";
         echo"<h1>Impressum</h1>";
+        echo "<div class='col-md-4' id='impressim_aside'> ";
+        require_once("include/aside_impressum.php");
+        echo "</div>";
         echo "<div class='col-md-8'>";
         echo "<p>Die Webseite enthält Verlinkungen zu anderen Webseiten („externe Links“). Diese Webseiten unterliegen der Haftung der jeweiligen Seitenbetreiber. Bei Verknüpfung der externen Links waren keine Rechtsverstöße ersichtlich. Auf die aktuelle und künftige Gestaltung der verlinkten Seiten hat der Anbieter keinen Einfluss. Die permanente Überprüfung der externen Links ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Bekanntwerden von Rechtsverstößen werden die betroffenen externen Links unverzüglich gelöscht.</p> <br />
 
@@ -43,9 +46,7 @@ Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorg
 <p> <strong>Quelle: Disclaimer powered by fachanwalt.de </strong></p>";
         echo "</div>";
 
-        echo "<div class='col-md-4' id='impressim_aside'> ";
-        require_once("include/aside_impressum.php");
-        echo "</div>";
+
         ?>
 
     </div>
