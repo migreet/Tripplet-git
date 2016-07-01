@@ -196,6 +196,7 @@ body {
 
 #aside-index .btn-default {
     float:right;
+    margin-right: 0;
 }
 
 #aside-index .form-horizontal .form-group{
@@ -358,3 +359,5 @@ body {
 .nav-abstand {
     margin-bottom: 100px;
 }
+
+
