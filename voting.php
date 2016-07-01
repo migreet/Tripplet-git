@@ -106,7 +106,7 @@ if (isset($postVoting)) {
         <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <i class='fa fa-angle-right'></i> <a href='vorlesung.php?id=".$vorlesung['ID'] ."'> ". $vorlesung['bezeichnung']. "</a> <i class='fa fa-angle-right'></i> ". $voting['bezeichnung'] ." bearbeiten
         </div>";
         //neu eingefügt
-        echo"</div>";
+
         ?>
 
         <h1> Voting <?php echo $voting['bezeichnung']; ?></h1>
@@ -146,6 +146,7 @@ if (isset($postVoting)) {
         <div class="col-md-5">
         <!-- Fragenlöschen-->
         <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
+        </div>
         </div>
         </div>
     <?php }
