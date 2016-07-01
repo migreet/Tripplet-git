@@ -64,9 +64,6 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
     ?>
 <h1> <?php echo $vorlesung['bezeichnung']; ?></h1>
     <div class="col-md-4 sidebar">
-        <div >
-            <p><strong>Fügen sie eine neues Voting hinzu</strong></p>
-        </div>
 
         <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group">
