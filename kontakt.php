@@ -19,7 +19,7 @@ session_start();
     //Breadcrumb
     echo"
         <div class='breadcrumb'>
-        > <a href='index.php'> Vorlesungen</a> > Kontakt
+        <i class='fa fa-angle-right'></i> <a href='index.php'> Vorlesungen</a> <i class='fa fa-angle-right'></i> Kontakt
         </div>";
     echo"<h1>Impressum</h1>";
     echo "<div class='col-md-8'>";

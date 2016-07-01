@@ -30,7 +30,7 @@ if(!isset($_SESSION['login'])):
         //Breadcrumb
         echo"
         <div class='breadcrumb'>
-        > <a href='index.php'> Vorlesungen</a> > Accountverwaltung
+        <i class='fa fa-angle-right'></i> <a href='index.php'> Vorlesungen</a> <i class='fa fa-angle-right'></i> Accountverwaltung
         </div>";
         ?>
         <h1> Accountverwaltung</h1>

@@ -59,7 +59,7 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
     //Breadcrumb
     echo"
     <div class='breadcrumb'>
-        > <a href='index.php'>Vorlesungen</a> > Votingübersicht
+        <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <i class='fa fa-angle-right'></i> Votingübersicht
     </div>";
     ?>
 <h1> <?php echo $vorlesung['bezeichnung']; ?></h1>
