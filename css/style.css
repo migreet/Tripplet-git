@@ -317,6 +317,7 @@ body {
 .btn-default {
     width: 91px;
     margin-bottom: 5px;
+    float: right;
 }
 
 .breadcrumb a{
