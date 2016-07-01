@@ -1,4 +1,4 @@
-<?php
+
 <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group">
                 <div class="col-sm-12">
@@ -17,7 +17,7 @@
             </div>
         </form>
 
-
+<?php
 /*
 <div class="col-md-4 sidebar-left">
     Eine neues Voting hinzufügen!
