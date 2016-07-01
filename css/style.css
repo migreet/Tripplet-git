@@ -368,3 +368,6 @@ body {
     margin-bottom: 100px;
 }
 
+#vorlesungsubersicht .container,  {
+    min-height: 800px;
+}
