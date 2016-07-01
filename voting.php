@@ -140,7 +140,7 @@ if (isset($postVoting)) {
             echo "</ul>";
 
             ?>
-        </div>
+
         <div class="col-md-5"
         <!-- Fragenlöschen-->
         <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
@@ -154,6 +154,7 @@ if (isset($postVoting)) {
     endif;
     ?>
 
+    </div>
     </div>
     </div>
     <?php require_once('include/footer.php'); ?>
