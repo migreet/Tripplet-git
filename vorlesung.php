@@ -56,6 +56,8 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 //Rights Check
 $usercheck=$vorlesungInstnc->userCheck($ID_Vorlesung);
 print_r($usercheck) ;
+print_r($_SESSION);
+//if($usercheck==$_SESSION['login'])
 ?>
 
 <div id="votingubersicht"  class="container">
