@@ -179,8 +179,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             </div>
         </form>
         <?php else:
-            //$getNot=0;
-            header('location:vote_logout.php?notification=' . $getNot);
+
+            header('location:vote_logout.php?notification='."2");
         endif; ?>
 
 
