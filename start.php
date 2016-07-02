@@ -38,7 +38,7 @@ if (isset($votingsent)) {
     if (empty($voting['schluessel'])){
         if (empty($schluesselcheck)){
             $voting = $votingInstnc->update($votingId, $schluessel);
-            header('Location: start.php?id=' .$votingId);
+            header('Location: start.php?id='.$votingId."&notification=4");
         }
         else{
             echo "Dieser Schlüssel wird im Moment leider bereits verwendet!";
