@@ -61,7 +61,7 @@ require_once("include/navigation.php");
         </div>";
     ?>
 <h1>Voting <?php echo $voting['bezeichnung']; ?> starten</h1>
-    <div class="col-md-12">
+    <div class="col-md-4">
         <?php require_once('include/aside_start.php') ?>
     <div class="col-md-8">
 
