@@ -41,7 +41,7 @@ if (isset($votingsent)) {
             header('Location: start.php?id='.$votingId."&notification=4");
         }
         else{
-            echo "Dieser Schlüssel wird im Moment leider bereits verwendet!";
+            header('Location: start.php?id='.$votingId."&notification=6");
         }
 
         }
@@ -109,6 +109,13 @@ else:
     echo "Das Voting wurde erfolgreich gestartet.";
     echo "</div>";
     }
+    elseif ($_GET['notification']=="6") {
+        echo "<div class='notifikation'>";
+        echo "Dieser Schlüssel wird im Moment leider bereits verwendet!";
+        echo "</div>";
+    }
+
+
 
 endif;
 ?>
