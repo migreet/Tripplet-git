@@ -18,6 +18,12 @@ $auswertungInstnc = new auswertung();
 $ID_Frage=$_GET['id'];
 $frage=$frageInstnc->getById($ID_Frage);
 
+//Rights Check
+$usercheck=$frageInstnc->userCheck($ID_Frage);
+if($usercheck['ID']!=$_SESSION['user_id']) {
+    header ('location: index.php');
+}
+
 echo "<div id='beamer' class='container'>";
 
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($frage['ID']);
