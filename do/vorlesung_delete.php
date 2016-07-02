@@ -19,6 +19,11 @@ $votingInstnc = new voting();
 $votingId=$_GET['id'];
 $vorlesungsId=$_GET['idvorlesung'];
 
+//Rights Check
+$usercheck=$votingInstnc->userCheck($ID_Vorlesung);
+if($usercheck['ID']!=$_SESSION['user_id']) {
+    header ('location: index.php');
+}
 
 $voting = $votingInstnc->delete($votingId);
 header ('location: ../vorlesung.php?id=' .$vorlesungsId);

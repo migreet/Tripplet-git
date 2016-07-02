@@ -55,8 +55,6 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 
 //Rights Check
 $usercheck=$vorlesungInstnc->userCheck($ID_Vorlesung);
-print_r($usercheck) ;
-print_r($_SESSION);
 if($usercheck['ID']!=$_SESSION['user_id']) {
     header ('location: index.php');
 }
