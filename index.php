@@ -114,7 +114,8 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
 	
     <?php else: ?>
    <body>
-<?php require_once("include/navigation.php");
+   <?php print_r($_SESSION);
+   <?php require_once("include/navigation.php");
 $eintragManager = new vorlesung();
 ?>
 
