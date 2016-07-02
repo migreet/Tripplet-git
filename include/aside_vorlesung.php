@@ -1,4 +1,4 @@
-
+<div class="sidebar-left">
 <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group">
                 <div class="col-sm-12">
@@ -44,3 +44,4 @@
 */
 
 ?>
+</div>
