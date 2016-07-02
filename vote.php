@@ -114,8 +114,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     if (isset($fragerundeset)) {
         $eintragID = trim(stripslashes (htmlentities($_POST['antwort'], ENT_QUOTES, "UTF-8")));
         $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
-        $getNot=2;
-        header('location:vote.php?notification='.$getNot);
+        header('location:vote.php');
     }
     ?>
 
@@ -180,7 +179,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             </div>
         </form>
         <?php else:
-
+            $getNot=0;
+            header('location:vote_logout.php?notification=' . $getNot);
         endif; ?>
 
 
@@ -201,7 +201,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         header('location:vote.php');
         }
         else {$getNot = "0";}
-        header('location:vote.php?notification='.$getNot);
+        header('location:vote.php?notification=' . $getNot);
 
     }
     ?>
@@ -228,9 +228,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             if ($notification==0) {
                 echo "<div class='notification'>";
                 echo "Falscher Schlüssel";
-                echo "</div>";
+                echo "<div>";
             }
-
             ?>
         </form>
         </div>
