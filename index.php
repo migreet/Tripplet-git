@@ -24,7 +24,7 @@ $notificationLogin=$_GET['notification_login'];
 ?>
 
 
-
+<!--if Schleife für Logincheck-->
     <?php if(!isset($_SESSION['login'])):?>
 	
 	<body>
@@ -37,6 +37,7 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
 }
 ?>
 
+<!--Registrierungsformular-->
 <div class="container" id="registrieren" >
     <div class="form-horizontal col-sm-offset-6">
     <h1>Registrieren</h1>
@@ -70,6 +71,8 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
                 <button type="submit" name="registrieren" class="btn btn-default">Registrieren</button>
             </div>
         </div>
+
+        <!--Notificationanzeige-->
         <?php
         if ($notification=="right") {
             echo "<div class='col-sm-6'>Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.</div>";
@@ -82,12 +85,14 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
     </form>
 
     <?php
+    //Validierung der POSTS
     if (isset($_POST["sentregister"])) {
         $vorname = trim(stripslashes (htmlentities($_POST["vorname"], ENT_QUOTES, "UTF-8")));
         $nachname = trim(stripslashes (htmlentities($_POST["nachname"], ENT_QUOTES, "UTF-8")));
         $passwort = hash("MD5", trim(stripslashes (htmlentities($_POST["passwort"], ENT_QUOTES, "UTF-8"))));
         $mail = trim(stripslashes (htmlentities($_POST["mail"], ENT_QUOTES, "UTF-8")));
 
+        //Ifabfrage für Ausfüllcheck
         if (!empty ($mail) && !empty ($passwort) && !empty ($nachname) && !empty ($vorname)) {
             $dozentInstnc = new dozent();
             $dozent = $dozentInstnc->getByMail($mail);
@@ -112,8 +117,11 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
 </body>
 
 	
+    <!-- Elseblock für Ausgabe bei eigeloggten Zustand-->
     <?php else: ?>
-   <body>
+
+
+        <body>
    <?php require_once("include/navigation.php");
 $eintragManager = new vorlesung();
 ?>
