@@ -200,7 +200,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             $_SESSION['votingid']= $voting['ID'];
         header('location:vote.php');
         }
-        else {$getNot = 00;
+        else {
         header('location:vote.php?notification=' . $getNot);}
 
     }
