@@ -11,7 +11,10 @@
 //Requires
 require_once("../php/classes.php");
 session_start();
+if(!isset($_SESSION['login'])):
+    header ('location: ../index.php');
 
+else:
 //Instanzen
 $dozentInstnc = new dozent();
 
@@ -22,5 +25,5 @@ $rights=$_GET['rights'];
 
 $dozent = $dozentInstnc->updateRights($dozentenId, $rights);
 header ('location: ../admin.php');
-
+endif;
 ?>
