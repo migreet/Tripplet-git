@@ -87,12 +87,8 @@ if (empty ($voting['schluessel'])):
 
     </div>
     <?php
-    if ($_GET['notification']=="4") {
-        echo "<div class='notifikation'>";
-        echo "Das Voting wurde erfolgreich gestartet.";
-        echo "</div>";
-    }
-    elseif ($_GET['notification']=="5") {
+
+    if ($_GET['notification']=="5") {
             echo "<div class='notifikation'>";
             echo "Das Voting wurde beendet.";
             echo "</div>";
@@ -107,8 +103,13 @@ else:
             <button type="submit" name="stop" class="btn btn-danger">stoppen</button>
     </div>
 
+    <?php
+    if ($_GET['notification']=="4") {
+    echo "<div class='notifikation'>";
+    echo "Das Voting wurde erfolgreich gestartet.";
+    echo "</div>";
+    }
 
-<?php
 endif;
 ?>
 </form>
