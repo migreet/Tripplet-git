@@ -23,7 +23,7 @@ $vorlesungsId=$_GET['id'];
 
 //Rights Check
 $usercheck=$vorlesungInstnc->userCheck($vorlesungsId);
-if($usercheck['ID']!=$_SESSION['user_id']) {
+if($usercheck['ID']!=$_SESSION['user_id'] || !isset($vorlesungsId)) {
     header ('location: index.php');
 }
 
