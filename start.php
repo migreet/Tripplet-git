@@ -26,6 +26,11 @@ $votingInstnc = new voting();
 $voting=$votingInstnc->getById($votingId);
 $schluesselcheck=$votingInstnc->getByKey($schluessel);
 
+//Rights Check
+$usercheck=$votingInstnc->userCheck($votingId);
+if($usercheck['ID']!=$_SESSION['user_id']) {
+    header ('location: index.php');
+}
 
 //Ifabfrage für Schlüsseleingabe und Statusprüfung
 if (isset($votingsent)) {
