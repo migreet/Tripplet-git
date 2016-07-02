@@ -180,7 +180,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         </form>
         <?php else:
 
-            header('location:vote_logout.php?notification='."2");
+            header('location:vote_logout.php');
         endif; ?>
 
 

@@ -13,5 +13,5 @@ session_start();
 
 unset($_SESSION['votingid']);
 
-header('location: vote.php');
+header('location: vote.php?notification='."2");
 ?>
