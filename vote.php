@@ -114,7 +114,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     if (isset($fragerundeset)) {
         $eintragID = trim(stripslashes (htmlentities($_POST['antwort'], ENT_QUOTES, "UTF-8")));
         $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
-        header('location:vot.php');
+        $getNot=2;
+        header('location:vote.php'.$getNot);
     }
     ?>
 
@@ -200,8 +201,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             $_SESSION['votingid']= $voting['ID'];
         header('location:vote.php');
         }
-        else {$getNot = "wrong";}
-        header('location:vote.php?notification=' . $getNot);
+        else {$getNot = "0";}
+        header('location:vote.php?notification='.$getNot);
 
     }
     ?>
@@ -225,10 +226,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             </div>
             <?php
             //Ausgabe der Warnung bei falsher Schlüsseleingabe
-            if ($notification=="wrong") {
+            if ($notification==0) {
                 echo "<div class='notification'>";
                 echo "Falscher Schlüssel";
-                echo "<div>";
+                echo "</div>";
+            }
+            elseif ($notification==2) {
+                echo "<div class='notification'>";
+                echo "Voting Beendet. Vielen Dank für deine Teilnahme!";
+                echo "</div>";
             }
             ?>
         </form>
