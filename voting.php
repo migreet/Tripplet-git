@@ -31,6 +31,11 @@ $notification=$_GET['notification'];
 $frageCreate=$_POST["fragecreate"];
 $frageText = trim(stripslashes (htmlentities($_POST["frage"], ENT_QUOTES, "UTF-8")));
 
+//Rights Check
+$usercheck=$votingInstnc->userCheck($ID_Voting);
+if($usercheck['ID']!=$_SESSION['user_id']) {
+    header ('location: index.php');
+}
 
 if (isset($frageCreate)) {
 
