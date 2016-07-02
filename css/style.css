@@ -146,7 +146,6 @@ body {
 }
 
 
-
 #vorlesungsubersicht .col-md-12{
     clear: both;
     padding-left: 0;
@@ -165,6 +164,11 @@ body {
     padding-left: 50px;
     padding-right: 0;
 }
+
+#votingubersicht .btn-default {
+    margin-right: 0;
+}
+
 
 #votingubersicht .col-md-12 {
     clear: both;
