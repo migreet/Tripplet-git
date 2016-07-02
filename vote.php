@@ -201,7 +201,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         header('location:vote.php');
         }
         else {
-        header('location:vote.php?notification=' . $getNot);}
+        header('location:vote.php?notification='."0");}
 
     }
     ?>
@@ -224,9 +224,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <button type="submit" name="login" class="btn btn-danger vote-btn logout-btn">Einschreiben</button>
             </div>
             <?php
-            //Ausgabe der Warnung bei falsher Schlüsseleingabe
-            if ($_GET['notification']=="00"){
+            //Ausgabe der Notifikationen
+            if ($_GET['notification']=="0"){
                 echo "Falscher Schlüssel";
+            }
+            elseif ($_GET['notification']=="2") {
+                echo "Voting beendet. Vielen Dank für Ihre Teilnahme!";
             }
             ?>
         </form>
