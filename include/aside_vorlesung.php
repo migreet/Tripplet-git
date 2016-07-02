@@ -1,3 +1,5 @@
+<div class="panel panel-default">
+    <div class="panel-body">
 <div class="sidebar-left">
 <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group">
@@ -45,3 +47,5 @@
 
 ?>
 </div>
+        </div>
+    </div>
