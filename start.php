@@ -68,6 +68,7 @@ require_once("include/navigation.php");
 <h1>Voting <?php echo $voting['bezeichnung']; ?> starten</h1>
     <div class="col-md-4">
         <?php require_once('include/aside_start.php') ?>
+        </div>
     <div class="col-md-8">
 
 <form name="registerform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
