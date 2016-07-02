@@ -1,3 +1,6 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+
 <?php
 echo"<div class='sidebar-left'>
             <div>
@@ -5,3 +8,6 @@ In diesem Bereich werden Votings geöffnet und geschlossen. Wählen Sie einen Sc
             </div>
         </div>";
 ?>
+
+        </div>
+    </div>

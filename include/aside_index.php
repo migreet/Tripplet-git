@@ -1,3 +1,5 @@
+<div class="panel panel-default">
+    <div class="panel-body">
 <div class='sidebar-left'>
 
 <?php
@@ -47,3 +49,6 @@ else {echo "<div> Anlegen der Vorlesung nicht erfolgreich! Wenden Sie sich bitte
 </form>
 </div>
 </div>
+
+        </div>
+    </div>

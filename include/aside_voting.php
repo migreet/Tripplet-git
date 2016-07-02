@@ -1,4 +1,5 @@
-
+<div class="panel panel-default">
+    <div class="panel-body">
 
 <div id="aside_voting" class="sidebar-left">
     <div>
@@ -55,3 +56,5 @@
         </div>
     </form>
 </div>
+</div>
+    </div>
