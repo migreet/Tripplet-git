@@ -47,7 +47,7 @@ if (isset($votingsent)) {
         }
     else {
         $voting = $votingInstnc->update($votingId, NULL);
-        header('Location: start.php?id='.$votingId.'&?notification='."5");
+        header('Location: start.php?id=' .$votingId);
     }
     }
 
@@ -86,14 +86,8 @@ if (empty ($voting['schluessel'])):
             <button type="submit" name="start" class="btn btn-success">starten</button>
 
     </div>
-    <?php
-    if ($_GET['notification']=="5"){
-    echo "<div class='notifikation'>";
-    echo "Das Voting wurde erfolgreich gestartet.";
-    echo "</div>";
-    }
 
-
+<?php
 else:
 ?>
 
