@@ -10,7 +10,10 @@
 require_once("../php/classes.php");
 require_once("../include/header.php");
 session_start();
+if(!isset($_SESSION['login'])):
+    header ('location: ../index.php');
 
+else:
 $votingInstnc = new voting();
 $voting = $votingInstnc ->getByTimestamp();
 print_r($voting);
@@ -20,4 +23,5 @@ foreach ($voting as $eintrag){
     $votingInstnc->update($eintrag['ID'], NULL);
 
 }
-
+endif;
+?>
