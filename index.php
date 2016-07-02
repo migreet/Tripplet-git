@@ -135,7 +135,7 @@ $eintragManager = new vorlesung();
     <?php
 
 
-    $liste = $eintragManager->getByDozentenId($_SESSION ['id']);
+    $liste = $eintragManager->getByDozentenId($_SESSION ['user_id']);
     if (!empty ($liste)) {
 
 
