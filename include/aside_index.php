@@ -17,7 +17,7 @@ $bezeichnung = trim(stripslashes (htmlentities($_POST["bezeichnung"], ENT_QUOTES
 
 if (!empty ($bezeichnung)) {
 $vorlesungInstnc = new vorlesung();
-$vorlesung = $vorlesungInstnc->createVorlesung($bezeichnung, $_SESSION ['id']);
+$vorlesung = $vorlesungInstnc->createVorlesung($bezeichnung, $_SESSION ['user_id']);
 
     $getNot = "Die Vorlesung wurde erfolgreich angelegt!";
 
