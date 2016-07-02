@@ -294,7 +294,7 @@ class vorlesung extends mother
 
         try {
             $stmt = $this->pdo->prepare('
-              SELECT * FROM dozent
+              SELECT ID.dozent FROM dozent
               INNER JOIN vorlesung
               ON dozent.ID = vorlesung.ID_DOZENT
               INNER JOIN voting
