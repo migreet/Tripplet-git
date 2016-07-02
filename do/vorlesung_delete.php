@@ -11,7 +11,10 @@
 //Requires
 require_once("../php/classes.php");
 session_start();
+if(!isset($_SESSION['login'])):
+    header ('location: ../index.php');
 
+else:
 //Instanzen
 $votingInstnc = new voting();
 
@@ -28,5 +31,5 @@ if($usercheck['ID']!=$_SESSION['user_id']) {
 //Vorlesung löschen
 $voting = $votingInstnc->delete($votingId);
 header ('location: ../vorlesung.php?id=' .$vorlesungsId);
-
+endif;
 ?>
