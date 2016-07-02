@@ -16,11 +16,6 @@
 require_once("php/classes.php");
 require_once("include/header.php");
 session_start();
-
-
-//GETs & POSTs
-$notification=$_GET['notification'];
-$notificationLogin=$_GET['notification_login'];
 ?>
 
 
@@ -32,8 +27,8 @@ $notificationLogin=$_GET['notification_login'];
 
 <?php
 require_once("include/navigation_login.php");
-if ($notificationLogin=="wrong"){
-echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrekte Passwort und Emailadressenkombination ein.</div>";
+if ($_GET['notification']=="0"){
+echo "<div class='col-md-offset-6 notifikation'>Bitte geben Sie eine korrekte Passwort und Emailadressenkombination ein.</div>";
 }
 ?>
 
@@ -74,11 +69,11 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
 
         <!--Notificationanzeige-->
         <?php
-        if ($notification=="right") {
-            echo "<div class='col-sm-6'>Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.</div>";
+        if ($_GET['notification']=="3") {
+            echo "<div class='col-md-6 notifikation'>Die Registrierung war erfolgreich. Sie werden in Kürze von einem Administrator freigeschaltet.</div>";
         }
-        if ($notification=="wrong") {
-            echo "<div class='col-sm-6'>Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
+        if ($_GET['notification']=="4") {
+            echo "<div class='col-md-6 notifikation'>Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
         }
 
         ?>
@@ -99,11 +94,9 @@ echo "<div id='loginWarning' class='col-sm-offset-6'>Bitte geben Sie eine korrek
 
             if (empty($dozent)) {
                 $liste = $dozentInstnc->signup($nachname, $vorname, $passwort, $mail);
-                $getNot = "right";
-                header('location:index.php?notification=' . $getNot);
+                header('location:index.php?notification='."3");
             } else {
-                $getNot = "wrong";
-                header('location:index.php?notification=' . $getNot);
+                header('location:index.php?notification='."4");
             }
         }
 
