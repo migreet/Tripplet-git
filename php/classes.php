@@ -300,7 +300,10 @@ class vorlesung extends mother
               INNER JOIN voting
               ON vorlesung.ID = voting.ID_VORLESUNG
               INNER JOIN frage
-              ON voting.ID = frage.ID_VOTING');
+              ON voting.ID = frage.ID_VOTING
+              WHERE ID.vorlesung =  :id
+              ');
+            $stmt->bindParam(':id', $id);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $n = $stmt->fetch();
