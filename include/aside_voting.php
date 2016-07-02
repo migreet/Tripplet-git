@@ -1,6 +1,10 @@
 <div class="panel panel-default">
     <div class="panel-body">
 
+        <div class='side-text'>
+            <p>Hier steht ein Platzhaltertext</p>
+        </div>
+
 <div id="aside_voting" class="sidebar-left">
     <div>
         <p><strong>Fügen sie eine neue Frage hinzufügen</strong></p>

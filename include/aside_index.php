@@ -29,6 +29,9 @@ else {echo "<div> Anlegen der Vorlesung nicht erfolgreich! Wenden Sie sich bitte
 }
 }
 ?>
+    <div class='side-text'>
+        <p>Hier steht ein Platzhaltertext</p>
+        </div>
 
 <div id="aside-index">
 
