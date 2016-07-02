@@ -1,4 +1,9 @@
+<?php
+if(!isset($_SESSION['login'])):
+    header ('location: ../index.php');
 
+else:
+?>
 
 <div class="panel panel-default">
     <div class="panel-body">
@@ -56,3 +61,5 @@
 </div>
         </div>
     </div>
+
+<?php endif; ?>
