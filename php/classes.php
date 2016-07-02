@@ -297,8 +297,6 @@ class vorlesung extends mother
               SELECT dozent.ID FROM dozent
               INNER JOIN vorlesung
               ON dozent.ID = vorlesung.ID_DOZENT
-              INNER JOIN voting
-              ON vorlesung.ID = voting.ID_VORLESUNG
               WHERE vorlesung.ID = :id
               ');
             $stmt->bindParam(':id', $id);
