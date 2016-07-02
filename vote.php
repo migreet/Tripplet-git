@@ -200,8 +200,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             $_SESSION['votingid']= $voting['ID'];
         header('location:vote.php');
         }
-        else {$getNot = "Falscher Schlüssel";}
-        header('location:vote.php?notification=' . $getNot);
+        else {$getNot = 00;
+        header('location:vote.php?notification=' . $getNot);}
 
     }
     ?>
