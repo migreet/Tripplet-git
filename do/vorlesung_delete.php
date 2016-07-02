@@ -25,6 +25,7 @@ if($usercheck['ID']!=$_SESSION['user_id']) {
     header ('location: index.php');
 }
 
+//Vorlesung löschen
 $voting = $votingInstnc->delete($votingId);
 header ('location: ../vorlesung.php?id=' .$vorlesungsId);
 
