@@ -26,7 +26,7 @@ $usercheck=$frageInstnc->userCheck($ID_Frage);
 if($usercheck['ID']!=$_SESSION['user_id']) {
     //header ('location: index.php');
 }
-
+print_r($usercheck);
 echo "<div id='beamer' class='container'>";
 
             $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($frage['ID']);
