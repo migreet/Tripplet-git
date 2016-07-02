@@ -8,6 +8,7 @@
 
 require_once("include/header.php");
 require_once("php/classes.php");
+session_start();
 
 $antwortInstnc = new antwort();
 $votingInstnc = new voting();
@@ -22,7 +23,7 @@ $frage=$frageInstnc->getById($ID_Frage);
 //Rights Check
 $usercheck=$frageInstnc->userCheck($ID_Frage);
 if($usercheck['ID']!=$_SESSION['user_id']) {
-    //header ('location: index.php');
+    header ('location: index.php');
 }
 print_r($usercheck);
 print_r($_SESSION);
