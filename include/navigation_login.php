@@ -48,7 +48,7 @@ if (isset($_POST["sentlogin"])) {
             header('location:index.php');
         }
             else {
-                header('location:index.php?notification='."4");
+                header('location:index.php?notification='."0");
             }
     }
 
