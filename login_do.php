@@ -22,7 +22,8 @@ if (!empty ($mail) && !empty ($passwort)) {
 		$_SESSION ['login']=1;
 		$_SESSION ['mail']=$mail;
         $_SESSION ['rights']=$dozent['ID_RECHTE'];
-		$_SESSION ['id'] =$dozent['ID'];
+		$_SESSION ['user_id'] =$dozent['ID'];
+            $_SESSION['id']= uniqid();
 
         header ('location: index.php');
 
