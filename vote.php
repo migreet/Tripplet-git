@@ -74,7 +74,7 @@ session_start();
 $schluessel=$_POST['schluessel'];
 $schluesselsent=$_POST['schluesselsent'];
 $fragerundeset=$_POST["fragerunde"];
-$notification=$_GET['notification'];
+//$notification=$_GET['notification'];
 
 //Instanzen
 $votingInstnc = new voting();
@@ -225,9 +225,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             </div>
             <?php
             //Ausgabe der Warnung bei falsher Schlüsseleingabe
-            if ($notification==00){
+            if ($_GET['notification']=="00"){
                 echo "Falscher Schlüssel";
-                unset($notification);
             }
             ?>
         </form>
