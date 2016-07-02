@@ -57,9 +57,9 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 $usercheck=$vorlesungInstnc->userCheck($ID_Vorlesung);
 print_r($usercheck) ;
 print_r($_SESSION);
-if($usercheck!=$_SESSION['user_id']) {
+/*if($usercheck!=$_SESSION['user_id']) {
     header ('location: index.php');
-}
+}*/
 ?>
 
 <div id="votingubersicht"  class="container">
