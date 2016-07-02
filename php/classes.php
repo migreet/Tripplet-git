@@ -511,6 +511,32 @@ class voting extends mother
         if (!$n) $n = null;
         return $n;
     }
+
+    public function userCheck($id)
+    {
+
+        try {
+            $stmt = $this->pdo->prepare('
+              SELECT dozent.ID FROM dozent
+              INNER JOIN vorlesung
+              ON dozent.ID = vorlesung.ID_DOZENT
+              INNER JOIN voting
+              ON vorlesung.ID = voting.ID_VORLESUNG
+              WHERE vorlesung.ID = :id
+              ');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $n = $stmt->fetch();
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+        if (!$n) $n = null;
+        return $n;
+
+    }
+
 }
 
 class frage extends mother
