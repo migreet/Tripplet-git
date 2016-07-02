@@ -301,7 +301,7 @@ class vorlesung extends mother
               ON vorlesung.ID = voting.ID_VORLESUNG
               INNER JOIN frage
               ON voting.ID = frage.ID_VOTING
-              WHERE vorlesung.ID =  :id
+              WHERE vorlesung.ID = :id
               ');
             $stmt->bindParam(':id', $id);
             $stmt->execute();
