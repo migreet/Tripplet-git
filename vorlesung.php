@@ -52,6 +52,10 @@ $ID_Vorlesung=$_GET['id'];
 $votingInstnc = new voting();
 $vorlesungInstnc = new vorlesung();
 $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
+
+//Rights Check
+$usercheck=$vorlesungInstnc->userCheck($ID_Vorlesung);
+print_r($usercheck);
 ?>
 
 <div id="votingubersicht"  class="container">
