@@ -20,7 +20,7 @@ $frage=$frageInstnc->getById($ID_Frage);
 
 
 //Rights Check
-$usercheck=$frageInstnc->userCheck($ID_Frage);
+$usercheck=$frageInstnc->userCheck(90);
 if($usercheck['ID']!=$_SESSION['user_id']) {
     header ('location: index.php');
 }
