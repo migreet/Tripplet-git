@@ -115,7 +115,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
         $eintragID = trim(stripslashes (htmlentities($_POST['antwort'], ENT_QUOTES, "UTF-8")));
         $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
         $getNot=2;
-        header('location:vote.php'.$getNot);
+        header('location:vote.php?notification='.$getNot);
     }
     ?>
 
@@ -180,8 +180,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             </div>
         </form>
         <?php else:
-            $getNot=0;
-            header('location:vote_logout.php?notification=' . $getNot);
+
         endif; ?>
 
 
