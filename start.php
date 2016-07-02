@@ -93,6 +93,11 @@ if (empty ($voting['schluessel'])):
             echo "Das Voting wurde beendet.";
             echo "</div>";
         }
+    elseif ($_GET['notification']=="6") {
+        echo "<div class='notifikation'>";
+        echo "Dieser Schlüssel wird im Moment leider bereits verwendet!";
+        echo "</div>";
+    }
      ?>
 
 <?php
@@ -109,11 +114,7 @@ else:
     echo "Das Voting wurde erfolgreich gestartet.";
     echo "</div>";
     }
-    elseif ($_GET['notification']=="6") {
-        echo "<div class='notifikation'>";
-        echo "Dieser Schlüssel wird im Moment leider bereits verwendet!";
-        echo "</div>";
-    }
+
 
 
 
