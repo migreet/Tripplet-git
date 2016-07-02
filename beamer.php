@@ -17,6 +17,8 @@ $auswertungInstnc = new auswertung();
 
 $ID_Frage=$_GET['id'];
 $frage=$frageInstnc->getById($ID_Frage);
+print_r($ID_Frage);
+print_r($frage);
 
 //Rights Check
 $usercheck=$frageInstnc->userCheck($ID_Frage);
