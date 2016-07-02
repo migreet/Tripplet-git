@@ -48,8 +48,7 @@ if (isset($_POST["sentlogin"])) {
             header('location:index.php');
         }
             else {
-                $getNot = "wrong";
-                header('location:index.php?notification_login=' . $getNot);
+                header('location:index.php?notification='."4");
             }
     }
 
