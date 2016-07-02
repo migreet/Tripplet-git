@@ -1,3 +1,11 @@
+<?php
+if(!isset($_SESSION['login'])):
+    header ('location: ../index.php');
+
+else:
+?>
+
+
 <div class="panel panel-default">
     <div class="panel-body">
 <div class='sidebar-left'>
@@ -55,3 +63,5 @@ else {echo "<div> Anlegen der Vorlesung nicht erfolgreich! Wenden Sie sich bitte
 
         </div>
     </div>
+
+<?php endif; ?>
