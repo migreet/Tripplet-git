@@ -27,4 +27,5 @@ $dozentenId=$_GET['id'];
 $vorlesung = $dozentInstnc->delete($dozentenId);
 header ('location: ../admin.php');
 
+    endif;
 ?>
