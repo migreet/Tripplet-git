@@ -11,7 +11,10 @@
 //Requires
 require_once("../php/classes.php");
 session_start();
+if(!isset($_SESSION['login'])):
+    header ('location: ../index.php');
 
+else:
 //Instanzen
 $fragenInstnc = new frage();
 
@@ -22,5 +25,5 @@ $votingId=$_GET['idvoting'];
 
 $frage = $fragenInstnc->delete($fragenId);
 header ('location: ../voting.php?id=' .$votingId);
-
+endif;
 ?>
