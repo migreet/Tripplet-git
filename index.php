@@ -127,8 +127,9 @@ $eintragManager = new vorlesung();
 
     <h1> Vorlesungen</h1>
 
+    <div class="col-md-4">
         <?php require_once('include/aside_index.php'); ?>
-
+    </div>
 
     <div class="col-md-8">
     <?php
