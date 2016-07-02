@@ -226,7 +226,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <?php
             //Ausgabe der Warnung bei falsher Schlüsseleingabe
             if ($notification=="wrong") {
+                echo "<div class='notification'>";
                 echo "Falscher Schlüssel";
+                echo "<div>";
             }
             ?>
         </form>
