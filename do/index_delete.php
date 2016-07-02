@@ -18,6 +18,11 @@ $vorlesungInstnc = new vorlesung();
 //GETs
 $vorlesungsId=$_GET['id'];
 
+//Rights Check
+$usercheck=$vorlesungInstnc->userCheck($vorlesungsId);
+if($usercheck['ID']!=$_SESSION['user_id']) {
+    header ('location: index.php');
+}
 
 $vorlesung = $vorlesungInstnc->delete($vorlesungsId);
 //auswertungen die zu fragen gehören die zu votings gehören die zu vorlesungen gehören. antworten auch
