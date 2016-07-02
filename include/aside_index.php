@@ -1,5 +1,3 @@
-<div class='sidebar-left'>
-
 <?php
 /*
  * Created by PhpStorm.
@@ -7,7 +5,7 @@
  * Date: 05.04.2016
  * Time: 18:03
  */
-
+echo"<div class='sidebar-left'>";
 
 $postVorlesung=$_POST["vorlesungcreate"];
 if (isset($postVorlesung)) {
