@@ -230,11 +230,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                 echo "Falscher Schlüssel";
                 echo "</div>";
             }
-            elseif ($notification==2) {
-                echo "<div class='notification'>";
-                echo "Voting Beendet. Vielen Dank für deine Teilnahme!";
-                echo "</div>";
-            }
+
             ?>
         </form>
         </div>
