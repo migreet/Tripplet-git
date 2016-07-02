@@ -114,7 +114,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     if (isset($fragerundeset)) {
         $eintragID = trim(stripslashes (htmlentities($_POST['antwort'], ENT_QUOTES, "UTF-8")));
         $auswertungInstnc->update($fragerunde['ID_FRAGE'], $_SESSION['id'], $eintragID);
-        header('location:vote.php');
+        header('location:vot.php');
     }
     ?>
 
