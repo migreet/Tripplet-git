@@ -200,7 +200,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             $_SESSION['votingid']= $voting['ID'];
         header('location:vote.php');
         }
-        else {$getNot = "Falscher Schlüssel";}
+        else {$getNot = "wrong";}
         header('location:vote.php?notification=' . $getNot);
 
     }
@@ -225,7 +225,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             </div>
             <?php
             //Ausgabe der Warnung bei falsher Schlüsseleingabe
-            echo $notification;
+            if ($notification="wrong") {
+                echo "Falscher Schlüssel";
+            }
             ?>
         </form>
         </div>
