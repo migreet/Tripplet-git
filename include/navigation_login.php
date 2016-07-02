@@ -1,5 +1,10 @@
 
 <?php
+if(!isset($_SESSION['login'])):
+    header ('location: ../index.php');
+
+else:
+
 //GETs & POSTs
 $notification=$_GET['notification'];
 ?>
@@ -59,4 +64,5 @@ if (isset($_POST["sentlogin"])) {
 
 }
 }
+endif;
 ?>
