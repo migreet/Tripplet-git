@@ -23,7 +23,7 @@ print_r($frage);
 //Rights Check
 $usercheck=$frageInstnc->userCheck($ID_Frage);
 if($usercheck['ID']!=$_SESSION['user_id']) {
-    header ('location: index.php');
+    //header ('location: index.php');
 }
 
 echo "<div id='beamer' class='container'>";
