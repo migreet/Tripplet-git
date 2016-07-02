@@ -226,10 +226,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <?php
             //Ausgabe der Notifikationen
             if ($_GET['notification']=="0"){
+                echo "<div class='notifikation'>";
                 echo "Falscher Schlüssel";
+                echo "</div>";
             }
             elseif ($_GET['notification']=="2") {
+                echo "<div class='notifikation'>";
                 echo "Voting beendet. Vielen Dank für Ihre Teilnahme!";
+                echo "</div>";
             }
             ?>
         </form>
