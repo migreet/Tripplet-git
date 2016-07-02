@@ -1,13 +1,4 @@
 
-<?php
-if(!isset($_SESSION['login'])):
-    header ('location: ../index.php');
-
-else:
-
-//GETs & POSTs
-$notification=$_GET['notification'];
-?>
 
 <div class="navbar navbar-inverse">
     <div class="container">
@@ -64,5 +55,5 @@ if (isset($_POST["sentlogin"])) {
 
 }
 }
-endif;
+
 ?>
