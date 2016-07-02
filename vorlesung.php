@@ -55,7 +55,7 @@ $vorlesung=$vorlesungInstnc->getById($ID_Vorlesung);
 
 //Rights Check
 $usercheck=$vorlesungInstnc->userCheck($ID_Vorlesung);
-print_r($usercheck);
+print_r($usercheck) ;
 ?>
 
 <div id="votingubersicht"  class="container">
