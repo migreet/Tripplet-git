@@ -13,7 +13,7 @@ require_once("include/header.php");
 require_once("php/classes.php");
 session_start();
 
-$frageInstnc = new frage(); //richtie Klasse!!!
+$frageInstnc = new frage();
 ?>
 
 <div class="container">
@@ -25,11 +25,11 @@ $frageInstnc = new frage(); //richtie Klasse!!!
 
 
 
-        $fragen = $frageInstnc->getByVotingId($_GET ['id']); //hier richtige klasse!!! und VOTING ID
+        $fragen = $frageInstnc->getByVotingId($_GET ['id']);
         if (!empty ($fragen)) {
             foreach ($fragen as $eintrag) {
-                echo "<div class='list-entry'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">"; //richtiger link!!
-                echo $eintrag['bezeichnung'] . " "; //richtiger parameter??!!
+                echo "<div class='list-entry'><a href=vorlesung.php?id=" . $eintrag['ID'] . ">";
+                echo $eintrag['bezeichnung'] . " ";
                 echo "</a> </div>";
             }
         }
@@ -70,9 +70,9 @@ $frageInstnc = new frage(); //richtie Klasse!!!
             $frage1 = htmlspecialchars($_POST["frage1"], ENT_QUOTES, "UTF-8");
 
 
-            if (!empty ($frage1)) {       //muss hier nicht noch ein OR hin mit den restlichen feldern??
-                $frageInstnc = new frage(); //richtige klasse!!!!
-                $frage = $frageInstnc->createVorlesung($bezeichnung, $_SESSION ['id']); //richtige funktion!!!!!
+            if (!empty ($frage1)) {
+                $frageInstnc = new frage();
+                $frage = $frageInstnc->createVorlesung($bezeichnung, $_SESSION ['id']);
 
                 echo "<div> Die Fragen wuden dem Voting erfolgreich hinzugefügt!</div>";
                 header('Location: index.php');

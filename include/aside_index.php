@@ -33,7 +33,6 @@ $vorlesung = $vorlesungInstnc->createVorlesung($bezeichnung, $_SESSION ['user_id
 header('Location: index.php?notification=' . $getNot);
 }
 else {echo "<div> Anlegen der Vorlesung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.</div>";
-//header('Location: vorlesung.php'."?id=1");
 }
 }
 ?>

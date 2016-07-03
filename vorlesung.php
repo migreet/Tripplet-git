@@ -5,7 +5,6 @@
  * Date: 31.03.2016
  * Time: 14:12
  */
-/*include("include/sessioncheck.php");*/
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +32,6 @@ $ID_Vorlesung=$_GET['id'];
             header('Location: vorlesung.php?id='.$ID_Vorlesung);
         }
         else {echo "<div> Es ist ein Fehler aufgetreten! Wenden Sie sich bitte an den Administrator.</div>";
-            //header('Location: vorlesung.php'."?id=1");
         }
     }
 
@@ -70,29 +68,7 @@ if($usercheck['ID']!=$_SESSION['user_id']) {
     ?>
 <h1> <?php echo $vorlesung['bezeichnung']; ?></h1>
     <div class="col-md-4 sidebar">
-
         <?php require_once('include/aside_vorlesung.php'); ?>
-        <?php
-        /* $postVoting=$_POST["votingcreate"];
-         if (isset($postVoting)) {
-             $bezeichnung = htmlspecialchars($_POST["bezeichnung"], ENT_QUOTES, "UTF-8");
-             $schluessel= htmlspecialchars($_POST["schluessel"], ENT_QUOTES, "UTF-8");
-             $vorlesungsId= htmlspecialchars($_GET["id"], ENT_QUOTES, "UTF-8");
-
-             if (!empty ($bezeichnung)) {
-                 $votingInstnc = new voting();
-                 $voting = $votingInstnc->createVoting($bezeichnung, $schluessel, $vorlesungsId);
-
-                 echo "<div> Die Registrierung war erfolgreich!</div>";
-
-                 header('Location: vorlesung.php?id='.$ID_Vorlesung);
-             }
-             else {echo "<div> Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.</div>";
-                 //header('Location: vorlesung.php'."?id=1");
-             }
-         }*/
-
-        ?>
     </div>
 
     <div class="col-md-8">
@@ -103,7 +79,6 @@ if (!empty ($voting)):
     foreach ($voting as $eintrag) {
         echo "<div class='col-md-12'>
               <div class='col-md-4'>";
-        //if (empty($eintrag['schluessel'])){
             echo $eintrag['bezeichnung'] . " ";
 
             echo "</div> ";

@@ -9,7 +9,7 @@
 require_once("include/header.php");
 require_once("php/classes.php");
 session_start();
-
+//Instanzen
 $antwortInstnc = new antwort();
 $votingInstnc = new voting();
 $frageInstnc = new frage();

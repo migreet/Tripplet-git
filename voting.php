@@ -5,7 +5,6 @@
  * Date: 31.03.2016
  * Time: 14:12
  */
-/*include("include/sessioncheck.php");*/
 ?>
 
 <!DOCTYPE html>
@@ -51,11 +50,9 @@ if (isset($frageCreate)) {
         header('Location: voting.php?id=' .$ID_Voting .'?notification=' . $getNot);
     }
 
-    //$antwort = htmlspecialchars($_POST["antwort"], ENT_QUOTES, "UTF-8");
     $antwort= array ();
     for ($i = 0; $i <= 9; $i++) {
         if (!empty (trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))))){
-            //$antwort[] = htmlspecialchars($_POST["antwort" . $i], ENT_QUOTES, "UTF-8");
             $antwortText = trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8")));
             $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
 
@@ -82,7 +79,6 @@ if (isset($postVoting)) {
         header('Location: vorlesung.php?id='.$ID_Voting);
     }
     else {$getNot = "Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.";
-        //header('Location: vorlesung.php'."?id=1");
     }
 }
 
@@ -110,7 +106,6 @@ if (isset($postVoting)) {
         <div class='breadcrumb'>
         <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <i class='fa fa-angle-right'></i> <a href='vorlesung.php?id=".$vorlesung['ID'] ."'> ". $vorlesung['bezeichnung']. "</a> <i class='fa fa-angle-right'></i> ". $voting['bezeichnung'] ." bearbeiten
         </div>";
-        //neu eingefüg
         ?>
 
         <h1> Voting <?php echo $voting['bezeichnung']; ?></h1>

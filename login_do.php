@@ -36,21 +36,7 @@ if (!empty ($mail) && !empty ($passwort)) {
 		header ('location: index.php');
 	}
 	
-	
-	
-	/*
-    $userInstanz = new dozent();
-    $logincheck = $userInstanz->getByMail($username);
-    if ($logincheck == null) {
-        header('Location: index.php');
-    }
-    else {session_start();
-        $_SESSION ['benutzer'] = $userInstanz;
-        $_SESSION ['login'] = "1";
-        header('Location: index.php');
-        die();
-    }
-	*/
+
 }
 else {echo "Ein Fehler ist aufgetreten. Bitter loggen Sie sich erneut ein.";}
 

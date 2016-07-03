@@ -5,7 +5,6 @@
  * Date: 31.03.2016
  * Time: 14:12
  */
-/*include("include/sessioncheck.php");*/
 ?>
 
 <!DOCTYPE html>
@@ -74,31 +73,16 @@ session_start();
 $schluessel=$_POST['schluessel'];
 $schluesselsent=$_POST['schluesselsent'];
 $fragerundeset=$_POST["fragerunde"];
-//$notification=$_GET['notification'];
 
 //Instanzen
 $votingInstnc = new voting();
 $auswertungInstnc = new auswertung();
 $frageInstnc = new frage();
 $antwortInstnc = new antwort();
-$voting=$votingInstnc->getByKey($schluessel); //ZU TUN::: Abfrage ob gleicher Schlüssel in der DB gerade aktiv ist!
+$voting=$votingInstnc->getByKey($schluessel);
 $frage = $frageInstnc->getByVotingId($voting['ID']);
 $fragerunde=$auswertungInstnc->frageRunde($voting['ID'], $_SESSION['id']);
 $votingName=$votingInstnc->getById($_SESSION['votingid']);
-
-            //debug section
-            /*
-            echo"<br />=== voting === <br />";
-            print_r($voting)."<br />";
-            echo"<br />=== frage === <br />";
-            print_r($frage) ."<br />";
-            echo "<br />=== fragerunde === <br />";
-            print_r($fragerunde)."<br />";
-            echo "<br />=== Session === <br />";
-            print_r( $_SESSION);
-            */
-
-
 
 if ($_SESSION['rights']>0){
     header ('location: index.php');
