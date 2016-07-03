@@ -4,25 +4,38 @@
  * User: Mic
  * Date: 21.04.2016
  * Time: 20:25
+ * Löschen von Usern
  */
-//Löschen von Usern
 
-
-//Requires
+/**
+ * Requires
+ */
 require_once("../php/classes.php");
+
+/**
+ * Instanzen
+ */
+$dozentInstnc = new dozent();
+
+/**
+ * GETs
+ */
+$dozentenId=$_GET['id'];
+$rights=$_GET['rights'];
+
+/**
+ * Session starten
+ */
 session_start();
+
+/**
+ * Sicherheitsabfrage
+ * Wenn gesetzt dann Admin updaten
+ */
 if(!isset($_SESSION['login'])):
     header ('location: ../index.php');
 
 else:
-//Instanzen
-$dozentInstnc = new dozent();
-
-//GETs
-$dozentenId=$_GET['id'];
-$rights=$_GET['rights'];
-
-
 $dozent = $dozentInstnc->updateRights($dozentenId, $rights);
 header ('location: ../admin.php');
 endif;
