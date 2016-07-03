@@ -95,11 +95,14 @@ else: ?>
         ?>
         <h1> Auswertung <?php echo $voting['bezeichnung']; ?></h1>
         <div class="col-md-4">
-        <?php require_once('include/aside_auswertung.php') ?>
-        </div>
-        <div class="col-md-8">
-            <?php
-            //Ausgeben der Fragen zur passenden Voting ID
+        <?php require_once('include/aside_auswertung.php');
+        echo "
+            </div>
+            <div class='col-md-8'>";
+
+            /**
+             * Ausgeben der Fragen zur passenden Voting ID
+             */
             $voting = $frageInstnc->getByVotingId($ID_Voting);
             if (!empty ($voting)):
                 foreach ($voting as $eintrag) {
