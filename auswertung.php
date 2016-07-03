@@ -86,7 +86,9 @@ else: ?>
     ?>
     <div class="container" id="auswertung">
         <?php
-            //Breadcrumb
+            /**
+            * Breadcrumb
+            */
             $vorlesung = $vorlesungInstnc->getById($voting['ID_VORLESUNG']);
             echo"
             <div class='breadcrumb'>
