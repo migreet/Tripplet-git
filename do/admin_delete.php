@@ -4,28 +4,35 @@
  * User: Mic
  * Date: 21.04.2016
  * Time: 20:25
+ * Löschen von Usern
  */
-//Löschen von Usern
 
-
-//Requires
+/**
+ * Requires
+ */
 require_once("../php/classes.php");
+
+/**
+ * GETs
+ */
+$dozentenId=$_GET['id'];
+
+/**
+ * Instanzen
+ */
+$dozentInstnc = new dozent();
+
+/**
+ * Session starten
+ */
 session_start();
 
 if(!isset($_SESSION['login'])):
-    header ('location: ../index.php');?>
+    header ('location: ../index.php');
 
-<?php else:
-
-//Instanzen
-$dozentInstnc = new dozent();
-
-//GETs
-$dozentenId=$_GET['id'];
-
-
+else:
 $vorlesung = $dozentInstnc->delete($dozentenId);
 header ('location: ../admin.php');
 
-    endif;
+endif;
 ?>
