@@ -96,7 +96,10 @@ if (!empty ($voting)):
 }
 
 else:
-    echo "Es sind keine Votings Vorhanden";
+    echo "
+    <div class='col-md-12'>
+    Es sind keine Votings Vorhanden
+    </div>";
 endif;
 ?>
 
