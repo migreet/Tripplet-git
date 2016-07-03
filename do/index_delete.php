@@ -36,15 +36,15 @@ else:
     /**
      * Rights check
      */
-$usercheck=$vorlesungInstnc->userCheck($vorlesungsId);
-if($usercheck['ID']!=$_SESSION['user_id']):
-    header ('location: index.php');
-endif;
+    $usercheck=$vorlesungInstnc->userCheck($vorlesungsId);
+    if($usercheck['ID']!=$_SESSION['user_id']):
+        header ('location: index.php');
+    endif;
 
     /**
      * Vorlesungen werden gelöscht
      */
-$vorlesung = $vorlesungInstnc->delete($vorlesungsId);
-header ('location: ../index.php');
+    $vorlesung = $vorlesungInstnc->delete($vorlesungsId);
+    header ('location: ../index.php');
 endif;
 ?>
