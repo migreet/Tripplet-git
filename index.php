@@ -10,7 +10,7 @@
 
 <!DOCTYPE html>
 <html lang="de">
-<>
+<body>
 
 <?php
 /**
@@ -42,7 +42,7 @@ session_start();
     ?>
 
     <!--Registrierungsformular-->
-    < class="container" id="registrieren" >
+    <div class="container" id="registrieren" >
         <div class="form-horizontal col-sm-offset-6">
         <h1>Registrieren</h1>
         </div>
