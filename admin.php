@@ -61,7 +61,7 @@ else:
                     </div>
                     <div class='col-md-6'>
                         <a href='do/admin_update.php?id=<?php $user['ID'] ?>&rights=1' class='btn btn-default'>Daten ändern</a>
-                        <a href='do/admin_delete.php?id=<?php $user['ID']?> 'class='btn btn-default'> Account Löschen</a>";
+                        <a href='do/admin_delete.php?id=<?php $user['ID']?> 'class='btn btn-default'> Account Löschen</a>
                     </div>
                 </div>
             </div>
