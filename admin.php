@@ -69,10 +69,8 @@ else:
         <div class='col-md-8'>";
 
             <?php
-            if ($_SESSION['rights']>1){
-                ?>
+            if ($_SESSION['rights']>1):
 
-        <?php
             /**
              * Rechteprüfung und Ausgabe der zu überprüfenden User
              */
@@ -98,16 +96,17 @@ else:
                 endif;
                 echo "</div>" ;
             }
-        }
+        endif;
         ?>
 
+        </div>
     </div>
-            </div>
-            </div>
-                <?php require_once('include/footer.php'); ?>
-    </body>
+</div>
+<?php require_once('include/footer.php');
 
-<?php endif; ?>
+endif;
+?>
+</body>
 </html>
 
 
