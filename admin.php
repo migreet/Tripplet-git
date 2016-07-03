@@ -66,7 +66,7 @@ else:
                 </div>
             </div>
         </div>
-        <div class='col-md-8'>";
+        <div class='col-md-8'>
 
             <?php
             if ($_SESSION['rights']>1):
