@@ -123,7 +123,7 @@ if (isset($postVoting)) {
             if (!empty ($voting)):
             foreach ($voting as $eintrag) {
             echo "
-
+<div class='col-md-12'>
     <div class='col-md-7'>";
 
             echo " " . $eintrag['text'] . " ";
