@@ -1,38 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<body>
+
 <?php
 /**
  * Created by PhpStorm.
  * User: Mic
  * Date: 21.04.2016
  * Time: 21:42
+ * Starten des Votings
  */
 
-
-//Starten des Votings
-
-
-//Requires
+/**
+ * Requires
+ */
 require_once("php/classes.php");
 require_once("include/header.php");
+
+/**
+ * Session wird gestartet
+ */
 session_start();
 
-//POSTs & GETs
+/**
+ * GETs
+ */
 $votingId=$_GET['id'];
 $votingsent=$_POST['votingstart'];
 $schluessel=$_POST['schluessel'];
 
-//Instanzen
+/**
+ * Instanzen
+ */
 $vorlesungInstnc = new vorlesung();
 $votingInstnc = new voting();
+
 $voting=$votingInstnc->getById($votingId);
 $schluesselcheck=$votingInstnc->getByKey($schluessel);
 
-//Rights Check
-$usercheck=$votingInstnc->userCheck($votingId);
-if($usercheck['ID']!=$_SESSION['user_id']) {
-    header ('location: index.php');
-}
 
-//Ifabfrage für Schlüsseleingabe und Statusprüfung
+/**
+ * Sicherheitsabfrage
+ */
+if(!isset($_SESSION['login'])):
+
+require_once("include/navigation_login.php");
+
+/**
+ * Rights Check
+ */
+$usercheck=$votingInstnc->userCheck($votingId);
+if($usercheck['ID']!=$_SESSION['user_id']):
+    header ('location: index.php');
+endif;
+
+/**
+ * Ifabfrage für Schlüsseleingabe und Statusprüfung
+ */
 if (isset($votingsent)) {
 //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
     if (empty($voting['schluessel'])){
@@ -126,6 +150,12 @@ endif;
 
     </div>
 </div>
-<?php require_once('include/footer.php'); ?>
 
+<?php require_once('include/footer.php');
+
+endif;
+?>
+
+</body>
+</html>
 
