@@ -1,12 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Mic
- * Date: 01.04.2016
- * Time: 11:26
- */
-
-?>
+<!-- Header -->
 
 <head>
     <meta charset = "utf-8" name="viewport" content="width = device-width, initial-scale = 1">
