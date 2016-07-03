@@ -85,7 +85,7 @@ else:
 
                     if ($user['ID_RECHTE']==1):
                         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 'class='btn btn-default'>Grant Admin</a>";
-                    else($user['ID_RECHTE']>1):
+                    else:
                         echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-default'>Take Admin</a>";
                     endif;
 
