@@ -59,38 +59,39 @@ else:
     /**
      * Ifabfrage für Schlüsseleingabe und Statusprüfung
      */
-    if (isset($votingsent)) {
-    //Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
-        if (empty($voting['schluessel'])){
-            if (empty($schluesselcheck)){
+    if (isset($votingsent)):
+
+    /**
+    * Wenn Voting nicht gestartet UND Schlüssel ausgefüllt
+    */
+        if (empty($voting['schluessel'])):
+            if (empty($schluesselcheck)):
                 $voting = $votingInstnc->update($votingId, $schluessel);
                 header('Location: start.php?id='.$votingId."&notification=4");
-            }
-            else{
+            else:
                 header('Location: start.php?id='.$votingId."&notification=6");
-            }
-
-            }
-        else {
+            endif;
+        else:
             $voting = $votingInstnc->update($votingId, NULL);
             header('Location: start.php?id='.$votingId."&notification=5");
-        }
-        }
+        endif;
+    endif;
 
     require_once("include/navigation.php");
     ?>
 
-
-
     <div class="container">
         <?php
-        //Breadcrumb
+        /**
+        * Breadcrumb
+        */
         $vorlesung = $vorlesungInstnc->getById($voting['ID_VORLESUNG']);
         echo"
             <div class='breadcrumb'>
-            <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <a href='vorlesung.php?id=".$vorlesung['ID'] ."'>". $vorlesung['bezeichnung']. "</a> <i class='fa fa-angle-right'></i> ". $voting['bezeichnung'] ." starten
+                <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <a href='vorlesung.php?id=".$vorlesung['ID'] ."'>". $vorlesung['bezeichnung']. "</a> <i class='fa fa-angle-right'></i> ". $voting['bezeichnung'] ." starten
             </div>";
         ?>
+
     <h1>Voting <?php echo $voting['bezeichnung']; ?> starten</h1>
         <div class="col-md-4">
             <?php require_once('include/aside_start.php') ?>
@@ -98,12 +99,12 @@ else:
         <div class="col-md-8">
 
     <form name="registerform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <input type="hidden" value="1" name="votingstart">
 
-
-                <input type="hidden" value="1" name="votingstart">
-
-
-    <?php //Buttonänderung
+    <?php
+    /**
+    * Button ändert sich bei klick
+    */
     if (empty ($voting['schluessel'])):
     ?>
         <div class="form-group">
@@ -115,19 +116,16 @@ else:
         </div>
         <?php
 
-        if ($_GET['notification']=="5") {
+        if ($_GET['notification']=="5"):
                 echo "<div class='notifikation'>";
                 echo "Das Voting wurde beendet.";
                 echo "</div>";
-            }
-        elseif ($_GET['notification']=="6") {
+        elseif ($_GET['notification']=="6"):
             echo "<div class='notifikation'>";
             echo "Dieser Schlüssel wird im Moment leider bereits verwendet!";
             echo "</div>";
-        }
-         ?>
+        endif;
 
-    <?php
     else:
     ?>
 
@@ -136,24 +134,21 @@ else:
         </div>
 
         <?php
-        if ($_GET['notification']=="4") {
+        if ($_GET['notification']=="4"):
         echo "<div class='notifikation'>";
         echo "Das Voting wurde erfolgreich gestartet.";
         echo "</div>";
-        }
-
-
-
+        endif;
 
     endif;
-    ?>
-    </form>
-    </div>
 
+    echo "
+    </form>
         </div>
     </div>
+</div>";
 
-    <?php require_once('include/footer.php');
+    require_once('include/footer.php');
 
 endif;
 ?>
