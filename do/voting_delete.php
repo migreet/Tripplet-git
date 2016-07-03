@@ -4,26 +4,42 @@
  * User: Mic
  * Date: 21.04.2016
  * Time: 20:25
+ * Löschen der Fragen
  */
 
-//Löschen der Fragen
-
-//Requires
+/**
+ * Requires
+ */
 require_once("../php/classes.php");
-session_start();
-if(!isset($_SESSION['login'])):
-    header ('location: ../index.php');
 
-else:
-//Instanzen
-$fragenInstnc = new frage();
-
-//GETs
+/**
+ * GETs
+ */
 $fragenId=$_GET['id'];
 $votingId=$_GET['idvoting'];
 
+/**
+ * Instanzen
+ */
+$fragenInstnc = new frage();
 
-$frage = $fragenInstnc->delete($fragenId);
-header ('location: ../voting.php?id=' .$votingId);
+/**
+ * Session starten
+ */
+session_start();
+
+/**
+ * Sicherheitsabfrage
+ * Fragen löschen
+ */
+if(!isset($_SESSION['login'])):
+    header ('location: ../index.php');
+
+/**
+ * Fragen werden gelöscht
+ */
+else:
+    $frage = $fragenInstnc->delete($fragenId);
+    header ('location: ../voting.php?id=' .$votingId);
 endif;
 ?>
