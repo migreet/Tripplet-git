@@ -128,7 +128,9 @@ else:
 
     else:
     ?>
-
+        <div class="form-group">
+            <input type="text" class="form-control" name="schluessel" placeholder="Schlüssel" id="schluessel" disabeled>
+        </div>
         <div class="form-group">
                 <button type="submit" name="stop" class="btn btn-danger">stoppen</button>
         </div>
