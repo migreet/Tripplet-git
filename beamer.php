@@ -4,6 +4,7 @@
  * User: Andreas
  * Date: 22.06.2016
  * Time: 15:27
+ * Impressumsseite
  */
 
 require_once("include/header.php");
