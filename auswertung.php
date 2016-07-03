@@ -102,28 +102,28 @@ else: ?>
             //Ausgeben der Fragen zur passenden Voting ID
             $voting = $frageInstnc->getByVotingId($ID_Voting);
             if (!empty ($voting)):
-            foreach ($voting as $eintrag) {
-            echo "
-    <div class='list-entry'>
-    <div class='col-md-10'>";
-            $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($eintrag['ID']);
-            echo "<h3>" . $eintrag['text'] . " (" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)"."   <a href='beamer.php?id=". $eintrag['ID'] ."' target='_blank' class='btn btn-success'>Beam me up!</a></h3></br>";
-            ?>
-            <!--Ausgabe der Antworten zu der passenden Frage-->
-            <?php
-            $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
-            foreach ($antwort as $eintragFrage) {
+                foreach ($voting as $eintrag) {
+                echo "
+                <div class='list-entry'>
+                <div class='col-md-10'>";
+                $anzahlTeilnehmer=$auswertungInstnc->countTeilnehmer($eintrag['ID']);
+                echo "<h3>" . $eintrag['text'] . " (" . $anzahlTeilnehmer['COUNT(*)'] . " Teilnehmer)"."   <a href='beamer.php?id=". $eintrag['ID'] ."' target='_blank' class='btn btn-success'>Beam me up!</a></h3></br>";
+                ?>
+                <!--Ausgabe der Antworten zu der passenden Frage-->
+                <?php
+                $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
+                foreach ($antwort as $eintragFrage) {
                 $anzahlAntworten=$auswertungInstnc->countAntworten($eintragFrage['ID']);
                 $percent = 0;
-                if(intval($anzahlTeilnehmer['COUNT(*)']!=0)) {
-                $percent=round(100/intval($anzahlTeilnehmer['COUNT(*)'])*intval($anzahlAntworten['COUNT(*)']),2);
-                }
+                if(intval($anzahlTeilnehmer['COUNT(*)']!=0)):
+                    $percent=round(100/intval($anzahlTeilnehmer['COUNT(*)'])*intval($anzahlAntworten['COUNT(*)']),2);
+                endif;
                 echo $eintragFrage['text'] ." (Stimmen: ". $anzahlAntworten['COUNT(*)']." | ".$percent."%)";
                 echo "
                 <div class='progress'>
                     <div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100' style='width: $percent%'>
-                <span class='sr-only'>20% Complete</span>
-                </div>
+                        <span class='sr-only'>20% Complete</span>
+                    </div>
                 </div>";
             }
             ?>
