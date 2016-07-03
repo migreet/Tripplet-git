@@ -44,7 +44,7 @@ else:
         <!-- Breadcrumb -->
         <div class='breadcrumb'>
             <i class='fa fa-angle-right'></i> <a href='index.php'> Vorlesungen</a> <i class='fa fa-angle-right'></i> Accountverwaltung
-        </div>";
+        </div>
 
         <h1> Accountverwaltung</h1>
         <div class='col-md-4'>
