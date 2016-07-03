@@ -40,34 +40,37 @@ else:
     ?>
 
     <div class="container">
-        <?php
-        /**
-         * Breadcrumb
-         */
-        echo"
+
+        <!-- Breadcrumb -->
         <div class='breadcrumb'>
-        <i class='fa fa-angle-right'></i> <a href='index.php'> Vorlesungen</a> <i class='fa fa-angle-right'></i> Accountverwaltung
+            <i class='fa fa-angle-right'></i> <a href='index.php'> Vorlesungen</a> <i class='fa fa-angle-right'></i> Accountverwaltung
         </div>";
-        ?>
+
         <h1> Accountverwaltung</h1>
         <div class='col-md-4'>
-        <div class="panel panel-default">
-            <div class="panel-body">
-        <?php
-        /**
-         * Aktueller User wird an dieser Stelle ausgegeben
-         */
-        echo "<div class='col-md-6'>";
-        echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
-        echo "</div><div class='col-md-6'>";
-        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1 'class='btn btn-default'>Daten ändern</a>";
-        echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'> Account Löschen</a>";
-        echo "</div>
-            </div>
-        </div></div> <div class='col-md-8'>";
+            <div class="panel panel-default">
+                <div class="panel-body">
 
-        if ($_SESSION['rights']>1){
-        ?>
+                    <div class='col-md-6'>
+                        <?php
+                        /**
+                         * Aktueller User wird an dieser Stelle ausgegeben
+                         */
+                        echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
+                        ?>
+                    </div>
+                    <div class='col-md-6'>
+                        <a href='do/admin_update.php?id=<?php $user['ID'] ?>&rights=1' class='btn btn-default'>Daten ändern</a>
+                        <a href='do/admin_delete.php?id=<?php $user['ID']?> 'class='btn btn-default'> Account Löschen</a>";
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-8'>";
+
+            <?php
+            if ($_SESSION['rights']>1){
+                ?>
 
         <?php
             /**
