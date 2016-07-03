@@ -9,6 +9,7 @@
 
 <!DOCTYPE html>
 <html lang="de">
+<body>
 
 
 <?php require_once("include/header.php");
@@ -56,7 +57,7 @@ if (isset($frageCreate)):
         echo "<div> Es ist ein Problem beim einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.</div>";
     endif;
         $antwort= array ();
-        for ($i = 0; $i <= 9; $i++) {
+        for ($i = 0; $i <= 9; $i++){
             if (!empty (trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))))):
                 $antwortText = trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8")));
                 $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
@@ -80,7 +81,6 @@ endif;
 if(!isset($_SESSION['login'])):
     header ('location: index.php');
 else: ?>
-    <body>
     <?php require_once("include/navigation.php");
     $voting=$votingInstnc->getById($ID_Voting);
     ?>
@@ -138,10 +138,11 @@ else: ?>
     </div>
     </div>
     <?php require_once('include/footer.php'); ?>
-    </body>
+
 
 <?php
 endif;
 ?>
 
+</body>
 </html>
