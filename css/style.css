@@ -417,6 +417,7 @@ body {
 color: #c9302c;
     font-weight: bold;
     padding-left: 0;
+    margin-top: 10px;
 }
 
 #vote input[type="radio"], input[type="checkbox"] {
