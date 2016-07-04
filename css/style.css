@@ -468,3 +468,7 @@ input[type="checkbox"]:checked + label .fa-check {
     margin-right: 0;
 }
 
+a:hover {
+color: #55d6ba;
+}
+
