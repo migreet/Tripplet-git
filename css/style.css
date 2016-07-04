@@ -459,7 +459,7 @@ input[type="checkbox"]:checked + label .fa-check {
 }
 
 
-.btn-success:active:hover {
+.btn-success:active:hover, .btn-success:hover {
     color: #333;
     background-color: #d4d4d4;
     border-color: #8c8c8c;
