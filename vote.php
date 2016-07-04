@@ -174,12 +174,11 @@ else:
                 /**
                  * Leerer Auswertungdatensatz mit Session ID wird erstellt, je nach Anzahl der Fragen
                  */
-                foreach ($frage as $eintrag) {
-                    $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
-                }
-
             endif;
 
+            foreach ($frage as $eintrag) {
+                $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
+            }
             $_SESSION['rights']= 0;
             $_SESSION['votingid']= $voting['ID'];
         header('location:vote.php');
