@@ -3,6 +3,7 @@
 <body>
 
 <?php
+print_r($_SESSION);
 /**
  * Created by PhpStorm.
  * User: Mic
