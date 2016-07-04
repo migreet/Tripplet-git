@@ -6,7 +6,7 @@
             <?php
             if ($_SESSION['rights']<1):
                 echo "<li>
-                        <a href="admin.php">Accountverwaltung</a>
+                        <a href='admin.php'>Accountverwaltung</a>
                       </li>";
             endif; ?>
             <li>
