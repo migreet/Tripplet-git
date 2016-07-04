@@ -374,6 +374,10 @@ body {
     color: #808080;
 }
 
+.vote-footer .footer{
+    margin-top: 10px;
+}
+
 .navbar {
     position: relative;
     top: 0;
