@@ -92,7 +92,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <ul class="list-group">
             <?php
             /**
-             * Gibts Antworten zur passenden Frage aus
+             * Gibt Antworten zur passenden Frage aus
              */
             if (!empty($antwort)):
             foreach ($antwort as $eintrag) {
