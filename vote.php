@@ -134,7 +134,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                 endif;
             }
             ?>
-
+                <div class="vote-footer">
+                    <?php require_once('include/footer.php');
+                    echo "</div>"; ?>
             </div>
                 <div class='col-md-12 no-padding vote-logout'><a href='vote_logout.php' class='btn btn-danger vote-btn logout-btn'>Ausloggen</a>
                 </div>
