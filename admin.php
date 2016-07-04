@@ -22,7 +22,7 @@ session_start();
 /**
  * Aktuelleer User wird ausgelesen
  */
-$adminInstnc=$admin->getById($_SESSION['id']);
+$adminInstnc=$admin->getById($_SESSION['user_id']);
 
 /**
  * Userliste für Admin wird ausgelesen
