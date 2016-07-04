@@ -126,13 +126,15 @@ else:
         <div class="form-group">
             <input type="text" class="form-control" name="schluessel" placeholder="Schlüssel" id="schluessel" disabled>
                 <button type="submit" name="stop" class="btn btn-default">stoppen</button>
+            <?php
+        if ($_GET['notification']=="4"):
+            echo "<div class='notifikation'>";
+            echo "Das Voting wurde erfolgreich gestartet.";
+            echo "</div>";
+            ?>
         </div>
 
         <?php
-        if ($_GET['notification']=="4"):
-        echo "<div class='notifikation'>";
-        echo "Das Voting wurde erfolgreich gestartet.";
-        echo "</div>";
         endif;
 
     endif;
