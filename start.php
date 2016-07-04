@@ -145,8 +145,6 @@ else:
     </div>
 </div>";
 
-    require_once('include/footer.php');
-
 endif;
 ?>
 
