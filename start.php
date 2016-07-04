@@ -108,19 +108,19 @@ else:
         <div class="form-group">
             <input type="text" class="form-control" name="schluessel" placeholder="Schlüssel" id="schluessel" required>
                 <button type="submit" name="start" class="btn btn-default">starten</button>
-        </div>
-        <?php
-
-        if ($_GET['notification']=="5"):
+            <?php
+            if ($_GET['notification']=="5"):
                 echo "<div class='notifikation'>";
                 echo "Das Voting wurde beendet.";
                 echo "</div>";
-        elseif ($_GET['notification']=="6"):
-            echo "<div class='notifikation'>";
-            echo "Dieser Schlüssel wird im Moment leider bereits verwendet!";
-            echo "</div>";
-        endif;
-
+            elseif ($_GET['notification']=="6"):
+                echo "<div class='notifikation'>";
+                echo "Dieser Schlüssel wird im Moment leider bereits verwendet!";
+                echo "</div>";
+            endif;
+            ?>
+        </div>
+    <?php
     else:
     ?>
         <div class="form-group">
