@@ -1,17 +1,15 @@
+<!DOCTYPE html>
+<html lang="de">
+<body>
 <?php
 /**
  * Created by PhpStorm.
  * User: Mic
  * Date: 31.03.2016
  * Time: 14:12
+ * Votings bearbeiten
  */
-?>
 
-<!DOCTYPE html>
-<html lang="de">
-
-
-<?php
 /**
  * Requires
  */
@@ -75,40 +73,12 @@ if (isset($frageCreate)):
 
 endif;
 
-/**
- *
- */
-/*
-if (isset($postVoting)):
-    $bezeichnung = trim(stripslashes (htmlentities($_POST["bezeichnung"], ENT_QUOTES, "UTF-8")));
-    $schluessel= trim(stripslashes (htmlentities($_POST["schluessel"], ENT_QUOTES, "UTF-8")));
-    $vorlesungsId= trim(stripslashes (htmlentities($_GET["id"], ENT_QUOTES, "UTF-8")));
+if(!isset($_SESSION['login'])):
+    header ('location: index.php');
 
-    if (!empty ($bezeichnung)) {
-        $voting = $votingInstnc->createVoting($bezeichnung, $schluessel, $vorlesungsId);
+else:
 
-        echo "<div> Die Registrierung war erfolgreich!</div>";
-
-        header('Location: vorlesung.php?id='.$ID_Voting);
-    }
-    else {$getNot = "Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.";
-    }
-
-
-endif;
-*/
-
-
-?>
-
-
-
-<?php if(!isset($_SESSION['login'])):
-    header ('location: index.php');?>
-
-<?php else: ?>
-    <body>
-    <?php require_once("include/navigation.php");
+    require_once("include/navigation.php");
     $voting=$votingInstnc->getById($ID_Voting);
     ?>
 
@@ -121,7 +91,7 @@ endif;
         $vorlesung = $vorlesungInstnc->getById($voting['ID_VORLESUNG']);
         echo"
         <div class='breadcrumb'>
-        <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <i class='fa fa-angle-right'></i> <a href='vorlesung.php?id=".$vorlesung['ID'] ."'> ". $vorlesung['bezeichnung']. "</a> <i class='fa fa-angle-right'></i> ". $voting['bezeichnung'] ." bearbeiten
+            <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <i class='fa fa-angle-right'></i> <a href='vorlesung.php?id=".$vorlesung['ID'] ."'> ". $vorlesung['bezeichnung']. "</a> <i class='fa fa-angle-right'></i> ". $voting['bezeichnung'] ." bearbeiten
         </div>";
         ?>
 
@@ -132,6 +102,7 @@ endif;
             ?>
         </div>
         <div class="col-md-8">
+
             <?php
 
             /**
@@ -140,43 +111,42 @@ endif;
             echo "<p><strong>Fragen in diesem Voting</strong></p>";
             $voting = $frageInstnc->getByVotingId($ID_Voting);
             if (!empty ($voting)):
-            foreach ($voting as $eintrag) {
-            echo "
-<div class='col-md-12'>
-    <div class='col-md-7'>";
+                foreach ($voting as $eintrag) { ?>
+                <div class='col-md-12'>
+                    <div class='col-md-7'>
+                <?php
+                echo " " . $eintrag['text'] . " ";
+                echo " " . $eintrag['datum'] . " ";
 
-            echo " " . $eintrag['text'] . " ";
-            echo " " . $eintrag['datum'] . " ";
-            ?>
+                /**
+                 * Ausgabe der Antworten zu der passenden Frage
+                 */
+                $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
+                echo "<ul>";
+                foreach ($antwort as $eintragFrage) {
+                    echo "<li>" . $eintragFrage['text'] . "</li>";
+                }
+                echo "</ul>";
+                ?>
 
-            <!--Ausgabe der Antworten zu der passenden Frage -->
-            <?php
-            $antwort=$antwortInstnc->getByFragenId($eintrag['ID']);
-            echo "<ul>";
-            foreach ($antwort as $eintragFrage) {
+                </div>
+                    <div class="col-md-5">
+                        <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
+                    </div>
+                </div>
 
-            echo "<li>" . $eintragFrage['text'] . "</li>";
-            }
-            echo "</ul>";
-
-            ?>
-    </div>
-        <div class="col-md-5">
-        <!-- Fragenlöschen-->
-        <a href="do/voting_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvoting='.$ID_Voting;?>" class="btn btn-danger">Löschen</a>
-        </div>
-    </div>
-
-    <?php }
+                <?php
+                }
     else:
         echo "Es sind keine Fragen vorhanden";
-    endif;
-    ?>
 
-    </div>
-    <?php require_once('include/footer.php'); ?>
-    </body>
+            endif;
 
-<?php endif; ?>
+    echo "</div>";
+    require_once('include/footer.php');
 
+endif;
+?>
+
+</body>
 </html>
