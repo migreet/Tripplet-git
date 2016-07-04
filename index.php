@@ -70,7 +70,7 @@ session_start();
             </div>
             <div class="form-group">
                 <div class="col-sm-6">
-                    <button type="submit" name="registrieren" class="btn btn-default">Registrieren</button>
+                    <button type="submit" name="registrieren" class="btn btn-default btn-max">Registrieren</button>
                 </div>
             </div>
 
