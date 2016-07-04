@@ -359,7 +359,6 @@ body {
 }
 
 .footer {
-    float: right;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -370,7 +369,6 @@ body {
 }
 
 .footer a{
-    float: right;
     margin-left: 5px;
     color: #808080;
 }
