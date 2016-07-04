@@ -417,6 +417,7 @@ body {
 .notifikation {
 color: #c9302c;
     font-weight: bold;
+    padding-left: 0;
 }
 
 #vote input[type="radio"], input[type="checkbox"] {
