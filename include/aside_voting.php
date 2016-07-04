@@ -20,7 +20,7 @@ else:
 <div class="panel panel-default">
     <div class="panel-body">
         <div class='side-text'>
-            <p>Hier steht ein Platzhaltertext</p>
+            <p>Du kannst Fragen mit bis zu <strong>10</strong> Antworten zu deinem Voting hinzufügen</p>
         </div>
         <div id="aside_voting" class="sidebar-left">
             <div>
