@@ -48,7 +48,7 @@ else:
 
         <h1> Accountverwaltung</h1>
         <div class='col-md-4'>
-            <div class="panel panel-default aside-index">
+            <div class="panel panel-default sidebar-left">
                 <div class="panel-body">
 
                     <div class='col-md-6'>
