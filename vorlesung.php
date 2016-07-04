@@ -77,7 +77,7 @@ endif;
     <!-- Breadcrumb -->
     <div class='breadcrumb'>
         <i class='fa fa-angle-right'></i> <a href='index.php'>Vorlesungen</a> <i class='fa fa-angle-right'></i>
-        <?php echo $vorlesung['bezeichnung']; ?>
+        <?php echo "Votingübersicht " .$vorlesung['bezeichnung']; ?>
     </div>
     <h1> <?php echo $vorlesung['bezeichnung']; ?></h1>
     <div class="col-md-4 sidebar">
