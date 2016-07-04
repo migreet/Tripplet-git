@@ -474,6 +474,10 @@ input[type="checkbox"]:checked + label .fa-check {
 }
 
 a:hover {
-color: #55d6ba;
+    color: #55d6ba;
+}
+
+.list-group {
+    margin-bottom: 0;
 }
 
