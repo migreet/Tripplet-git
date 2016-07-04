@@ -113,7 +113,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             </div>
 
 
-            <div class='col-md-12 vote-dot'>";
+            <div class='col-md-12 vote-dot'>
             <?php
             /**
              * Bullet Navigation
