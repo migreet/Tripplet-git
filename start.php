@@ -46,8 +46,6 @@ if(!isset($_SESSION['login'])):
     header ('location: index.php');
 
 else:
-    require_once("include/navigation_login.php");
-
     /**
      * Rights Check
      */
