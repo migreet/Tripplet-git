@@ -115,8 +115,10 @@ session_start();
             endif;
 
         endif;
-        echo "</div>";
+        echo "</div>
+        echo <div class='login-footer'>";
         require_once('include/footer.php');
+        echo "</div>";
         /**
          * Elseblock für Ausgabe bei eigeloggtem Zustand
          */
