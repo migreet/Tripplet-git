@@ -86,7 +86,7 @@ session_start();
                 echo "<div class='col-md-6 notifikation'>Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
             endif;
             echo "<div class='col-sm-6'>";
-            require_once('include/footer.php')
+            require_once('include/footer.php');
             echo "</div>";
             ?>
 
