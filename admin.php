@@ -50,16 +50,18 @@ else:
         <div class='col-md-4'>
             <div class="panel panel-default sidebar-left">
                 <div class="panel-body">
-
-                    <div class='col-md-6'>
-                        <?php
-                        /**
-                         * Aktueller User wird an dieser Stelle ausgegeben
-                         */
-                        echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
-                        ?>
+                    <div class='side-text'>
+                        <p>Hier steht ein Platzhaltertext</p>
                     </div>
-                </div>
+                        <div class='col-md-6'>
+                            <?php
+                            /**
+                             * Aktueller User wird an dieser Stelle ausgegeben
+                             */
+                            echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
+                            ?>
+                        </div>
+                    </div>
             </div>
         </div>
         <div class='col-md-8'>
