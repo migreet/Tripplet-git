@@ -93,12 +93,13 @@ body {
     color: #55d6ba;
     background-color: #808080;
     border-color: #808080;
+
 }
 
 .btn-success:hover {
-    color: #55d6ba;
     background-color: #a6a6a6;
-    border-color: #a6a6a6;
+    color: #55d6ba;
+    text-decoration: none;
 }
 
 .btn-success.focus, .btn-success:focus {
