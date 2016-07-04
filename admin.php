@@ -57,7 +57,7 @@ else:
             <div class="panel panel-default sidebar-left">
                 <div class="panel-body">
                     <div class='side-text'>
-                        <p>Hier steht ein Platzhaltertext</p>
+                        <p>In der Accountverwaltung kannst du Benutzer freischalten, löschen und Adminrechte vergeben.</p>
                     </div>
                         <div class='col-md-6'>
                             <?php
