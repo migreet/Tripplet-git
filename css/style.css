@@ -464,3 +464,7 @@ input[type="checkbox"]:checked + label .fa-check {
     background-color: #d4d4d4;
     border-color: #8c8c8c;
 }
+
+.btn-max {
+    width: 100%;
+}
