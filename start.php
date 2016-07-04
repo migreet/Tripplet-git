@@ -125,8 +125,6 @@ else:
     ?>
         <div class="form-group">
             <input type="text" class="form-control" name="schluessel" placeholder="Schlüssel" id="schluessel" disabled>
-        </div>
-        <div class="form-group">
                 <button type="submit" name="stop" class="btn btn-default">stoppen</button>
         </div>
 
