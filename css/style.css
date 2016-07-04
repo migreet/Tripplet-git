@@ -177,7 +177,6 @@ body {
     padding-right: 0;
     border-bottom: #ccc dotted 1px;
     padding-top: 5px;
-    padding-left: 50px;
     clear: both;
 }
 
@@ -188,6 +187,10 @@ body {
 #votingubersicht .col-md-12 .col-md-8{
     padding-left: 0;
     padding-right: 0;
+}
+
+#votingubersicht .col-md-8 {
+    padding-left: 50px;
 }
 
 #voting .col-md-12 {
