@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="de">
+<body>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -74,3 +78,6 @@ else:
 
 endif;
 ?>
+
+</body>
+</html>
