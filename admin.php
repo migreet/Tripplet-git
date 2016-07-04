@@ -45,7 +45,7 @@ else:
         <div class='breadcrumb'>
             <i class='fa fa-angle-right'></i> <a href='index.php'> Vorlesungen</a> <i class='fa fa-angle-right'></i> Accountverwaltung
         </div>
-
+<?php print_r($adminInstnc);?>
         <h1> Accountverwaltung</h1>
         <div class='col-md-4'>
             <div class="panel panel-default">
@@ -58,10 +58,6 @@ else:
                          */
                         echo $adminInstnc['name'] ."<br>". $adminInstnc['vorname'] ."<br>".$adminInstnc['mail']."<br>".$adminInstnc['ID_RECHTE']."<br>";
                         ?>
-                    </div>
-                    <div class='col-md-6'>
-                        <a href='do/admin_update.php?id=<?php $user['ID'] ?>&rights=1' class='btn btn-default'>Daten ändern</a>
-                        <a href='do/admin_delete.php?id=<?php $user['ID']?> 'class='btn btn-default'> Account Löschen</a>
                     </div>
                 </div>
             </div>
