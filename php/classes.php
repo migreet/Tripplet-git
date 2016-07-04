@@ -1080,8 +1080,26 @@ class auswertung extends mother
 
     }
 
+    public function check($fragenid, $sessionid){
+        try {
+            $stmt = $this->pdo->prepare('
+              SELECT * FROM AUSWERTUNG
+              WHERE ID_FRAGE=:fragenid
+              AND SESSIONID_STUDENT=:sessionid;
+            ');
+            $stmt->bindParam(':fragenid', $fragenid);
+            $stmt->bindParam(':sessionid', $sessionid);
+            $stmt->execute();
+            $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
 
-	
+        } catch (PDOException $e) {
+            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            die();
+        }
+
+    }
+
 }
 
 class rechte extends mother
