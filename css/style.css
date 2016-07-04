@@ -365,7 +365,6 @@ body {
     left: 0;
     width: 100%;
     margin-bottom: 10px;
-    margin-top: 18vh;
     background-color: transparent;
 }
 
@@ -373,14 +372,6 @@ body {
     text-align: center;
     margin-left: 5px;
     color: #808080;
-}
-
-.vote-footer .footer{
-    margin-top: 10px;
-}
-
-.login-footer .footer{
-    margin-top: 50vh;
 }
 
 .navbar {
