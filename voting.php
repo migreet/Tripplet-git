@@ -78,6 +78,7 @@ endif;
 /**
  *
  */
+/*
 if (isset($postVoting)):
     $bezeichnung = trim(stripslashes (htmlentities($_POST["bezeichnung"], ENT_QUOTES, "UTF-8")));
     $schluessel= trim(stripslashes (htmlentities($_POST["schluessel"], ENT_QUOTES, "UTF-8")));
@@ -93,8 +94,9 @@ if (isset($postVoting)):
     else {$getNot = "Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.";
     }
 
-endif;
 
+endif;
+*/
 
 
 ?>
