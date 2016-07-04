@@ -3,7 +3,6 @@
 <body>
 
 <?php
-print_r($_SESSION);
 /**
  * Created by PhpStorm.
  * User: Mic
@@ -218,6 +217,7 @@ else:
                 echo "Voting beendet. Vielen Dank für Ihre Teilnahme!";
                 echo "</div>";
             endif;
+            print_r($_SESSION);
             ?>
         </form>
         </div>
