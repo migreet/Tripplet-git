@@ -133,10 +133,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
                 endif;
             }
-            echo "DEBUG:";
-            print_r($_SESSION);
-            echo "FRAGERUNDE";
-            print_r($fragerunde);
             ?>
 
             </div>
@@ -219,9 +215,8 @@ else:
                 echo "<div class='notifikation'>";
                 echo "Voting beendet. Vielen Dank für Ihre Teilnahme!";
                 echo "</div>";
+
             endif;
-            print_r($_SESSION);
-            print_r();
             ?>
         </form>
         </div>
