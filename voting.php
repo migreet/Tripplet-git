@@ -142,7 +142,8 @@ else:
 
             endif;
 
-    echo "</div>";
+    echo "</div>
+</div>";
     require_once('include/footer.php');
 
 endif;
