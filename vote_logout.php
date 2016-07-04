@@ -19,7 +19,7 @@ require_once("php/classes.php");
 session_start();
 
 /**
- * Session wird gecleaned
+ * Voting ID in der Session wird resettet
  */
 unset($_SESSION['votingid']);
 header('location: vote.php?notification='."2");
