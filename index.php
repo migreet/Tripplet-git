@@ -71,6 +71,7 @@ session_start();
             <div class="form-group">
                 <div class="col-sm-6">
                     <button type="submit" name="registrieren" class="btn btn-default btn-max">Registrieren</button>
+
                 </div>
             </div>
 
@@ -84,7 +85,9 @@ session_start();
             if ($_GET['notification']=="4"):
                 echo "<div class='col-md-6 notifikation'>Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
             endif;
-            require_once('include/footer.php');
+            echo "<div class='col-sm-6'>";
+            require_once('include/footer.php')
+            echo "</div>";
             ?>
 
         </form>
