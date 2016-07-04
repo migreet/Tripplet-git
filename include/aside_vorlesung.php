@@ -30,7 +30,7 @@ else:
                     </div>
                         <input type="hidden" value="1" name="votingcreate">
                         <div class="col-sm-12">
-                            <button type="submit" class="btn btn-default">hinzufügen</button>
+                            <button type="submit" class="btn btn-default btn-max">hinzufügen</button>
                         </div>
                 </div>
             </form>
