@@ -135,6 +135,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             }
             echo "DEBUG:";
             print_r($_SESSION);
+            echo "FRAGERUNDE";
             print_r($fragerunde);
             ?>
 
