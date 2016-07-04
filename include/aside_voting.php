@@ -62,8 +62,6 @@ else:
                         <input type="text" class="form-control" name="antwort9" placeholder="Antwort" id="antwort" >
                         <input type="hidden" value="1" name="fragecreate">
                     </div>
-                </div>
-                <div class="form-group">
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-default btn-max">Voting hinzufügen</button>
                     </div>
