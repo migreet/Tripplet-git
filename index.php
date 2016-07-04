@@ -116,7 +116,7 @@ session_start();
 
         endif;
         echo "</div>";
-
+        require_once('include/footer.php');
         /**
          * Elseblock für Ausgabe bei eigeloggtem Zustand
          */
