@@ -107,10 +107,7 @@ else:
     ?>
         <div class="form-group">
             <input type="text" class="form-control" name="schluessel" placeholder="Schlüssel" id="schluessel" required>
-        </div>
-        <div class="form-group">
                 <button type="submit" name="start" class="btn btn-success">starten</button>
-
         </div>
         <?php
 

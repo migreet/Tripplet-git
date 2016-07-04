@@ -471,3 +471,7 @@ input[type="checkbox"]:checked + label .fa-check {
 #start .col-md-8 {
     padding-left: 50px;
 }
+
+#start .btn-default {
+    float: right
+}
