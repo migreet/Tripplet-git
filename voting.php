@@ -11,62 +11,74 @@
 <html lang="de">
 
 
-<?php require_once("include/header.php");
+<?php
+/**
+ * Requires
+ */
+require_once("include/header.php");
 require_once("php/classes.php");
 
-session_start();
-//Instanzen
+/**
+ * GETs
+ */
+$ID_Voting=$_GET['id'];
+$notification=$_GET['notification'];
+$frageCreate=$_POST["fragecreate"];
+$frageText = trim(stripslashes (htmlentities($_POST["frage"], ENT_QUOTES, "UTF-8")));
+$postVoting=$_POST["votingcreate"];
+
+/**
+ * Instanzen
+ */
 $vorlesungInstnc = new vorlesung();
 $antwortInstnc = new antwort();
 $votingInstnc = new voting();
 $frageInstnc = new frage();
 
-//GETs
-$ID_Voting=$_GET['id'];
-$notification=$_GET['notification'];
+/**
+ * Session wird gestartet
+ */
+session_start();
 
-
-//Voting Aside Logik
-$frageCreate=$_POST["fragecreate"];
-$frageText = trim(stripslashes (htmlentities($_POST["frage"], ENT_QUOTES, "UTF-8")));
-
-//Rights Check
+/**
+ * Rights Check
+ */
 $usercheck=$votingInstnc->userCheck($ID_Voting);
-if($usercheck['ID']!=$_SESSION['user_id']) {
+if($usercheck['ID']!=$_SESSION['user_id']):
     header ('location: index.php');
-}
+endif;
 
-if (isset($frageCreate)) {
+/**
+ *Validierung der Eingabe und Erstellung einer neuen Frage
+ */
+if (isset($frageCreate)):
 
-    if (!empty ($frageText)) {
-        $frageInstnc = new frage();
+    if (!empty ($frageText)):
         $frage = $frageInstnc->createFrage($frageText, $ID_Voting);
         header('Location: voting.php?id=' .$ID_Voting);
-        echo "<div> Die Frage wurde eingereicht</div>"; //Brauchen wir das?!
 
-
-    }
-    else {$getNot = "Es ist ein Problem beim Einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.";
+    else: $getNot = "Es ist ein Problem beim Einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.";
         header('Location: voting.php?id=' .$ID_Voting .'?notification=' . $getNot);
-    }
 
+    endif;
+    /**
+     * Einzelne Antworten werden in die Datenbank geschrieben
+     */
     $antwort= array ();
     for ($i = 0; $i <= 9; $i++) {
-        if (!empty (trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))))){
+        if (!empty (trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8"))))):
             $antwortText = trim(stripslashes (htmlentities($_POST["antwort" . $i], ENT_QUOTES, "UTF-8")));
             $antwort = $antwortInstnc->createAntwort($antwortText, $frage);
 
-        }
-
+        endif;
     }
 
+endif;
 
-
-
-}
-
-$postVoting=$_POST["votingcreate"];
-if (isset($postVoting)) {
+/**
+ *
+ */
+if (isset($postVoting)):
     $bezeichnung = trim(stripslashes (htmlentities($_POST["bezeichnung"], ENT_QUOTES, "UTF-8")));
     $schluessel= trim(stripslashes (htmlentities($_POST["schluessel"], ENT_QUOTES, "UTF-8")));
     $vorlesungsId= trim(stripslashes (htmlentities($_GET["id"], ENT_QUOTES, "UTF-8")));
@@ -80,7 +92,8 @@ if (isset($postVoting)) {
     }
     else {$getNot = "Registrierung nicht erfolgreich! Wenden Sie sich bitte an den Administrator.";
     }
-}
+
+endif;
 
 
 
@@ -100,7 +113,9 @@ if (isset($postVoting)) {
     <div class="container" id="voting">
 
         <?php
-        //Breadcrumb
+        /**
+         * Breadcrumb
+         */
         $vorlesung = $vorlesungInstnc->getById($voting['ID_VORLESUNG']);
         echo"
         <div class='breadcrumb'>
@@ -117,7 +132,9 @@ if (isset($postVoting)) {
         <div class="col-md-8">
             <?php
 
-//Ausgeben der Fragen zur passenden Voting ID
+            /**
+             * Ausgeben der Fragen zur passenden Voting ID
+             */
             echo "<p><strong>Fragen in diesem Voting</strong></p>";
             $voting = $frageInstnc->getByVotingId($ID_Voting);
             if (!empty ($voting)):
