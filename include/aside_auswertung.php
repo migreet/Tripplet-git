@@ -4,8 +4,7 @@
     <div class="panel-body">
         <div class='sidebar-left'>
             <div class='side-text'>
-                In diesem Bereich öffnest und schließt du Votings. Wähle einen Schlüssel um den Zugang zu deinem Voting zu beschränken.
-                Nach 90 Minuten werden deine Votings aus Sicherheitsgründen automatisch geschlossen.
+                Das Ergebnis deines Votings wird prozentual und absolut angezeigt. Mit <strong>Beam me up!</strong> kannst du die Resultate für jede einzelne Frage auf einer Beamerfreundlichen Seite öffnen.
             </div>
         </div>
     </div>
