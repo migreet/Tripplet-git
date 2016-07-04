@@ -1,67 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<body>
+
 <?php
 /**
  * Created by PhpStorm.
  * User: Mic
  * Date: 31.03.2016
  * Time: 14:12
+ * Ausgabe des Votings für den Student
  */
-?>
 
-<!DOCTYPE html>
-<html lang="de">
-
-<?php
 require_once("include/header.php");
 ?>
-
-<style>
-
-    /* Hidding the radiobuttons & checkboxes */
-    input[type="radio"], input[type="checkbox"] {
-        display: none;
-    }
-    /* Hidding the "check" status of inputs */
-    input[type="radio"] + label .fa-check-circle,
-    input[type="checkbox"] + label .fa-check  {
-        display: none;
-    }
-    /* Styling the "check" status */
-    input[type="radio"]:checked + label .fa-check-circle,
-    input[type="checkbox"]:checked + label .fa-check {
-        display: block;
-        color: DarkTurquoise;
-    }
-    /* Styling checkboxes */
-    input[type="checkbox"]:checked + label .fa-check {
-        position: relative;
-        left: .125em;
-        bottom: .125em;
-    }
-    /* Styling radiobuttons */
-    input[type="radio"]:checked + label .fa-circle {
-        display: none;
-        color: DarkTurquoise;
-    }
-    input[type="radio"] + label .fa-circle {
-        color: DarkTurquoise;
-    }
-
-    .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #f5f5f5;
-    }
-
-    #vote .form-control{
-        width: 100%
-    }
-
-</style>
-
-
-
 
 <?php
 
@@ -102,7 +53,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     }
     ?>
 
-    <body>
+
     <div class="container" id="vote">
         <div class="col-md-4"></div>
         <div class="col-md-4">
