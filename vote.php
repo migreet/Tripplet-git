@@ -143,7 +143,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
         <?php
         /**
-         * bei
+         * wenn keine leeren Fragen mehr vorhanden sind wird man automatisch ausgeloggt, Voting wird beendet
          */
         else:
             header('location:vote_logout.php');
@@ -153,26 +153,38 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
     </div>
 
     </body>
-<?php else:
-    if (isset($schluesselsent)) {
-        if ($schluessel==$voting['schluessel']){
-            if (!isset($_SESSION['id'])){
+<?php
+/**
+ * Login check
+ */
+else:
+    if (isset($schluesselsent)):
+
+        if ($schluessel==$voting['schluessel']):
+
+            if (!isset($_SESSION['id'])):
             $_SESSION['id']= uniqid();
+
+                /**
+                 * Leerer Auswertungdatensatz it Session ID wird erstellt, je nach Anzahl der Fragen
+                 */
                 foreach ($frage as $eintrag) {
                     $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
                 }
-            }
+
+            endif;
+
             $_SESSION['rights']= 0;
             $_SESSION['votingid']= $voting['ID'];
         header('location:vote.php');
-        }
-        else {
-        header('location:vote.php?notification='."0");}
 
-    }
+        else :
+        header('location:vote.php?notification='."0");
+
+        endif;
+
+    endif;
     ?>
-
-    <body>
 
     <div class="container" id="vote">
     <div class="col-md-4">
@@ -189,27 +201,30 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <div>
             <button type="submit" name="login" class="btn btn-danger vote-btn logout-btn">Einschreiben</button>
             </div>
+
             <?php
-            //Ausgabe der Notifikationen
-            if ($_GET['notification']=="0"){
+            /**
+             * Ausgabe der Notifikationen
+             */
+            if ($_GET['notification']=="0"):
                 echo "<div class='notifikation'>";
                 echo "Falscher Schlüssel";
                 echo "</div>";
-            }
-            elseif ($_GET['notification']=="2") {
+            elseif ($_GET['notification']=="2"):
                 echo "<div class='notifikation'>";
                 echo "Voting beendet. Vielen Dank für Ihre Teilnahme!";
                 echo "</div>";
-            }
+            endif;
             ?>
         </form>
         </div>
 
 
     </div>
-    <?php require_once('include/footer.php'); ?>
-    </body>
+    <?php require_once('include/footer.php');
 
-<?php endif; ?>
+endif;
+?>
 
+</body>
 </html>
