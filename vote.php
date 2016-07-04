@@ -88,6 +88,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
         <h5><?php $votingName['bezeichnung'] ?></h5>
         <h3> <?php $fragerunde['text'] ?></h3>
+                <?php print_r($votingName);
+                      print_r($fragerunde); ?>
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" >
             <ul class="list-group">
             <?php
