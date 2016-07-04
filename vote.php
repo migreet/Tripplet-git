@@ -221,8 +221,9 @@ else:
 
 
     </div>
+    <div class="vote-footer">
     <?php require_once('include/footer.php');
-
+    echo "</div>";
 endif;
 ?>
 
