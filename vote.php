@@ -59,52 +59,53 @@
  * Requires
  */
 require_once("include/header.php");
-require_once("php/classes.php");
- ?>
+?>
 <style>
-input[type="radio"], input[type="checkbox"] {
-    display: none;
-}
+    input[type="radio"], input[type="checkbox"] {
+        display: none;
+    }
 
     input[type="radio"] + label .fa-check-circle,
     input[type="checkbox"] + label .fa-check  {
-    display: none;
-}
+        display: none;
+    }
 
     input[type="radio"]:checked + label .fa-check-circle,
     input[type="checkbox"]:checked + label .fa-check {
-    display: block;
-    color: DarkTurquoise;
-}
+        display: block;
+        color: DarkTurquoise;
+    }
 
     input[type="checkbox"]:checked + label .fa-check {
-    position: relative;
-    left: .125em;
+        position: relative;
+        left: .125em;
         bottom: .125em;
     }
 
     input[type="radio"]:checked + label .fa-circle {
-    display: none;
-    color: DarkTurquoise;
-}
+        display: none;
+        color: DarkTurquoise;
+    }
 
     input[type="radio"] + label .fa-circle {
-    color: DarkTurquoise;
-}
+        color: DarkTurquoise;
+    }
 
     .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
         background-color: #f5f5f5;
     }
 
     .form-control{
-    width: 100%
+        width: 100%
     }
 </style>
 <?php
+require_once("php/classes.php");
+
 /**
  * Session wird gestartet
  */
