@@ -4,6 +4,9 @@
     <div class="container">
         <ul class="nav navbar-nav" style="float: right">
             <?php
+            /**
+             * Ausblenden von "Accuntverwaltung" für nicht-Admins
+             */
             if ($_SESSION['rights']>1):
                 echo "<li>
                         <a href='admin.php'>Accountverwaltung</a>

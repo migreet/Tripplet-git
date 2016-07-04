@@ -36,6 +36,9 @@ if(!isset($_SESSION['login'])):
     header ('location: index.php');
 
 else:
+    if ($_SESSION['rights']<2):
+        header ('location: index.php');
+    endif;
     require_once("include/navigation.php");
     ?>
 
