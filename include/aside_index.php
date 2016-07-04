@@ -65,4 +65,6 @@ else:
 
 <?php
 endif;
+
+require_once('include/footer.php');
 ?>

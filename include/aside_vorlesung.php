@@ -38,4 +38,7 @@ else:
     </div>
 </div>
 
-<?php endif; ?>
+<?php endif;
+
+require_once('include/footer.php');
+?>
