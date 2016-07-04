@@ -55,7 +55,7 @@ else:
                     <div class="form-group">
                         <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnung" id="mail" required>
                         <input type="hidden" value="1" name="vorlesungcreate">
-                        <button type="submit" name="registrieren" class="btn btn-default btn-max">Hinzufügen</button>
+                        <button type="submit" name="registrieren" class="btn btn-default btn-max">Vorlesung hinzufügen</button>
                     </div>
                 </form>
             </div>
