@@ -116,7 +116,7 @@ session_start();
 
         endif;
         echo "</div>
-        echo <div class='login-footer'>";
+        <div class='login-footer'>";
         require_once('include/footer.php');
         echo "</div>";
         /**
