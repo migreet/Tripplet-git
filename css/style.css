@@ -373,7 +373,10 @@ body {
     text-align: center;
     margin-left: 5px;
     color: #808080;
+}
 
+.vote-footer {
+    margin-top: 10px;
 }
 
 .navbar {
