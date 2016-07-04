@@ -78,7 +78,7 @@ else:
     require_once("include/navigation.php");
     ?>
 
-    <div class="container">
+    <div class="container" id="start">
         <?php
         /**
         * Breadcrumb

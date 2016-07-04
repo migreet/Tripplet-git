@@ -467,3 +467,7 @@ input[type="checkbox"]:checked + label .fa-check {
 .btn-max {
     width: 100%;
 }
+
+#start .col-md-8 {
+    padding-left: 50px;
+}
