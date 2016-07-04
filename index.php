@@ -136,7 +136,9 @@ session_start();
 
         <h1> Vorlesungen</h1>
         <div class="col-md-4">
-            <?php require_once('include/aside_index.php'); ?>
+            <?php require_once('include/aside_index.php');
+            require_once('include/footer.php');
+            ?>
         </div>
         <div class="col-md-8">
         <?php
@@ -166,7 +168,6 @@ session_start();
         echo "
         </div>
     </div>";
-        require_once('include/footer.php');
 
 endif;
         ?>
