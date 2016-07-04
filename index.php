@@ -84,12 +84,12 @@ session_start();
             if ($_GET['notification']=="4"):
                 echo "<div class='col-md-6 notifikation'>Registrierung nicht erfolgreich. Diese Emailadresse wurde bereits verwendet.</div>";
             endif;
-            require_once('include/footer.php');
             ?>
 
         </form>
 
         <?php
+        require_once('include/footer.php');
         /**
          * Validierung der POSTs
          */
