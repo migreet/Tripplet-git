@@ -471,6 +471,3 @@ input[type="checkbox"]:checked + label .fa-check {
     margin-right: 0;
 }
 
-#start .notifikation {
-    float: right;
-}
