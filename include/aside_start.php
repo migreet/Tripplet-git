@@ -4,7 +4,7 @@
     <div class="panel-body">
         <div class='sidebar-left'>
             <div class='side-text'>
-                In diesem Bereich werden Votings geöffnet und geschlossen. Wählen Sie einen Schlüssel um den Zugang zu Ihrem Voting zu beschränken.
+                Öffne Votings indem du einen Schlüssel vergibst und auf <strong>starten</strong> drückst. Mit diesem Schlüssel kann man unter <strong>https://mars.iuk.hdm-stuttgart.de/~mg144/vote.php</strong> und der Eingabe des korrekten schlüssels am Voting teilnehmen. Votings werden nach 90 Minuten automatisch geschlossen.
             </div>
         </div>
     </div>
