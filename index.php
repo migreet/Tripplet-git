@@ -89,6 +89,7 @@ session_start();
         </form>
 
         <?php
+        require_once('include/footer.php');
         /**
          * Validierung der POSTs
          */
@@ -115,10 +116,7 @@ session_start();
             endif;
 
         endif;
-        echo "</div>
-        <div class='login-footer'>";
-        require_once('include/footer.php');
-        echo "</div>";
+
         /**
          * Elseblock für Ausgabe bei eigeloggtem Zustand
          */
