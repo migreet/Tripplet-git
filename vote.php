@@ -1,51 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <body>
-<!--
-<style>
-    input[type="radio"], input[type="checkbox"] {
-        display: none;
-    }
 
-    input[type="radio"] + label .fa-check-circle,
-    input[type="checkbox"] + label .fa-check  {
-        display: none;
-    }
-
-    input[type="radio"]:checked + label .fa-check-circle,
-    input[type="checkbox"]:checked + label .fa-check {
-        display: block;
-        color: DarkTurquoise;
-    }
-
-    input[type="checkbox"]:checked + label .fa-check {
-        position: relative;
-        left: .125em;
-        bottom: .125em;
-    }
-
-    input[type="radio"]:checked + label .fa-circle {
-        display: none;
-        color: DarkTurquoise;
-    }
-
-    input[type="radio"] + label .fa-circle {
-        color: DarkTurquoise;
-    }
-
-    .footer{
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
-        background-color: #f5f5f5;
-    }
-
-    .form-control{
-        width: 100%
-    }
-</style>
--->
 <?php
 /**
  * Created by PhpStorm.
@@ -142,13 +98,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             foreach ($antwort as $eintrag) {
 
                 echo "<input value='" . $eintrag['ID'] . "' id='" . $eintrag['ID'] . "' type='radio' name='antwort'>
-<label for='". $eintrag['ID'] ."' class='list-group-item'>
-            <span class='fa-stack'>
-                <i class='fa fa-circle fa-stack-1x'></i>
-                <i class='fa fa-check-circle fa-stack-2x'></i>
-            </span>"
+                <label for='". $eintrag['ID'] ."' class='list-group-item'>
+                    <span class='fa-stack'>
+                        <i class='fa fa-circle fa-stack-1x'></i>
+                        <i class='fa fa-check-circle fa-stack-2x'></i>
+                    </span>"
                     . $eintrag['text'] .
-                    "</label>";
+                "</label>";
 
             }
             ?>
