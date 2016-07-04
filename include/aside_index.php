@@ -48,7 +48,7 @@ else:
     ?>
 
             <div class='side-text'>
-                <p>Hier steht ein Platzhaltertext</p>
+                <p>Hier siehst du deine Vorlsungen. Du kannst Vorlesungen hinzufügen löschen und anzeigen</p>
             </div>
             <div id="aside-index">
                 <form name="registerform" id="aside-index" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
