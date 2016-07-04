@@ -63,7 +63,7 @@ else:
                         <input type="hidden" value="1" name="fragecreate">
                     </div>
                     <div class="col-sm-12">
-                        <button type="submit" class="btn btn-default btn-max">Voting hinzufügen</button>
+                        <button type="submit" class="btn btn-default btn-max">Frage hinzufügen</button>
                     </div>
                 </div>
             </form>
