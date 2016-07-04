@@ -100,9 +100,9 @@ endif;
                     echo " <div class='col-md-8'>";?>
                     <a href="start.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">starten</a>
                     <a href="voting.php?id=<?php echo $eintrag['ID']?>" type='button' class='btn btn-default'>bearbeiten</a>
-                    <a href="auswertung.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Ergebnis</a>
-                    <!-- Votings loeschen -->
                     <a href="do/vorlesung_delete.php?id=<?php echo $eintrag['ID']. '&' .'idvorlesung='.$ID_Vorlesung;?>" class="btn btn-default">löschen</a>
+                    <a href="auswertung.php?id=<?php echo $eintrag['ID']?>" class="btn btn-default">Ergebnis</a>
+
                         </div>
                     </div>
     <?php
