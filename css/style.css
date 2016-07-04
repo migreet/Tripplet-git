@@ -468,4 +468,5 @@ input[type="checkbox"]:checked + label .fa-check {
 
 #start .btn-default {
     float: right;
+    margin-right: 0;
 }
