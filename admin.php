@@ -36,6 +36,9 @@ if(!isset($_SESSION['login'])):
     header ('location: index.php');
 
 else:
+    /**
+    * Sicherheitscheck dass nicht-Admins nicht auf Accountverwaltung kommen
+    */
     if ($_SESSION['rights']<2):
         header ('location: index.php');
     endif;
