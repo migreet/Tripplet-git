@@ -463,6 +463,10 @@ input[type="checkbox"]:checked + label .fa-check {
     width: 100%;
 }
 
+#registrieren .btn-default {
+    width: auto;
+}
+
 #start .col-md-8 {
     padding-left: 50px;
 }
