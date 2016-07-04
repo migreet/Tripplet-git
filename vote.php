@@ -173,7 +173,10 @@ else:
             endif;
 
             foreach ($frage as $eintrag) {
-                $auswertungInstnc->createAuswertung($eintrag['ID'],$_SESSION['id']);
+                $auswertungsCheck=$auswertungInstnc->check($eintrag['ID'],$_SESSION['id']);
+                if (empty($auswertungsCheck)) {
+                    $auswertungInstnc->createAuswertung($eintrag['ID'], $_SESSION['id']);
+                }
             }
             $_SESSION['rights']= 0;
             $_SESSION['votingid']= $voting['ID'];
