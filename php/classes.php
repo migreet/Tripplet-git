@@ -1083,7 +1083,7 @@ class auswertung extends mother
     public function check($fragenid, $sessionid){
         try {
             $stmt = $this->pdo->prepare('
-              SELECT * FROM Auswertung
+              SELECT * FROM auswertung
               WHERE ID_FRAGE=:fragenid
               AND SESSIONID_STUDENT=:sessionid;
             ');
