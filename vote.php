@@ -92,7 +92,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
             <ul class="list-group">
             <?php
             /**
-             * Gibts ANtworten zur passenden Frage aus
+             * Gibts Antworten zur passenden Frage aus
              */
             if (!empty($antwort)):
             foreach ($antwort as $eintrag) { ?>
@@ -101,7 +101,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                     <span class='fa-stack'>
                         <i class='fa fa-circle fa-stack-1x'></i>
                         <i class='fa fa-check-circle fa-stack-2x'></i>
-                    </span>"
+                    </span>
                     <?php echo $eintrag['text']; ?>
                 </label>
             <?php
