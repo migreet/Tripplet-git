@@ -71,6 +71,10 @@ else:
                     </div>
             </div>
         </div>
+        <?php
+        require_once('include/footer.php');
+        ?>
+
         <div class='col-md-8'>
 
             <?php
@@ -107,7 +111,7 @@ else:
         </div>
     </div>
 </div>
-<?php require_once('include/footer.php');
+<?php
 
 endif;
 ?>
