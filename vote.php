@@ -140,9 +140,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                 </div>
             </div>
         </form>
-            <div class="vote-footer">
-                    <?php require_once('include/footer.php');
-                    echo "</div>"; ?>
+
         <?php
         /**
          * wenn keine leeren Fragen mehr vorhanden sind wird man automatisch ausgeloggt, Voting wird beendet
@@ -153,7 +151,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
 
 
     </div>
-
+        <div class="vote-footer">
+            <?php require_once('include/footer.php');
+            echo "</div>"; ?>
     </body>
 <?php
 /**
