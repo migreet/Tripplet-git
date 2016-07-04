@@ -20,7 +20,6 @@ require_once("php/classes.php");
  * GETs
  */
 $ID_Voting=$_GET['id'];
-$notification=$_GET['notification'];
 $frageCreate=$_POST["fragecreate"];
 $frageText = trim(stripslashes (htmlentities($_POST["frage"], ENT_QUOTES, "UTF-8")));
 $postVoting=$_POST["votingcreate"];
@@ -54,9 +53,6 @@ if (isset($frageCreate)):
     if (!empty ($frageText)):
         $frage = $frageInstnc->createFrage($frageText, $ID_Voting);
         header('Location: voting.php?id=' .$ID_Voting);
-
-    else: $getNot = "Es ist ein Problem beim Einreichen der Frage aufgetreten. Wenden Sie sich bitte an den Administrator.";
-        header('Location: voting.php?id=' .$ID_Voting .'?notification=' . $getNot);
 
     endif;
     /**
@@ -98,7 +94,6 @@ else:
         <h1> Voting <?php echo $voting['bezeichnung']; ?></h1>
         <div class="col-md-4">
             <?php require_once('include/aside_voting.php');
-            echo "$notification";
             ?>
         </div>
         <div class="col-md-8">
