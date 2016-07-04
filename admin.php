@@ -60,6 +60,7 @@ else:
                         <p>In der Accountverwaltung kannst du Benutzer freischalten, löschen und Adminrechte vergeben.</p>
                     </div>
                         <div class='col-md-6'>
+                        <h5>Deine Accountdaten</h5>
                             <?php
                             /**
                              * Aktueller User wird an dieser Stelle ausgegeben
