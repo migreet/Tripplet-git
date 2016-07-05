@@ -55,6 +55,8 @@ else:
                     <div class="col-sm-12">
                         <input type="text" class="form-control" name="antwort6" placeholder="Antwort" id="antwort" >
                     </div>
+
+                        <input type="hidden" value="1" name="fragecreate">
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-default btn-max">Frage hinzufügen</button>
                     </div>
