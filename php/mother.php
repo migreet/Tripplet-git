@@ -17,7 +17,7 @@ class mother
                 );
             }
         } catch (PDOException $e) {
-            echo("Fehler! Bitten wenden Sie sich an den Administrator...<br>" . $e->getMessage() . "<br>");
+            echo("Ein Fehler ist aufgetreten<br>" . $e->getMessage() . "<br>");
             die();
         }
     }
