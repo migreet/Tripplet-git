@@ -50,7 +50,9 @@ else:
             <img src="img/snap-hi.svg">
             </div>
             <div class='side-text'>
-                <p>Hier siehst du deine Vorlsungen. Du kannst Vorlesungen hinzufügen anzeigen und löschen</p>
+                <p> Hi, ich bin Crock! Ich begleite dich durch die Seite!</br>
+                    Hier siehst du deine Vorlesungen. Füge Vorlesungen hinzu indem du das Feld und den Button unten verwendest!
+                </p>
             </div>
             <div id="aside-index">
                 <form name="registerform" id="aside-index" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
