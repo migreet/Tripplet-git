@@ -7,9 +7,9 @@
                 <div>
                     Hochschule der Medien<br>
                     Nobelstraße 10 <br>
-                    70569 Stuttgart
-                    Telefon: 071111 83 49 53 79 38 45 76
-                    Mail: am154@hdm-stuttgart.de
+                    70569 Stuttgart <br>
+                    Telefon: 071111 83 49 53 79 38 45 76 <br>
+                    Mail: am154@hdm-stuttgart.de <br>
                 </div>
             </div>
         </div>
