@@ -194,6 +194,7 @@ else:
     <div class="col-md-4">
     </div>
         <div class="col-md-4">
+            <img src="img/logo.svg">
         <h3>Schlüssel eingeben</h3>
 
         <form name="signinform" class="form-inline"  action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
