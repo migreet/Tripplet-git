@@ -56,9 +56,6 @@ else:
         <div class='col-md-4'>
             <div class="panel panel-default sidebar-left">
                 <div class="panel-body">
-                    <div class='side-text'>
-                        <p>In der Accountverwaltung kannst du Benutzer freischalten, löschen und Adminrechte vergeben.</p>
-                    </div>
                         <div class='col-md-6'>
                         <h5>Deine Accountdaten</h5>
                             <?php
