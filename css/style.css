@@ -486,6 +486,7 @@ a:hover {
 
 .croc img{
     margin: auto;
+    display: block;
 
 }
 
