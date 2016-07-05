@@ -88,7 +88,7 @@ else:
                 echo "<div class='col-md-6'>";
                 if ($_SESSION['rights']>$user['ID_RECHTE']):
                     if (empty($user['ID_RECHTE'])):
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-default'>freischalten</a>";
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-default btn-doppel'>freischalten</a>";
                     endif;
 
                     if ($user['ID_RECHTE']==1):
