@@ -105,7 +105,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['votingid'])):
                         </span>
                         <?php echo $eintrag['text'];?>
                     </label>
-
+            <?php
                 }
             ?>
             <input type='hidden' value='1' name='fragerunde'>
