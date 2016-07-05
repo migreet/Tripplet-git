@@ -21,7 +21,7 @@ session_start();
     <div class='breadcrumb'>
         <i class='fa fa-angle-right'></i> <a href='index.php'> Vorlesungen</a> <i class='fa fa-angle-right'></i> Kontakt
     </div>
-    <h1>Impressum</h1>
+    <h1>Kontakt</h1>
     <?php echo "<div class='col-md-4' id='impressim_aside'> ";
         require_once("include/aside_impressum.php");
         echo "</div>";
