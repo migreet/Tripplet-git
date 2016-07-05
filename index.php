@@ -43,6 +43,9 @@ session_start();
 
     <!--Registrierungsformular-->
     <div class="container" id="registrieren" >
+        <div class="logo">
+            <img src="img/logo.svg">
+        </div>
         <div class="form-horizontal col-sm-offset-6">
         <h1>Registrieren</h1>
         </div>
