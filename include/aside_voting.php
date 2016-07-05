@@ -23,7 +23,7 @@ else:
         <img src="img/snap-tipp.svg">
         </div>
         <div class='side-text'>
-            <p>Füge Fragen mit bis zu zehn Antworten zu deinen Votings hinzu</p>
+            <p>Füge Fragen mit bis zu sieben möglichen Antworten zu deinen Votings hinzu!</p>
         </div>
         <div id="aside_voting" class="sidebar-left">
             <div>
