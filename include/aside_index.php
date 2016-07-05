@@ -57,7 +57,7 @@ else:
             <div id="aside-index">
                 <form name="registerform" id="aside-index" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnung" id="mail" required>
+                        <input type="text" class="form-control" name="bezeichnung" placeholder="Bezeichnung" maxlength="10" required>
                         <input type="hidden" value="1" name="vorlesungcreate">
                         <button type="submit" name="registrieren" class="btn btn-default btn-max">Vorlesung hinzufügen</button>
                     </div>
