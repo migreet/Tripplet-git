@@ -88,11 +88,11 @@ else:
                 echo "<div class='col-md-6'>";
                 if ($_SESSION['rights']>$user['ID_RECHTE']):
                     if (empty($user['ID_RECHTE'])):
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-default btn-doppel'>freischalten</a>";
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=1' class='btn btn-default'>freigeben</a>";
                     endif;
 
                     if ($user['ID_RECHTE']==1):
-                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 'class='btn btn-default'>Grant Admin</a>";
+                        echo "<a href='do/admin_update.php?id=" . $user['ID'] . "&rights=2 'class='btn btn-default'>Admin!</a>";
                     endif;
 
                     echo "<a href='do/admin_delete.php?id=" . $user['ID'] . "'class='btn btn-default'>löschen</a>";
