@@ -48,7 +48,7 @@ if (isset($_POST["sentlogin"])):
      * Passwort und Zugang wird überprüft, Session wird erstellt
      * Bei Falscheingabe Weiterleitung auf Index
      */
-    if (!empty ($mail) && !empty ($passwort)):
+    if (!empty ($mail) && !empty ($passwort) && $dozent['ID_RECHTE']!= NULL):
 
         if (!isset($_SESSION['login'])):
 
