@@ -50,7 +50,7 @@ else:
             <img src="img/snap-hi.svg">
             </div>
             <div class='side-text'>
-                <p> Hi, ich bin Crock! Ich begleite dich durch die Seite!</br>
+                <p> Hi, ich bin Crock! Ich begleite dich durch die Seite!</br></br>
                     Hier siehst du deine Vorlesungen. Füge Vorlesungen hinzu indem du das Feld und den Button unten verwendest!</br>
                 </p>
             </div>
