@@ -11,8 +11,6 @@ session_start();
 
 
     <body>
-    <?php require_once("include/navigation.php");
-    ?>
 
     <div class="container">
         <?php

@@ -8,7 +8,6 @@
  */
 require_once("include/header.php");
 require_once("php/classes.php");
-require_once("include/navigation.php");
 
 /**
  * Session wird gestartet
