@@ -19,6 +19,7 @@ else:
 
 <div class="panel panel-default">
     <div class="panel-body">
+        <img src="img/snap-hinweis.svg">
         <div class='side-text'>
             <p>Du hast die Möglichkeit Votings hinzuzufügen, zu bearbeiten und zu löschen. Auf <strong>Ergebnis</strong> kannst du die Resultate deiner Votings betrachten.</p>
         </div>
