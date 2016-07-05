@@ -83,7 +83,7 @@ else:
              */
             foreach ($userlist as $user){
                 echo "<div class='col-md-6'>";
-                echo $user['name'].$user['vorname'].$user['mail'].$user['ID_RECHTE'];
+                echo "<strong> " . $user['name']." ".$user['vorname']." ".$user['mail']." ".$user['ID_RECHTE'] . " </strong>";
                 echo "</div>";
                 echo "<div class='col-md-6'>";
                 if ($_SESSION['rights']>$user['ID_RECHTE']):
