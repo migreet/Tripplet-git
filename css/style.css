@@ -492,10 +492,13 @@ a:hover {
 
 
 .logo img{
+
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+.logo{
     display: block;
     margin: auto;
     border-bottom: 1px solid #808080;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
 }
 
