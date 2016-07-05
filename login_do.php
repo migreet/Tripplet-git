@@ -34,7 +34,7 @@ session_start();
  */
 $dozent=$dozentInstnc->getByMail($mail);
 
-if (!empty ($mail) && !empty ($passwort)):
+if (!empty ($mail) && !empty ($passwort) && $dozent['ID_RECHTE']!= NULL ):
 
 	if(!isset($_SESSION['login'])):
         if($mail===$dozent['mail'] && $passwort===$dozent['passwort']):
