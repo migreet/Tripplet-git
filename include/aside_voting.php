@@ -23,7 +23,7 @@ else:
         <img src="img/snap-tipp.svg">
         </div>
         <div class='side-text'>
-            <p>Du kannst Fragen mit bis zu zehn Antworten zu deinem Voting hinzufügen</p>
+            <p>Füge Fragen mit bis zu zehn Antworten zu deinen Votings hinzu</p>
         </div>
         <div id="aside_voting" class="sidebar-left">
             <div>
@@ -54,16 +54,6 @@ else:
                     </div>
                     <div class="col-sm-12">
                         <input type="text" class="form-control" name="antwort6" placeholder="Antwort" id="antwort" >
-                    </div>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" name="antwort7" placeholder="Antwort" id="antwort" >
-                    </div>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" name="antwort8" placeholder="Antwort" id="antwort" >
-                    </div>
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" name="antwort9" placeholder="Antwort" id="antwort" >
-                        <input type="hidden" value="1" name="fragecreate">
                     </div>
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-default btn-max">Frage hinzufügen</button>

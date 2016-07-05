@@ -7,7 +7,7 @@
             <img src="img/snap-aufeinenblick.svg">
             </div>
             <div class='side-text'>
-                Das Ergebnis deines Votings wird prozentual und absolut angezeigt. Mit <strong>Beam me up!</strong> kannst du die Resultate jeder einzelnen Frage auf einer Beamerfreundlichen Seite öffnen.
+                Schau dir die Ergebnisse deiner Votings an! Mit <strong> Beam me up!</strong> öffnest du die Resultate jeder einzelnen Frage auf einer Beamerfreundlichen Seite.
             </div>
         </div>
     </div>
