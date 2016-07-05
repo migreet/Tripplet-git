@@ -51,7 +51,7 @@ else:
             </div>
             <div class='side-text'>
                 <p> Hi, ich bin Crock! Ich begleite dich durch die Seite!</br>
-                    Hier siehst du deine Vorlesungen. Füge Vorlesungen hinzu indem du das Feld und den Button unten verwendest!
+                    Hier siehst du deine Vorlesungen. Füge Vorlesungen hinzu indem du das Feld und den Button unten verwendest!</br>
                 </p>
             </div>
             <div id="aside-index">
