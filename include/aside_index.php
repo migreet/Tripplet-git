@@ -46,7 +46,9 @@ else:
 
     endif;
     ?>
+            <div class="croc">
             <img src="img/snap-hi.svg">
+            </div>
             <div class='side-text'>
                 <p>Hier siehst du deine Vorlsungen. Du kannst Vorlesungen hinzufügen anzeigen und löschen</p>
             </div>
