@@ -46,6 +46,7 @@ session_start();
         <div class="logo col-sm-offset-6 col-md-4">
             <img src="img/logo.svg">
         </div>
+        <hr>
         <div class="form-horizontal col-sm-offset-6">
         <h1>Registrieren</h1>
         </div>
