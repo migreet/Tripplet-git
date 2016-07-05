@@ -1,6 +1,6 @@
 <!-- Footer -->
 
 <div class="footer">
-        <a href="./impressum.php">Impressum</a>
-        <a href="./kontakt.php">Kontakt</a>
+        <a target="_blank" href="./impressum.php">Impressum</a>
+        <a target="_blank" href="./kontakt.php">Kontakt</a>
 </div>
