@@ -23,7 +23,7 @@ else:
         <img src="img/snap-hinweis.svg">
         </div>
         <div class='side-text'>
-            <p>Füge Votings hinzu, bearbeiten oder lösche diese. Auf <strong>Ergebnis</strong> kannst du die Resultate deiner Votings betrachten.</p>
+            <p>Verwende das Formular unten um Votings hinzuzufügen. Mit den Buttons starten, bearbeiten und Ergebnis kommst du auf die jeweiligen Unterseiten.
         </div>
         <div class="sidebar-left">
             <form class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
