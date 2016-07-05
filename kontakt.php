@@ -23,34 +23,6 @@ session_start();
         echo "</div>";
     ?>
     <div class='col-md-8'>
-        <form class="form-horizontal">
-            <fieldset>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="textfeld">Kontaktformular</label>
-                    <div class="col-md-4">
-                        <textarea class="form-control" name="textfeld">Ihre Anfrage</textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="textfeld">Name</label>
-                    <div class="col-md-4">
-                        <input id="textfeld" name="textfeld" type="text" placeholder="placeholder" class="form-control input-md">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="textfeld">Name</label>
-                    <div class="col-md-4">
-                        <input id="textfeld" name="textfeld" type="text" placeholder="placeholder" class="form-control input-md">
-                    </div>
-                </div>
-
-
-            </fieldset>
-        </form>
-
     </div>
 </div>
 
