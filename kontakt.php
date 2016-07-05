@@ -24,7 +24,7 @@ session_start();
         echo "</div>";
     ?>
     <div class='col-md-8'>
-        <p><strong>Bei Fragen, Anregungen oder anderen Anliegen kontaktieren Sie uns bitte unter den links angegebenen Kontaktmöglichkeiten.</strong></p>
+        <p><strong>Bei Fragen, Anregungen oder anderen Anliegen kontaktieren Sie uns bitte unter den links angegebenen KontaktmÃ¶glichkeiten.</strong></p>
     </div>
 </div>
 
