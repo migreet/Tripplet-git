@@ -19,7 +19,9 @@ else:
 
 <div class="panel panel-default">
     <div class="panel-body">
+        <div class="croc">
         <img src="img/snap-tipp.svg">
+        </div>
         <div class='side-text'>
             <p>Du kannst Fragen mit bis zu zehn Antworten zu deinem Voting hinzufügen</p>
         </div>
